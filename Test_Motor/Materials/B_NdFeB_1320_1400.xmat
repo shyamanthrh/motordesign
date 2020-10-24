@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<B_NdFeB_1320_1400>
+  <Type>MAGNET</Type>
+  <BaseType>BASIC</BaseType>
+  <Version>1.0.0</Version>
+  <Name>NdFeB_1320_1400</Name>
+  <Author>FluxMotor</Author>
+  <Date>2017/03/21 10:07:41</Date>
+  <Comments />
+  <Manufacturer>FluxMotor</Manufacturer>
+  <magneticBehavior>
+    <magneticRemanenceTemperatureCoefficient>-0.001</magneticRemanenceTemperatureCoefficient>
+    <magneticReferenceTemperature>293.15</magneticReferenceTemperature>
+    <magneticRelativePermeability>1.1</magneticRelativePermeability>
+    <magneticIntrinsicCoercivityTemperatureCoefficient>-0.006</magneticIntrinsicCoercivityTemperatureCoefficient>
+    <magneticRemanence>1.32</magneticRemanence>
+    <magneticIntrinsicCoercivity>1400000.0</magneticIntrinsicCoercivity>
+    <magneticMaximumOperatingTemperature>403.15</magneticMaximumOperatingTemperature>
+    <magneticCurieTemperature>603.15</magneticCurieTemperature>
+  </magneticBehavior>
+  <electrokineticBehavior>
+    <electrokineticReferenceTemperature>293.15</electrokineticReferenceTemperature>
+    <electrokineticResistivityAtReferenceTemperature>1.6E-6</electrokineticResistivityAtReferenceTemperature>
+    <electrokineticResistivityCoefficient>0.0</electrokineticResistivityCoefficient>
+  </electrokineticBehavior>
+  <mechanicalBehavior>
+    <mechanicalMassDensity>7500.0</mechanicalMassDensity>
+  </mechanicalBehavior>
+  <economicBehavior>
+    <economicPrice>0.0</economicPrice>
+  </economicBehavior>
+</B_NdFeB_1320_1400>

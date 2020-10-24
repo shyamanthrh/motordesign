@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<B_Copper>
+  <Type>CONDUCTOR</Type>
+  <BaseType>BASIC</BaseType>
+  <Version>1.0.0</Version>
+  <Name>Copper</Name>
+  <Author>FluxMotor</Author>
+  <Date>2017/03/21 10:07:41</Date>
+  <Comments />
+  <Manufacturer>FluxMotor</Manufacturer>
+  <magneticBehavior />
+  <electrokineticBehavior>
+    <electrokineticReferenceTemperature>293.15</electrokineticReferenceTemperature>
+    <electrokineticResistivityAtReferenceTemperature>1.724E-8</electrokineticResistivityAtReferenceTemperature>
+    <electrokineticResistivityCoefficient>0.00393</electrokineticResistivityCoefficient>
+  </electrokineticBehavior>
+  <mechanicalBehavior>
+    <mechanicalMassDensity>8890.0</mechanicalMassDensity>
+  </mechanicalBehavior>
+  <economicBehavior>
+    <economicPrice>0.0</economicPrice>
+  </economicBehavior>
+</B_Copper>

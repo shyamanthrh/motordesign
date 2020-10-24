@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<B_Air>
+  <Type>FLUID</Type>
+  <BaseType>BASIC</BaseType>
+  <Version>1.0.0</Version>
+  <Name>Air</Name>
+  <Author>FluxMotor</Author>
+  <Date>2017/03/21 10:07:41</Date>
+  <Comments />
+  <Manufacturer>FluxMotor</Manufacturer>
+  <magneticBehavior />
+  <electrokineticBehavior />
+  <mechanicalBehavior>
+    <mechanicalMassDensity>1.293</mechanicalMassDensity>
+  </mechanicalBehavior>
+  <economicBehavior>
+    <economicPrice>0.0</economicPrice>
+  </economicBehavior>
+</B_Air>

@@ -1,0 +1,15 @@
+Executing: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/configurations/Got_units_SI_multiple.py' file
+Executing: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/configurations/Got_units_usual.py' file
+[upgrade] Data written by software: MOTOR_V2019-01-00
+[upgrade] Software build version : MOTOR_V2019-01-00
+[upgrade] Data written by user: Shyamanth R H
+[upgrade] Data writing date: Sat Oct 17 12:56:23 IST 2020
+[upgrade] Data reading date: Sat Oct 17 14:54:58 IST 2020
+Running: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/upgrades/upgrades00_FluxMotor.py' file
+Running: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/upgrades/upgrades01.py' file
+Running: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/upgrades/upgrades_FluxMotor.py' file
+C:\Program Files\Altair\2019-edu\AltairFluxMotor2019.1\Resources\upgrades\upgrades02_FluxMotor.py
+MOTOR_V2019-01-00
+NamedObjectBase file: 'C:/Users/Shyamanth R H/FluxMotor/FluxMotor2019.1/UserCatalog/User_SM_PM_IR_3Ph/Motors/Test_Motor/Test_Motor.motor' read
+Executing: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/configurations/Got_units_SI_multiple.py' file
+Executing: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/configurations/Got_units_usual.py' file

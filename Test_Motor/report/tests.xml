@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tests>
+  <version>2019.1.0</version>
+  <REPORT>
+    <uuid>8dbb1423-199d-4f58-91e3-cf882d824254</uuid>
+    <class>com.cedrat.motor.motorcommon.report.test.ReportTest</class>
+    <exportInputsUuid>
+      <REPORT_EXPORT_EXPORT_FORMAT>521f8637-149a-4d7e-a2d0-0e679f4a70e9</REPORT_EXPORT_EXPORT_FORMAT>
+      <REPORT_EXPORT_REPORT_NAME>9c696ded-8b81-426e-bdb3-6277d5c2df41</REPORT_EXPORT_REPORT_NAME>
+      <REPORT_EXPORT_STORAGE_FOLDER>dd02c4b3-7868-4ad0-a0aa-d12c87461dd0</REPORT_EXPORT_STORAGE_FOLDER>
+      <REPORT_EXPORT_ATTACHED_TO_MOTOR>4531cd9a-24ad-4390-a256-aacf58dfc054</REPORT_EXPORT_ATTACHED_TO_MOTOR>
+    </exportInputsUuid>
+    <designNodeInputsUuid>
+      <REPORT_NODE>fdf939c9-39bd-46ae-9886-5a8156975e70</REPORT_NODE>
+      <REPORT_NODE>8a11380d-19c3-4e7b-ad83-308be61b2374</REPORT_NODE>
+      <REPORT_NODE>008995b9-1d24-4f01-be23-0ebfc101f1f6</REPORT_NODE>
+      <REPORT_NODE>445dc995-0d01-449a-be0d-164ff073d2c6</REPORT_NODE>
+      <REPORT_NODE>0fc909ad-5f30-47ab-a4fd-441b83dc4623</REPORT_NODE>
+      <REPORT_NODE>7a028d1e-7c29-434a-bf52-2fc2cd5cc9e9</REPORT_NODE>
+      <REPORT_NODE>663eb05d-b3f7-4bd1-bb3a-449cc9ea8641</REPORT_NODE>
+    </designNodeInputsUuid>
+    <testNodeInputsUuid />
+    <materialNodeInputsUuid />
+    <archiveNodeInputsUuid />
+  </REPORT>
+</tests>

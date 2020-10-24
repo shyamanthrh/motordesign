@@ -1,0 +1,280 @@
+Executing: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/configurations/Got_units_SI_multiple.py' file
+Executing: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/configurations/Got_units_usual.py' file
+[upgrade] Data written by software: MOTOR_V2019-01-00
+[upgrade] Software build version : MOTOR_V2019-01-00
+[upgrade] Data written by user: Shyamanth R H
+[upgrade] Data writing date: Fri Oct 23 21:41:45 IST 2020
+[upgrade] Data reading date: Sat Oct 24 11:04:52 IST 2020
+Running: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/upgrades/upgrades00_FluxMotor.py' file
+Running: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/upgrades/upgrades01.py' file
+Running: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/upgrades/upgrades_FluxMotor.py' file
+C:\Program Files\Altair\2019-edu\AltairFluxMotor2019.1\Resources\upgrades\upgrades02_FluxMotor.py
+MOTOR_V2019-01-00
+NamedObjectBase file: 'C:/Users/Shyamanth R H/FluxMotor/FluxMotor2019.1/UserCatalog/User_SM_PM_IR_3Ph/Motors/Test_Motor/Test_Motor.motor' read
+Executing: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/configurations/Got_units_SI_multiple.py' file
+Executing: 'C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Third_party/got/GOT_V2017-01-20/Got2/configurations/Got_units_usual.py' file
+
+2020-10-24 11:05:08 [1u] Replace [  ]
+Added to database: [ Psi_norm ]
+
+2020-10-24 11:10:46 [1u] Add Psi_norm
+Added to database: [ Psi ]
+
+2020-10-24 11:10:46 [2u] Add Psi
+Added to database: [ D_axis_flux_linkage__d ]
+
+2020-10-24 11:10:46 [3u] Add D_axis_flux_linkage__d
+Added to database: [ Q_axis_flux_linkage__q ]
+
+2020-10-24 11:10:46 [4u] Add Q_axis_flux_linkage__q
+Added to database: [ Electromagnetic ]
+
+2020-10-24 11:10:46 [5u] Add Electromagnetic
+Added to database: [ Iron_loss_inter_hysteresis ]
+
+2020-10-24 11:10:46 [6u] Add Iron_loss_inter_hysteresis
+Added to database: [ Iron_loss_inter_classical ]
+
+2020-10-24 11:10:46 [7u] Add Iron_loss_inter_classical
+Added to database: [ Iron_loss_inter_excess ]
+
+2020-10-24 11:10:46 [8u] Add Iron_loss_inter_excess
+Added to database: [ i, id, iq, revSpeed, revSpeed_norm, v, vd, vq ]
+
+2020-10-24 11:10:46 [9u] Add v
+Added to database: [ addLoss, ironLoss, mechLoss, usefulTorque ]
+
+2020-10-24 11:10:46 [9u] Add usefulTorque
+Added to database: [ jouleLoss, totalLoss ]
+
+2020-10-24 11:10:46 [9u] Add totalLoss
+Added to database: [ absorbedPower, effiency, electromagPower, usefulPower ]
+
+2020-10-24 11:10:46 [9u] Add effiency
+
+2020-10-24 11:10:46 [9u] Replace revSpeed_norm
+
+2020-10-24 11:10:46 [9u] Replace Psi_norm
+version: PD4ML 399fx2 Pro
+not yet in cache: file:C:\Program Files\Altair\2019-edu\AltairFluxMotor2019.1\Resources\Font/pd4fonts.properties
+loading file:C:\Program%20Files\Altair\2019-edu\AltairFluxMotor2019.1\Resources\Font/pd4fonts.properties [4ms]
+default built-in stylesheet parsed [8ms]
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/Report.html [0ms]
+loading CSS file for file:/C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Resources//ReportCache/reportStyle.css
+not yet in cache: file:/C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Resources//ReportCache/reportStyle.css
+loading file:/C:/Program%20Files/Altair/2019-edu/AltairFluxMotor2019.1/Resources//ReportCache/reportStyle.css [5ms]
+stylesheet 'file:/C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Resources//ReportCache/reportStyle.css' parsed [2ms]
+stylesheet 'file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/Report.html:1' parsed [0ms]
+'verdana bold' is not in pd4fonts.properties file
+reject TTF lookup for: 'verdana bold'
+not yet in cache: file:C:\Program Files\Altair\2019-edu\AltairFluxMotor2019.1\Resources\Font/arialbd.ttf
+loading file:C:\Program%20Files\Altair\2019-edu\AltairFluxMotor2019.1\Resources\Font/arialbd.ttf [7ms]
+read 'arial bold' from file:C:\Program Files\Altair\2019-edu\AltairFluxMotor2019.1\Resources\Font/arialbd.ttf
+'verdana' is not in pd4fonts.properties file
+reject TTF lookup for: 'verdana'
+not yet in cache: file:C:\Program Files\Altair\2019-edu\AltairFluxMotor2019.1\Resources\Font/arial.ttf
+loading file:C:\Program%20Files\Altair\2019-edu\AltairFluxMotor2019.1\Resources\Font/arial.ttf [6ms]
+read 'arial' from file:C:\Program Files\Altair\2019-edu\AltairFluxMotor2019.1\Resources\Font/arial.ttf
+image not yet in cache: file:/C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Resources/Images/FluxMotorCedrat_black.png
+not yet in cache: file:/C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Resources/Images/FluxMotorCedrat_black.png
+loading file:/C:/Program%20Files/Altair/2019-edu/AltairFluxMotor2019.1/Resources/Images/FluxMotorCedrat_black.png [5ms]
+image size: 3760
+Warning: Can not embed file:/C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Resources/Images/FluxMotorCedrat_black.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Resources/Images/altair.png
+not yet in cache: file:/C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Resources/Images/altair.png
+loading file:/C:/Program%20Files/Altair/2019-edu/AltairFluxMotor2019.1/Resources/Images/altair.png [6ms]
+image size: 6342
+Warning: Can not embed file:/C:/Program Files/Altair/2019-edu/AltairFluxMotor2019.1/Resources/Images/altair.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/MotorTransversalView.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/MotorTransversalView.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/MotorTransversalView.png [0ms]
+image size: 48167
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/MotorTransversalView.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/topology_RESULT_DESIGN_TOPOLOGY_VIEW_RADIAL_graph.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/topology_RESULT_DESIGN_TOPOLOGY_VIEW_RADIAL_graph.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/topology_RESULT_DESIGN_TOPOLOGY_VIEW_RADIAL_graph.png [0ms]
+image size: 53905
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/topology_RESULT_DESIGN_TOPOLOGY_VIEW_RADIAL_graph.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/topology_RESULT_DESIGN_TOPOLOGY_VIEW_AXIAL_graph.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/topology_RESULT_DESIGN_TOPOLOGY_VIEW_AXIAL_graph.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/topology_RESULT_DESIGN_TOPOLOGY_VIEW_AXIAL_graph.png [0ms]
+image size: 8302
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/topology_RESULT_DESIGN_TOPOLOGY_VIEW_AXIAL_graph.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/topology_RESULT_DESIGN_TOPOLOGY_VIEW_WINDING_graph.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/topology_RESULT_DESIGN_TOPOLOGY_VIEW_WINDING_graph.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/topology_RESULT_DESIGN_TOPOLOGY_VIEW_WINDING_graph.png [1ms]
+image size: 66170
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/topology_RESULT_DESIGN_TOPOLOGY_VIEW_WINDING_graph.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/shaft_RESULT_DESIGN_SHAFT_VIEW_AXIAL_graph.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/shaft_RESULT_DESIGN_SHAFT_VIEW_AXIAL_graph.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/shaft_RESULT_DESIGN_SHAFT_VIEW_AXIAL_graph.png [1ms]
+image size: 8302
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/shaft_RESULT_DESIGN_SHAFT_VIEW_AXIAL_graph.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/lamination_RESULT_DESIGN_LAMINATION_VIEW_RADIAL_graph.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/lamination_RESULT_DESIGN_LAMINATION_VIEW_RADIAL_graph.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/lamination_RESULT_DESIGN_LAMINATION_VIEW_RADIAL_graph.png [1ms]
+image size: 53905
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/lamination_RESULT_DESIGN_LAMINATION_VIEW_RADIAL_graph.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/magnet_RESULT_DESIGN_MAGNET_VIEW_graph.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/magnet_RESULT_DESIGN_MAGNET_VIEW_graph.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/magnet_RESULT_DESIGN_MAGNET_VIEW_graph.png [0ms]
+image size: 15386
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/magnet_RESULT_DESIGN_MAGNET_VIEW_graph.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/polarization_RESULT_DESIGN_POLARIZATION_VIEW_LOCAL_graph.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/polarization_RESULT_DESIGN_POLARIZATION_VIEW_LOCAL_graph.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/polarization_RESULT_DESIGN_POLARIZATION_VIEW_LOCAL_graph.png [1ms]
+image size: 39229
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/polarization_RESULT_DESIGN_POLARIZATION_VIEW_LOCAL_graph.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/polarization_RESULT_DESIGN_POLARIZATION_VIEW_GLOBAL_graph.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/polarization_RESULT_DESIGN_POLARIZATION_VIEW_GLOBAL_graph.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/polarization_RESULT_DESIGN_POLARIZATION_VIEW_GLOBAL_graph.png [1ms]
+image size: 67993
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/polarization_RESULT_DESIGN_POLARIZATION_VIEW_GLOBAL_graph.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/slot_RESULT_DESIGN_SLOT_VIEW_graph.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/slot_RESULT_DESIGN_SLOT_VIEW_graph.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/slot_RESULT_DESIGN_SLOT_VIEW_graph.png [1ms]
+image size: 17862
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/slot_RESULT_DESIGN_SLOT_VIEW_graph.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_LAYOUT_GRAPH_graph.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_LAYOUT_GRAPH_graph.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_LAYOUT_GRAPH_graph.png [1ms]
+image size: 94051
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_LAYOUT_GRAPH_graph.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_RADIAL_GRAPH_graph.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_RADIAL_GRAPH_graph.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_RADIAL_GRAPH_graph.png [1ms]
+image size: 111285
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_RADIAL_GRAPH_graph.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_AXIAL_GRAPH_graph.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_AXIAL_GRAPH_graph.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_AXIAL_GRAPH_graph.png [0ms]
+image size: 11208
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_AXIAL_GRAPH_graph.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_MMF_CURVE_curve.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_MMF_CURVE_curve.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_MMF_CURVE_curve.png [0ms]
+image size: 13948
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_MMF_CURVE_curve.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_MMF_SPECTRUM_bar.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_MMF_SPECTRUM_bar.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_MMF_SPECTRUM_bar.png [1ms]
+image size: 8056
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_MMF_SPECTRUM_bar.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WIDNING_FACTOR_SPECTRUM_bar.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WIDNING_FACTOR_SPECTRUM_bar.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WIDNING_FACTOR_SPECTRUM_bar.png [1ms]
+image size: 11604
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WIDNING_FACTOR_SPECTRUM_bar.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+image not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_SLOT_STAR_GRAPH_graph.png
+not yet in cache: file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_SLOT_STAR_GRAPH_graph.png
+loading file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_SLOT_STAR_GRAPH_graph.png [0ms]
+image size: 26633
+Warning: Can not embed file:/C:/Windows/Temp/FluxMotorWorkingDir/cba4778a-6af8-47d8-93a8-5840eeafc569/tempPdf/img/winding_WINDING_SLOT_STAR_GRAPH_graph.png "as is". Not embeddable color type. Converting image to a compatible lossless image format (usually causes image data to grow in size).
+'open sans' is not in pd4fonts.properties file
+reject TTF lookup for: 'open sans'
+done in 1152ms.
+
+2020-10-24 11:30:43 [2u] Replace _WindingManager
+
+2020-10-24 11:32:50 [3u] Replace _WindingManager
+
+2020-10-24 11:35:38 [4u] Replace _bundleSetting
+Added to database: [ XY1, _AG_AIRGAP, _AG_FPN4, _AG_INNER, _AG_LINE1, _AG_Length, _AG_NF9, _AG_OD_C1, _AG_OD_C1_F, _AG_OUTER, _AG_P1, _AG_P1C2, _AG_P2, _AG_P3, _AG_P4, _AG_P5, _AG_P6, _AG_V, _AG_X0, _AG_X1, _AG_X2, _AG_X3, _AG_X4, _AG_X5, _AG_X6, _AG_Y0, _AG_Y1, _AG_Y2, _AG_Y3, _AG_Y4, _AG_Y5, _AG_Y6, _AG_airgapRot, _AG_innerAirgapLoc, _AG_outerAirgapLoc, _AG_partAirgap, _AG_u1, _AG_ua, _AG_ul, _AG_uv, _B_Air, _B_Copper, _B_EN_1_1151, _B_M330_35A, _B_M400_65A, _B_NdFeB_1320_1400, _B_Nomex_130, _H_FPN1, _H_NF, _H_housingRot, _H_partShaft, _H_u1, _H_ua, _H_ul, _H_uv, _IM_BRIDGE, _IM_BridgeLoc, _IM_CART, _IM_CS1, _IM_CS1_center, _IM_DR_virt, _IM_EDGE, _IM_EdgeLoc, _IM_FACE1, _IM_FACE2, _IM_FACE3, _IM_FACE4, _IM_FACE5, _IM_FACE6, _IM_FPN1, _IM_FPN2, _IM_FPN3, _IM_H, _IM_H_C0, _IM_H_C0_F, _IM_H_func, _IM_H_imp, _IM_H_k, _IM_ID, _IM_ID_imp, _IM_ID_k, _IM_ID_virt, _IM_INTER_POLE, _IM_IR, _IM_InterpoleLoc, _IM_KCD, _IM_LINE1, _IM_LINE10, _IM_LINE11, _IM_LINE12, _IM_LINE13, _IM_LINE14, _IM_LINE15, _IM_LINE16, _IM_LINE17, _IM_LINE18, _IM_LINE2, _IM_LINE3, _IM_LINE4, _IM_LINE5, _IM_LINE6, _IM_LINE7, _IM_LINE8, _IM_LINE9, _IM_LINEMAG, _IM_LOOP1, _IM_LOOP3, _IM_LOOP4, _IM_LOOP5, _IM_LOOP6, _IM_LOOP7, _IM_MAGNET, _IM_MAGNETIC_CIRCUIT, _IM_MAGNETS, _IM_MagnetLoc, _IM_NF6, _IM_OD, _IM_OD_imp, _IM_OR, _IM_P1, _IM_P10, _IM_P11, _IM_P2, _IM_P3, _IM_P4, _IM_P5, _IM_P5C6, _IM_P6, _IM_P7, _IM_P8, _IM_P9, _IM_PN, _IM_POLAR, _IM_POLE_SHOE, _IM_PS1, _IM_PS2, _IM_PS3, _IM_PS4, _IM_PSC, _IM_PoleShoeLoc, _IM_R, _IM_R1, _IM_R3, _IM_R4, _IM_R5, _IM_RT1_C, _IM_R_C0, _IM_R_C0_F, _IM_R_C1, _IM_R_C1_F, _IM_R_func, _IM_R_imp, _IM_R_k, _IM_SL, _IM_T1, _IM_TM, _IM_TM_C0, _IM_TM_C0_F, _IM_TM_func, _IM_TM_imp, _IM_TM_k, _IM_TX5, _IM_Teta, _IM_Teta_virt, _IM_V3, _IM_V4, _IM_V5, _IM_V6, _IM_VE, _IM_VP, _IM_W, _IM_WM, _IM_WM_C0, _IM_WM_C0_F, _IM_WM_func, _IM_WM_imp, _IM_WM_k, _IM_Wa, _IM_X1, _IM_X10, _IM_X11, _IM_X2, _IM_X3, _IM_X4, _IM_X5, _IM_X5C6, _IM_X6, _IM_X7, _IM_X8, _IM_X9, _IM_XY1_C, _IM_Y1, _IM_Y10, _IM_Y11, _IM_Y2, _IM_Y3, _IM_Y4, _IM_Y5, _IM_Y5C6, _IM_Y6, _IM_Y7, _IM_Y8, _IM_Y9, _IM_YOKE, _IM_YokeLoc, _IM_magnetRot, _IM_magnetSym, _IM_partInnerMagnet, _IM_sym_cart, _IM_sym_cart_center, _IM_sym_polar, _IM_sym_polar_center, _IM_u1, _IM_ua, _IM_ul, _IM_uv, _L_EN, _L_EX, _L_FACE1, _L_FPN1, _L_LINE1, _L_LINE2, _L_LINE3, _L_LINE4, _L_LINE5, _L_LINE6, _L_LOOP1, _L_LaminationRegion, _L_NF, _L_P1, _L_P2, _L_P2C3, _L_P3, _L_P4, _L_P5, _L_P6, _L_PC, _L_R, _L_R_C1, _L_R_C1_F, _L_V, _L_VS_C1, _L_VS_C1_F, _L_X0, _L_X1, _L_X2, _L_X3, _L_X4, _L_X5, _L_X6, _L_Y0, _L_Y1, _L_Y2, _L_Y3, _L_Y4, _L_Y5, _L_Y6, _L_arrowPoint1, _L_arrowPoint2, _L_arrowPoint3, _L_arrowPoint4, _L_laminationRot, _L_partLamination, _L_u1, _L_ua, _L_ul, _L_uv, _L_yokeLoc, _Motor, _OS_AS, _OS_ASa, _OS_ASb, _OS_ASc, _OS_ASd, _OS_CART, _OS_CONDUCTOR, _OS_CoilConductor1Loc, _OS_CoilConductor2Loc, _OS_D, _OS_FACE1, _OS_FACE2, _OS_FACE3, _OS_FACE4, _OS_FACE5, _OS_FACE6, _OS_FPN1, _OS_FPN2, _OS_FPN3, _OS_H1, _OS_H1_C0, _OS_H1_C0_F, _OS_H1_func, _OS_H1_imp, _OS_H1_k, _OS_HO, _OS_HO_C0, _OS_HO_C0_F, _OS_HO_func, _OS_HO_imp, _OS_HO_k, _OS_HS, _OS_HS_C0, _OS_HS_C0_F, _OS_HS_C1, _OS_HS_C1_F, _OS_HS_func, _OS_HS_imp, _OS_HS_k, _OS_HTC, _OS_ID, _OS_ID_imp, _OS_INSULATING_WEDGE, _OS_IR, _OS_K, _OS_KDR, _OS_LINE1, _OS_LINE10, _OS_LINE11, _OS_LINE12, _OS_LINE13, _OS_LINE14, _OS_LINE15, _OS_LINE16, _OS_LINE17, _OS_LINE18, _OS_LINE19, _OS_LINE2, _OS_LINE3, _OS_LINE4, _OS_LINE5, _OS_LINE6, _OS_LINE7, _OS_LINE8, _OS_LINE9, _OS_LOOP2, _OS_LOOP3, _OS_LOOP4, _OS_LOOP5, _OS_LOOP6, _OS_LOOP7, _OS_MAGNETIC_CIRCUIT, _OS_NF6, _OS_OD, _OS_OD_imp, _OS_OD_k, _OS_OD_virt, _OS_OR, _OS_P1, _OS_P10, _OS_P2, _OS_P3, _OS_P4, _OS_P4C5, _OS_P5, _OS_P6, _OS_P7, _OS_P8, _OS_P9, _OS_PI1, _OS_PI2, _OS_PI3, _OS_PI4, _OS_POLAR, _OS_PS1, _OS_PS2, _OS_PS3, _OS_PS4, _OS_PSC, _OS_R, _OS_RT1_C, _OS_SL, _OS_SN, _OS_Slot_sym, _OS_TOOTH, _OS_TOOTH_FOOT, _OS_Teta, _OS_ToothFootLoc, _OS_ToothLoc, _OS_V, _OS_V1, _OS_V1a, _OS_V1b, _OS_VE, _OS_WC, _OS_WO, _OS_WO_C0, _OS_WO_C0_F, _OS_WO_C1, _OS_WO_C1_F, _OS_WO_func, _OS_WO_imp, _OS_WO_k, _OS_WS, _OS_WS1, _OS_WS1_C0, _OS_WS1_C0_F, _OS_WS1_C1, _OS_WS1_C1_F, _OS_WS1_func, _OS_WS1_imp, _OS_WS1_k, _OS_WS2, _OS_WS2_C0, _OS_WS2_C0_F, _OS_WS2_func, _OS_WS2_imp, _OS_WS2_k, _OS_WT, _OS_WT1, _OS_WT2, _OS_WedgeLoc, _OS_X1, _OS_X2, _OS_X3, _OS_X4, _OS_X4C5, _OS_X5, _OS_X6, _OS_X7, _OS_X8, _OS_XI1, _OS_XI2, _OS_XI3, _OS_XY1_C, _OS_Y1, _OS_Y2, _OS_Y3, _OS_Y4, _OS_Y4C5, _OS_Y5, _OS_Y6, _OS_Y7, _OS_Y8, _OS_YI1, _OS_YI2, _OS_YI3, _OS_YI4, _OS_YOKE, _OS_YokeLoc, _OS_partOuterSlot, _OS_slotRot, _OS_sym_cart, _OS_sym_cart_center, _OS_sym_polar, _OS_sym_polar_center, _OS_u1, _OS_ua, _OS_ul, _OS_uv, _S_D1, _S_D1_C1, _S_D1_C1_F, _S_D2, _S_D2_C2, _S_D2_C2_F, _S_FACE1, _S_FPN1, _S_L1, _S_L2, _S_LINE1, _S_LINE2, _S_LINE3, _S_LOOP1, _S_NF, _S_PS1, _S_PS2, _S_PSC, _S_Shaft, _S_V, _S_X1, _S_X2, _S_X3, _S_Y1, _S_Y3, _S_partShaft, _S_sectionLoc, _S_shaftRot, _S_u1, _S_ua, _S_ul, _S_uv, _VS, _airgapDataManager, _airgapManager, _housingDataManager, _housingManager, _laminationDataManager, _laminationManager, _magnetDataManager, _magnetManager, _magnetSkew, _shaftDataManager, _shaftManager, _slotDataManager, _slotManager, _slotSkew ]
+
+2020-10-24 11:39:05 [1u] Add _Motor
+Added to database: [ _IM_OD, _IM_OD_imp ]
+
+2020-10-24 11:39:05 [1u] Add _IM_OD_imp
+Added to database: [ _IM_ID, _IM_ID_imp, _IM_KCD, _IM_PN, _IM_uv ]
+
+2020-10-24 11:39:05 [2u] Add _IM_ID_imp
+Added to database: [ _IM_Teta ]
+
+2020-10-24 11:39:05 [3u] Add _IM_Teta
+Added to database: [ _IM_ID_k, _IM_ID_virt ]
+
+2020-10-24 11:39:05 [4u] Add _IM_ID_virt
+Added to database: [ _IM_DR_virt ]
+
+2020-10-24 11:39:05 [5u] Add _IM_DR_virt
+Added to database: [ _IM_Teta_virt ]
+
+2020-10-24 11:39:05 [6u] Add _IM_Teta_virt
+Added to database: [ _IM_TM_imp, _IM_TM_k ]
+
+2020-10-24 11:39:05 [7u] Add _IM_TM_imp
+Added to database: [ _IM_WM_imp, _IM_WM_k ]
+
+2020-10-24 11:39:05 [8u] Add _IM_WM_imp
+Added to database: [ _IM_H_imp, _IM_H_k ]
+
+2020-10-24 11:39:05 [9u] Add _IM_H_imp
+Added to database: [ _IM_R_imp, _IM_R_k ]
+
+2020-10-24 11:39:05 [9u] Add _IM_R_imp
+Added to database: [ _IM_TM, _IM_TM_func ]
+
+2020-10-24 11:39:05 [9u] Add _IM_TM
+Added to database: [ _IM_WM, _IM_WM_func ]
+
+2020-10-24 11:39:05 [9u] Add _IM_WM
+Added to database: [ _IM_H, _IM_H_func ]
+
+2020-10-24 11:39:05 [9u] Add _IM_H
+Added to database: [ _IM_R, _IM_R_func ]
+
+2020-10-24 11:39:05 [9u] Add _IM_R
+
+2020-10-24 11:39:05 [9u] Replace [ _IM_PN, _IM_ID, _IM_OD ]
+
+2020-10-24 11:39:05 [9u] Replace [ _IM_TM, _IM_WM, _IM_H, _IM_R ]
+
+2020-10-24 11:39:05 [2u] Replace [ _IM_PN, _IM_ID, _IM_OD, _IM_OD_imp, _IM_ID_imp, _IM_Teta, _IM_ID_virt, _IM_DR_virt, _IM_Teta_virt, _IM_TM_imp, _IM_WM_imp, _IM_H_imp, _IM_R_imp, _IM_TM, _IM_WM, _IM_H, _IM_R ]
+
+2020-10-24 11:39:05 [3u] Replace [ _S_D1, _S_L1, _S_D2, _S_L2 ]
+
+2020-10-24 11:39:05 [4u] Replace [ _S_D1, _S_L1, _S_D2, _S_L2 ]
+
+2020-10-24 11:39:05 [5u] Replace [ _IM_TM, _IM_WM, _IM_H, _IM_R ]
+
+2020-10-24 11:39:05 [5u] Replace FDA1
+Added to database: [ Psi_norm ]
+
+2020-10-24 11:41:55 [1u] Add Psi_norm
+Added to database: [ Psi ]
+
+2020-10-24 11:41:55 [2u] Add Psi
+Added to database: [ D_axis_flux_linkage__d ]
+
+2020-10-24 11:41:55 [3u] Add D_axis_flux_linkage__d
+Added to database: [ Q_axis_flux_linkage__q ]
+
+2020-10-24 11:41:55 [4u] Add Q_axis_flux_linkage__q
+Added to database: [ Electromagnetic ]
+
+2020-10-24 11:41:55 [5u] Add Electromagnetic
+Added to database: [ Iron_loss_inter_hysteresis ]
+
+2020-10-24 11:41:55 [6u] Add Iron_loss_inter_hysteresis
+Added to database: [ Iron_loss_inter_classical ]
+
+2020-10-24 11:41:55 [7u] Add Iron_loss_inter_classical
+Added to database: [ Iron_loss_inter_excess ]
+
+2020-10-24 11:41:55 [8u] Add Iron_loss_inter_excess
+Added to database: [ i, id, iq, revSpeed, revSpeed_norm, v, vd, vq ]
+
+2020-10-24 11:41:55 [9u] Add v
+Added to database: [ addLoss, ironLoss, mechLoss, usefulTorque ]
+
+2020-10-24 11:41:55 [9u] Add usefulTorque
+Added to database: [ jouleLoss, totalLoss ]
+
+2020-10-24 11:41:55 [9u] Add totalLoss
+Added to database: [ absorbedPower, effiency, electromagPower, usefulPower ]
+
+2020-10-24 11:41:55 [9u] Add effiency
+
+2020-10-24 11:41:55 [9u] Replace revSpeed_norm
+
+2020-10-24 11:41:55 [9u] Replace Psi_norm

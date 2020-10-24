@@ -1,0 +1,1096 @@
+Loading data model 'Flux_model.stp'
+Recording commands in 'C:/Users/Shyamanth R H/Documents/Altair/Flux2D_log.py'
+You use a Flux Student Edition.
+4 cores maximum are authorized.
+Force update of the number of cores to 4.
+ 
+                                                               FLUX2D_18.1.2 : 2D Finite Element Electromagnetism
+                                                                     2048 MiB N. + 127 MiB C. + 1024 MiB J.
+                                        HWU licensing used: FLUX STUDENT EDITION - C:\Users\Shyamanth R H\Documents\Altair\altair_lic.dat
+                                             Build 1809241851 Flux_Release_2018.1.2 CL18356 Win64 4/12 cores MSI:11272 Shyamanth_R_H
+ 
+11:18:16       0 sec. FLUX2D_18.1.2 kernel initialized
+
+Flux2D (application 2018.1.2) running
+
+Anomaly (1) - Warning:
+You use a Flux Student Edition.
+4 cores maximum are authorized.
+Force update of the number of cores to 4.
+
+Execution of command file 'C:/Users/Shyamanth R H/Documents/Altair/Flux2DModel.py' in batch mode ...
+Loading new project
+Creating ANONYM
+... end loading new project
+   ParameterGeom[FLUXMOTOR_VERSION] created
+ParameterGeom[1]
+   DomainType[DOMAIN1] modified
+   DomainType[DOMAIN1] modified
+   CoordSys[XY1] modified
+   Periodicity[PeriodicityNumberZaxis] created
+PeriodicityNumberZaxis[1]
+   ParameterGeom[_OS_SN] created
+ParameterGeom[2]
+   ParameterGeom[_IM_PN] created
+ParameterGeom[3]
+   ParameterGeom[_IM_ID] created
+ParameterGeom[4]
+   ParameterGeom[_IM_OD] created
+ParameterGeom[5]
+   ParameterGeom[_IM_SL] created
+ParameterGeom[6]
+   ParameterGeom[_OS_ID] created
+ParameterGeom[7]
+   ParameterGeom[_OS_OD] created
+ParameterGeom[8]
+   ParameterGeom[_OS_SL] created
+ParameterGeom[9]
+   ParameterGeom[_L_EX] created
+ParameterGeom[10]
+   ParameterGeom[_VS] created
+ParameterGeom[11]
+   ParameterGeom[_L_EN] created
+ParameterGeom[12]
+   ParameterGeom[_AG_L] created
+ParameterGeom[13]
+   ParameterGeom[_IM_OD] modified
+   ParameterGeom[_IM_SL] modified
+   ParameterGeom[_IM_UL] created
+ParameterGeom[14]
+   ParameterGeom[_IM_UA] created
+ParameterGeom[15]
+   ParameterGeom[_IM_UV] created
+ParameterGeom[16]
+   ParameterGeom[_IM_U1] created
+ParameterGeom[17]
+   ParameterGeom[_IM_TM] created
+ParameterGeom[18]
+   ParameterGeom[_IM_WM] created
+ParameterGeom[19]
+   ParameterGeom[_IM_H] created
+ParameterGeom[20]
+   ParameterGeom[_IM_R] created
+ParameterGeom[21]
+   ParameterGeom[_IM_OR] created
+ParameterGeom[22]
+   ParameterGeom[_IM_IR] created
+ParameterGeom[23]
+   ParameterGeom[_IM_VE] created
+ParameterGeom[24]
+   ParameterGeom[_IM_X1] created
+ParameterGeom[25]
+   ParameterGeom[_IM_Y1] created
+ParameterGeom[26]
+   ParameterGeom[_IM_X2] created
+ParameterGeom[27]
+   ParameterGeom[_IM_Y2] created
+ParameterGeom[28]
+   ParameterGeom[_IM_X3] created
+ParameterGeom[29]
+   ParameterGeom[_IM_Y3] created
+ParameterGeom[30]
+   ParameterGeom[_IM_R3] created
+ParameterGeom[31]
+   ParameterGeom[_IM_V3] created
+ParameterGeom[32]
+   ParameterGeom[_IM_X4] created
+ParameterGeom[33]
+   ParameterGeom[_IM_Y4] created
+ParameterGeom[34]
+   ParameterGeom[_IM_V4] created
+ParameterGeom[35]
+   ParameterGeom[_IM_R4] created
+ParameterGeom[36]
+   ParameterGeom[_IM_WA] created
+ParameterGeom[37]
+   ParameterGeom[_IM_TX5] created
+ParameterGeom[38]
+   ParameterGeom[_IM_V5] created
+ParameterGeom[39]
+   ParameterGeom[_IM_R5] created
+ParameterGeom[40]
+   ParameterGeom[_IM_X5] created
+ParameterGeom[41]
+   ParameterGeom[_IM_Y5] created
+ParameterGeom[42]
+   ParameterGeom[_IM_V6] created
+ParameterGeom[43]
+   ParameterGeom[_IM_X6] created
+ParameterGeom[44]
+   ParameterGeom[_IM_Y6] created
+ParameterGeom[45]
+   ParameterGeom[_IM_X5C6] created
+ParameterGeom[46]
+   ParameterGeom[_IM_Y5C6] created
+ParameterGeom[47]
+   ParameterGeom[_IM_X7] created
+ParameterGeom[48]
+   ParameterGeom[_IM_Y7] created
+ParameterGeom[49]
+   ParameterGeom[_IM_X8] created
+ParameterGeom[50]
+   ParameterGeom[_IM_Y8] created
+ParameterGeom[51]
+   ParameterGeom[_IM_X9] created
+ParameterGeom[52]
+   ParameterGeom[_IM_Y9] created
+ParameterGeom[53]
+   ParameterGeom[_IM_X10] created
+ParameterGeom[54]
+   ParameterGeom[_IM_Y10] created
+ParameterGeom[55]
+   ParameterGeom[_IM_X11] created
+ParameterGeom[56]
+   ParameterGeom[_IM_Y11] created
+ParameterGeom[57]
+   CoordSys[_IM_CART] created
+CoordSysCartesian[2]
+   CoordSys[_IM_POLAR] created
+CoordSysCylindrical[3]
+   CoordSys[_IM_SYM_CART] created
+CoordSysCartesian[4]
+   CoordSys[_IM_SYM_POLAR] created
+CoordSysCylindrical[5]
+   CoordSys[_IM_CS1] created
+CoordSysCartesian[6]
+   Point[1] created
+PointCoordinates[1]
+   Point[2] created
+PointCoordinates[2]
+   Point[3] created
+PointCoordinates[3]
+   Point[4] created
+PointCoordinates[4]
+   Point[5] created
+PointCoordinates[5]
+   Point[6] created
+PointCoordinates[6]
+   Point[7] created
+PointCoordinates[7]
+   Point[8] created
+PointCoordinates[8]
+   Point[9] created
+PointCoordinates[9]
+   Point[10] created
+PointCoordinates[10]
+   Point[11] created
+PointCoordinates[11]
+   Line[1] created
+LineSegment[1]
+   Line[2] created
+LineSegment[2]
+   Line[3] created
+LineSegment[3]
+   Line[4] created
+LineArcPivotCoord[4]
+   Line[5] created
+LineArcPivotCoord[5]
+   Line[6] created
+LineArcPivotCoord[6]
+   Line[7] created
+LineArcPivotCoord[7]
+   Line[8] created
+LineArcPivotCoord[8]
+   Line[9] created
+LineSegment[9]
+   Line[10] created
+LineArcPivotCoord[10]
+   Line[11] created
+LineSegment[11]
+   ParameterGeom[_OS_UL] created
+ParameterGeom[58]
+   ParameterGeom[_OS_UA] created
+ParameterGeom[59]
+   ParameterGeom[_OS_UV] created
+ParameterGeom[60]
+   ParameterGeom[_OS_U1] created
+ParameterGeom[61]
+   ParameterGeom[_OS_HS] created
+ParameterGeom[62]
+   ParameterGeom[_OS_WS2] created
+ParameterGeom[63]
+   ParameterGeom[_OS_H1] created
+ParameterGeom[64]
+   ParameterGeom[_OS_WS1] created
+ParameterGeom[65]
+   ParameterGeom[_OS_HO] created
+ParameterGeom[66]
+   ParameterGeom[_OS_WO] created
+ParameterGeom[67]
+   ParameterGeom[_OS_OR] created
+ParameterGeom[68]
+   ParameterGeom[_OS_IR] created
+ParameterGeom[69]
+   ParameterGeom[_OS_VE] created
+ParameterGeom[70]
+   ParameterGeom[_OS_X1] created
+ParameterGeom[71]
+   ParameterGeom[_OS_Y1] created
+ParameterGeom[72]
+   ParameterGeom[_OS_X2] created
+ParameterGeom[73]
+   ParameterGeom[_OS_Y2] created
+ParameterGeom[74]
+   ParameterGeom[_OS_X3] created
+ParameterGeom[75]
+   ParameterGeom[_OS_Y3] created
+ParameterGeom[76]
+   ParameterGeom[_OS_X5] created
+ParameterGeom[77]
+   ParameterGeom[_OS_Y5] created
+ParameterGeom[78]
+   ParameterGeom[_OS_X4C5] created
+ParameterGeom[79]
+   ParameterGeom[_OS_Y4C5] created
+ParameterGeom[80]
+   ParameterGeom[_OS_V1A] created
+ParameterGeom[81]
+   ParameterGeom[_OS_V1B] created
+ParameterGeom[82]
+   ParameterGeom[_OS_V1] created
+ParameterGeom[83]
+   ParameterGeom[_OS_X4] created
+ParameterGeom[84]
+   ParameterGeom[_OS_Y4] created
+ParameterGeom[85]
+   ParameterGeom[_OS_X6] created
+ParameterGeom[86]
+   ParameterGeom[_OS_Y6] created
+ParameterGeom[87]
+   ParameterGeom[_OS_X7] created
+ParameterGeom[88]
+   ParameterGeom[_OS_Y7] created
+ParameterGeom[89]
+   ParameterGeom[_OS_X8] created
+ParameterGeom[90]
+   ParameterGeom[_OS_Y8] created
+ParameterGeom[91]
+   ParameterGeom[_OS_ASA] created
+ParameterGeom[92]
+   ParameterGeom[_OS_ASB] created
+ParameterGeom[93]
+   ParameterGeom[_OS_ASC] created
+ParameterGeom[94]
+   ParameterGeom[_OS_ASD] created
+ParameterGeom[95]
+   ParameterGeom[_OS_AS] created
+ParameterGeom[96]
+   ParameterGeom[_OS_K] created
+ParameterGeom[97]
+   ParameterGeom[_OS_HTC] created
+ParameterGeom[98]
+   ParameterGeom[_OS_WC] created
+ParameterGeom[99]
+   ParameterGeom[_OS_XI1] created
+ParameterGeom[100]
+   ParameterGeom[_OS_YI1] created
+ParameterGeom[101]
+   ParameterGeom[_OS_XI2] created
+ParameterGeom[102]
+   ParameterGeom[_OS_YI2] created
+ParameterGeom[103]
+   ParameterGeom[_OS_XI3] created
+ParameterGeom[104]
+   ParameterGeom[_OS_YI3] created
+ParameterGeom[105]
+   ParameterGeom[_OS_YI4] created
+ParameterGeom[106]
+   CoordSys[_OS_CART] created
+CoordSysCartesian[7]
+   CoordSys[_OS_POLAR] created
+CoordSysCylindrical[8]
+   CoordSys[_OS_SYM_CART] created
+CoordSysCartesian[9]
+   CoordSys[_OS_SYM_POLAR] created
+CoordSysCylindrical[10]
+   Point[12] created
+PointCoordinates[12]
+   Point[13] created
+PointCoordinates[13]
+   Point[14] created
+PointCoordinates[14]
+   Point[15] created
+PointCoordinates[15]
+   Point[16] created
+PointCoordinates[16]
+   Point[17] created
+PointCoordinates[17]
+   Point[18] created
+PointCoordinates[18]
+   Point[19] created
+PointCoordinates[19]
+   Point[20] created
+PointCoordinates[20]
+   Point[21] created
+PointCoordinates[21]
+   Point[22] created
+PointCoordinates[22]
+   Point[23] created
+PointCoordinates[23]
+   Line[12] created
+LineArcPivotCoord[12]
+   Line[13] created
+LineArcPivotCoord[13]
+   Line[14] created
+LineArcPivotCoord[14]
+   Line[15] created
+LineSegment[15]
+   Line[16] created
+LineSegment[16]
+   Line[17] created
+LineSegment[17]
+   Line[18] created
+LineArcPivotCoord[18]
+   Line[19] created
+LineSegment[19]
+   Line[20] created
+LineSegment[20]
+   Line[21] created
+LineSegment[21]
+   Line[22] created
+LineSegment[22]
+   Line[23] created
+LineSegment[23]
+   Line[24] created
+LineSegment[24]
+   ParameterGeom[_S_UL] created
+ParameterGeom[107]
+   ParameterGeom[_S_UA] created
+ParameterGeom[108]
+   ParameterGeom[_S_UV] created
+ParameterGeom[109]
+   ParameterGeom[_S_U1] created
+ParameterGeom[110]
+   ParameterGeom[_S_D1] created
+ParameterGeom[111]
+   ParameterGeom[_S_L1] created
+ParameterGeom[112]
+   ParameterGeom[_S_D2] created
+ParameterGeom[113]
+   ParameterGeom[_S_L2] created
+ParameterGeom[114]
+   ParameterGeom[_S_V] created
+ParameterGeom[115]
+   ParameterGeom[_S_X1] created
+ParameterGeom[116]
+   ParameterGeom[_S_Y1] created
+ParameterGeom[117]
+   ParameterGeom[_S_X2] created
+
+ParameterGeom[118]
+   ParameterGeom[_S_X3] created
+ParameterGeom[119]
+   ParameterGeom[_S_Y3] created
+ParameterGeom[120]
+   Point[24] created
+PointCoordinates[24]
+   Point[25] created
+PointCoordinates[25]
+   Point[26] created
+PointCoordinates[26]
+   Line[25] created
+LineArcPivotCoord[25]
+   ParameterGeom[_L_UL] created
+ParameterGeom[121]
+   ParameterGeom[_L_UA] created
+ParameterGeom[122]
+   ParameterGeom[_L_UV] created
+ParameterGeom[123]
+   ParameterGeom[_L_U1] created
+ParameterGeom[124]
+   ParameterGeom[_L_R] created
+ParameterGeom[125]
+   ParameterGeom[_L_V] created
+ParameterGeom[126]
+   ParameterGeom[_L_X0] created
+ParameterGeom[127]
+   ParameterGeom[_L_Y0] created
+ParameterGeom[128]
+   ParameterGeom[_L_X1] created
+ParameterGeom[129]
+   ParameterGeom[_L_Y1] created
+ParameterGeom[130]
+   ParameterGeom[_L_X2] created
+ParameterGeom[131]
+   ParameterGeom[_L_Y2] created
+ParameterGeom[132]
+   ParameterGeom[_L_X3] created
+ParameterGeom[133]
+   ParameterGeom[_L_Y3] created
+ParameterGeom[134]
+   ParameterGeom[_L_X4] created
+ParameterGeom[135]
+   ParameterGeom[_L_Y4] created
+ParameterGeom[136]
+   ParameterGeom[_L_X5] created
+ParameterGeom[137]
+   ParameterGeom[_L_Y5] created
+ParameterGeom[138]
+   ParameterGeom[_L_X6] created
+ParameterGeom[139]
+   ParameterGeom[_L_Y6] created
+ParameterGeom[140]
+   Point[27] created
+PointCoordinates[27]
+   Point[28] created
+PointCoordinates[28]
+   Point[29] created
+PointCoordinates[29]
+   Point[30] created
+PointCoordinates[30]
+   Line[26] created
+LineSegment[26]
+   Line[27] created
+LineArcPivotCoord[27]
+   Line[28] created
+LineSegment[28]
+   ParameterGeom[_AG_UL] created
+ParameterGeom[141]
+   ParameterGeom[_AG_UA] created
+ParameterGeom[142]
+   ParameterGeom[_AG_UV] created
+ParameterGeom[143]
+   ParameterGeom[_AG_U1] created
+ParameterGeom[144]
+   ParameterGeom[_AG_V] created
+ParameterGeom[145]
+   ParameterGeom[_AG_X0] created
+ParameterGeom[146]
+   ParameterGeom[_AG_Y0] created
+ParameterGeom[147]
+   ParameterGeom[_AG_X1] created
+ParameterGeom[148]
+   ParameterGeom[_AG_Y1] created
+ParameterGeom[149]
+   ParameterGeom[_AG_X2] created
+ParameterGeom[150]
+   ParameterGeom[_AG_Y2] created
+ParameterGeom[151]
+   ParameterGeom[_AG_X4] created
+ParameterGeom[152]
+   ParameterGeom[_AG_Y4] created
+ParameterGeom[153]
+   ParameterGeom[_AG_X3] created
+ParameterGeom[154]
+   ParameterGeom[_AG_Y3] created
+ParameterGeom[155]
+   ParameterGeom[_AG_X5] created
+ParameterGeom[156]
+   ParameterGeom[_AG_Y5] created
+ParameterGeom[157]
+   ParameterGeom[_AG_X6] created
+ParameterGeom[158]
+   ParameterGeom[_AG_Y6] created
+ParameterGeom[159]
+   Point[31] created
+PointCoordinates[31]
+   Point[32] created
+PointCoordinates[32]
+   Line[29] created
+LineArcPivotCoord[29]
+   Transf[_IM_MAGNETSYM] created
+TransfSymmetryLine2PT[1]
+Creation of 11 line(s) done :
+30  31  32  33  34  35  36  37  38  39  40
+   propagate executed
+   Transf[_IM_MAGNETROT] created
+TransfRotation3AnglesPivotCoord[2]
+Creation of 22 line(s) done :
+41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62
+   propagate executed
+{'stateOfLines': array('i', [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'points': [Point[5], Point[7], Point[9], Point[41], Point[42], Point[43], Point[44], Point[45], Point[46], Point[47], Point[48], Point[49], Point[50], Point[51], Point[52], Point[53], Point[54], Point[55], Point[56]], 'stateOfPoints': array('i', [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'lines': [Line[41], Line[42], Line[43], Line[44], Line[45], Line[46], Line[47], Line[48], Line[49], Line[50], Line[51], Line[52], Line[53], Line[54], Line[55], Line[56], Line[57], Line[58], Line[59], Line[60], Line[61], Line[62]]}
+   Transf[_OS_SLOT_SYM] created
+TransfSymmetryLine2PT[3]
+Creation of 11 line(s) done :
+63  64  65  66  67  68  69  70  71  72  73
+   propagate executed
+   Transf[_OS_SLOTROT] created
+TransfRotation3AnglesPivotCoord[4]
+Creation of 120 line(s) done :
+74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99  100  101  102  103  104  105  106  107  108  109  110  111  112  113  114  115  116  117  118  119  120  121  122  123  124  125  126
+127  128  129  130  131  132  133  134  135  136  137  138  139  140  141  142  143  144  145  146  147  148  149  150  151  152  153  154  155  156  157  158  159  160  161  162  163  164  165  166  167  168  169  170  171  172  173  174
+175  176  177  178  179  180  181  182  183  184  185  186  187  188  189  190  191  192  193
+   propagate executed
+{'stateOfLines': array('i', [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'points': [Point[13], Point[16], Point[20], Point[65], Point[66], Point[67], Point[68], Point[69], Point[70], Point[71], Point[72], Point[73], Point[74], Point[75], Point[76], Point[77], Point[78], Point[79], Point[80], Point[81], Point[82], Point[83], Point[84], Point[85], Point[86], Point[87], Point[88], Point[89], Point[90], Point[91], Point[92], Point[93], Point[94], Point[95], Point[96], Point[97], Point[98], Point[99], Point[100], Point[101], Point[102], Point[103], Point[104], Point[105], Point[106], Point[107], Point[108], Point[109], Point[110], Point[111], Point[112], Point[113], Point[114], Point[115], Point[116], Point[117], Point[118], Point[119], Point[120], Point[121], Point[122], Point[123], Point[124], Point[125], Point[126], Point[127], Point[128], Point[129], Point[130], Point[131], Point[132], Point[133], Point[134], Point[135], Point[136], Point[137], Point[138], Point[139], Point[140], Point[141], Point[142], Point[143], Point[144], Point[145], Point[146], Point[147], Point[148], Point[149]], 'stateOfPoints': array('i', [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'lines': [Line[74], Line[75], Line[76], Line[77], Line[78], Line[79], Line[80], Line[81], Line[82], Line[83], Line[84], Line[85], Line[86], Line[87], Line[88], Line[89], Line[90], Line[91], Line[92], Line[93], Line[94], Line[95], Line[96], Line[97], Line[98], Line[99], Line[100], Line[101], Line[102], Line[103], Line[104], Line[105], Line[106], Line[107], Line[108], Line[109], Line[110], Line[111], Line[112], Line[113], Line[114], Line[115], Line[116], Line[117], Line[118], Line[119], Line[120], Line[121], Line[122], Line[123], Line[124], Line[125], Line[126], Line[127], Line[128], Line[129], Line[130], Line[131], Line[132], Line[133], Line[134], Line[135], Line[136], Line[137], Line[138], Line[139], Line[140], Line[141], Line[142], Line[143], Line[144], Line[145], Line[146], Line[147], Line[148], Line[149], Line[150], Line[151], Line[152], Line[153], Line[154], Line[155], Line[156], Line[157], Line[158], Line[159], Line[160], Line[161], Line[162], Line[163], Line[164], Line[165], Line[166], Line[167], Line[168], Line[169], Line[170], Line[171], Line[172], Line[173], Line[174], Line[175], Line[176], Line[177], Line[178], Line[179], Line[180], Line[181], Line[182], Line[183], Line[184], Line[185], Line[186], Line[187], Line[188], Line[189], Line[190], Line[191], Line[192], Line[193]]}
+   Transf[_S_SHAFTROT] created
+TransfRotation3AnglesPivotCoord[5]
+Creation of 1 line(s) done :
+194
+   propagate executed
+{'stateOfLines': array('i', [0]), 'points': [Point[25], Point[150]], 'stateOfPoints': array('i', [1, 0]), 'lines': [Line[194]]}
+   Transf[_AG_AIRGAPROT] created
+TransfRotation3AnglesPivotCoord[6]
+Creation of 1 line(s) done :
+195
+   propagate executed
+{'stateOfLines': array('i', [0]), 'points': [Point[32], Point[151]], 'stateOfPoints': array('i', [1, 0]), 'lines': [Line[195]]}
+   InfiniteBox[InfiniteBoxDisc] created
+InfiniteBoxDisc[1]
+   complete2D executed
+ 
+Multiplying coefficient for the flux in the coils and for coupling with electrical circuits :
+Automatically calculated value = 4
+ 
+   Application[2] created
+ApplicationMagneticDC2D[2]
+   MechanicalSet[STATOR] created
+MechanicalSetFixed[1]
+   MechanicalSet[ROTOR] created
+MechanicalSetRotation1Axis[2]
+   CoilConductor[PHASE_1] created
+CurrentStrandedCoil[1]
+   CoilConductor[PHASE_2] created
+CurrentStrandedCoil[2]
+   CoilConductor[PHASE_3] created
+CurrentStrandedCoil[3]
+   Sensor[MAG_FLUX_PH1] created
+predefine[1]
+   Sensor[MAG_FLUX_PH2] created
+predefine[2]
+   Sensor[MAG_FLUX_PH3] created
+predefine[3]
+   VariationParameter[TURNS] created
+VariationParameterPilot[61]
+   Color[FLUID] created
+
+Color[9]
+   Color[SHAFT] created
+Color[10]
+   Color[SHAFT_RING] created
+Color[11]
+   Color[YOKE] created
+Color[12]
+   Color[NORTH_MAGNET] created
+Color[13]
+   Color[SOUTH_MAGNET] created
+Color[14]
+   Color[BAR] created
+Color[15]
+   Color[INSULATOR] created
+Color[16]
+   Color[PHASE_1_POS] created
+Color[17]
+   Color[PHASE_1_NEG] created
+Color[18]
+   Color[PHASE_2_POS] created
+Color[19]
+   Color[PHASE_2_NEG] created
+Color[20]
+   Color[PHASE_3_POS] created
+Color[21]
+   Color[PHASE_3_NEG] created
+Color[22]
+   Color[QUOTE] created
+Color[23]
+   Color[MECHANICAL_DEVICE] created
+Color[24]
+   Color[FERROMAGNETIC_WEDGE] created
+Color[25]
+   Color[HUB] created
+Color[26]
+   Material[_B_NDFEB_1320_1400] created
+Material[1]
+   Material[_B_M400_65A] created
+Material[2]
+   Material[_B_M330_35A] created
+Material[3]
+   Material[_B_COPPER] created
+Material[4]
+   Material[_B_NOMEX_130] created
+Material[5]
+   Material[_B_EN_1_1151] created
+Material[6]
+   RegionFace[_S_SHAFT] created
+Loss properties suitable only for laminated region
+
+RegionFace[2]
+   RegionFace[_S_SHAFT] modified
+   assignRegion executed
+   RegionFace[_IM_MAGNET_1] created
+RegionFace[3]
+ 
+The following surface regions are empty:
+3
+Modification possible using ASSIGN_REGIONS FACE.
+ 
+The following faces are not inside any surface region:
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63
+64
+Please use the "Assign regions to faces" command in the "Physics" menu.
+ 
+   orientRegSurfMaterial executed
+   RegionFace[_IM_MAGNET_1] modified
+ 
+The following surface regions are empty:
+3
+Modification possible using ASSIGN_REGIONS FACE.
+ 
+   assignRegion executed
+   CoordSys[_IM_CS1_1] created
+CoordSysPropagated[11]
+   RegionFace[_IM_MAGNET_2] created
+RegionFace[4]
+ 
+The following surface regions are empty:
+4
+Modification possible using ASSIGN_REGIONS FACE.
+ 
+The following faces are not inside any surface region:
+2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63
+64
+Please use the "Assign regions to faces" command in the "Physics" menu.
+ 
+   orientRegSurfMaterial executed
+   RegionFace[_IM_MAGNET_2] modified
+ 
+The following surface regions are empty:
+4
+Modification possible using ASSIGN_REGIONS FACE.
+ 
+   assignRegion executed
+   RegionFace[_IM_YOKE] created
+RegionFace[5]
+   RegionFace[_IM_YOKE] modified
+   assignRegion executed
+   RegionFace[_IM_BRIDGE] created
+RegionFace[6]
+   RegionFace[_IM_BRIDGE] modified
+   assignRegion executed
+   RegionFace[_IM_POLE_SHOE] created
+RegionFace[7]
+   RegionFace[_IM_POLE_SHOE] modified
+   assignRegion executed
+   RegionFace[_IM_INTER_POLE] created
+RegionFace[8]
+   RegionFace[_IM_INTER_POLE] modified
+   assignRegion executed
+   RegionFace[_IM_EDGE] created
+RegionFace[9]
+   RegionFace[_IM_EDGE] modified
+   assignRegion executed
+   RegionFace[_OS_YOKE] created
+RegionFace[10]
+   RegionFace[_OS_YOKE] modified
+   assignRegion executed
+   RegionFace[_OS_TOOTH] created
+RegionFace[11]
+   RegionFace[_OS_TOOTH] modified
+   assignRegion executed
+   RegionFace[_OS_TOOTH_FOOT] created
+RegionFace[12]
+   RegionFace[_OS_TOOTH_FOOT] modified
+   assignRegion executed
+   RegionFace[_OS_INSULATING_WEDGE] created
+RegionFace[13]
+   RegionFace[_OS_INSULATING_WEDGE] modified
+   assignRegion executed
+   RegionFace[_AG_INNER] created
+RegionFace[14]
+   RegionFace[_AG_INNER] modified
+   RegionFace[_AG_OUTER] created
+RegionFace[15]
+   RegionFace[_AG_OUTER] modified
+   assignRegion executed
+   assignRegion executed
+   RegionFace[PHASE_1_GO] created
+RegionFace[16]
+   RegionFace[PHASE_1_GO] modified
+   assignRegion executed
+   RegionFace[PHASE_1_RET] created
+RegionFace[17]
+   RegionFace[PHASE_1_RET] modified
+   assignRegion executed
+   RegionFace[PHASE_2_GO] created
+RegionFace[18]
+   RegionFace[PHASE_2_GO] modified
+   assignRegion executed
+   RegionFace[PHASE_2_RET] created
+RegionFace[19]
+   RegionFace[PHASE_2_RET] modified
+   assignRegion executed
+   RegionFace[PHASE_3_GO] created
+RegionFace[20]
+   RegionFace[PHASE_3_GO] modified
+   assignRegion executed
+   RegionFace[PHASE_3_RET] created
+RegionFace[21]
+   RegionFace[PHASE_3_RET] modified
+   assignRegion executed
+   RegionFace[INFINITE] modified
+   RegionFace[INFINITE] modified
+   RegionFace[AIR] created
+RegionFace[22]
+   RegionFace[AIR] modified
+   assignRegion executed
+   ParameterGeom[AG_MESH_COEF] created
+ParameterGeom[160]
+   AidedMesh[1] modified
+   RelaxFace[INACTIVFACERELAXATION] created
+RelaxFaceInactive[2]
+   RelaxLine[INACTIVLINERELAXATION] created
+RelaxLineInactive[2]
+   Face[65] modified
+   Face[65] modified
+   Line[196, 199, 197, 198] modified
+   MeshPoint[INFINITEMESHPOINT] created
+MeshPoint[5]
+   Point[152, 153, 154, 155, 156, 157] modified
+   AidedMesh[1] modified
+   Face[7, 13] modified
+   Line[5, 10, 18, 29, 34, 39, 45, 50 ..] modified
+   Line[5, 10, 18, 29, 34, 39, 45, 50 ..] modified
+   MeshPoint[AIRGAPMESHPOINT] created
+MeshPoint[6]
+   Point[6, 7, 11, 18, 19, 20, 23, 31 ..] modified
+   MeshLine[MESHLINE_DEFLR] created
+MeshLineRelativeDeviation[3]
+   ParameterGeom[TMP] created
+ParameterGeom[161]
+Mode avance active : utilisateur averti seulement.
+Mode avance active : pas de garantie de resultat en mode avance.
+Mode avance desactive
+Length of line 5  : 0.006098 meter
+ 
+   computeLengthLines executed
+Length of line 45  : 0.006098 meter
+ 
+   computeLengthLines executed
+Length of line 50  : 0.005369 meter
+ 
+   computeLengthLines executed
+Length of line 61  : 0.005369 meter
+ 
+   computeLengthLines executed
+Length of line 56  : 0.006098 meter
+ 
+   computeLengthLines executed
+Length of line 195  : 0.023248 meter
+ 
+   computeLengthLines executed
+Length of line 29  : 0.023248 meter
+ 
+   computeLengthLines executed
+Length of line 34  : 0.006098 meter
+ 
+   computeLengthLines executed
+Length of line 39  : 0.005369 meter
+ 
+   computeLengthLines executed
+Length of line 10  : 0.005369 meter
+ 
+   computeLengthLines executed
+Length of line 69  : 0.003507 meter
+ 
+   computeLengthLines executed
+Length of line 173  : 0.003507 meter
+ 
+   computeLengthLines executed
+Length of line 118  : 0.003507 meter
+ 
+   computeLengthLines executed
+Length of line 172  : 0.003507 meter
+ 
+   computeLengthLines executed
+Length of line 117  : 0.003507 meter
+ 
+   computeLengthLines executed
+Length of line 171  : 0.003507 meter
+ 
+   computeLengthLines executed
+Length of line 116  : 0.003507 meter
+ 
+   computeLengthLines executed
+Length of line 170  : 0.003507 meter
+ 
+   computeLengthLines executed
+Length of line 115  : 0.003507 meter
+ 
+   computeLengthLines executed
+Length of line 169  : 0.003507 meter
+ 
+   computeLengthLines executed
+Length of line 114  : 0.003507 meter
+ 
+   computeLengthLines executed
+Length of line 18  : 0.003507 meter
+ 
+   computeLengthLines executed
+   ParameterGeom[TMP] deleted
+   RelaxFace[STATORTOOTHFACERELAXATION] created
+RelaxFaceUser[3]
+   RelaxLine[STATORTOOTHLINERELAXATION] created
+RelaxLineUser[3]
+   Face[9, 28, 50, 51, 52, 53, 63] modified
+   Line[12, 14, 63, 65, 66, 67, 84, 85 ..] modified
+   Line[27, 26, 28] modified
+   Face[8] modified
+   Line[201] modified
+ 
+Meshing of 65 faces
+ 
+Verifying of linked lines ...
+ 
+Automatic mesh of 219 lines
+11:18:26       9 sec. Internal meshing of the lines
+ 
+Automatic meshing of 65  faces
+Boundary meshing of the faces achieved in 1 iteration(s)
+Internal meshing of the 65 faces
+Faces internal meshing achieved
+Boundary meshing of the faces achieved in 1 iteration(s)
+Internal meshing of the 65 faces
+Faces internal meshing achieved
+Boundary meshing of the faces achieved in 1 iteration(s)
+Internal meshing of the 65 faces
+Faces internal meshing achieved
+End of topological mesh regularization
+11:18:26      10 sec.    1482 1st order surfacic elements created
+ 
+11:18:26      10 sec. Generating 2nd order elements is running
+  Total number of nodes --> 3035
+11:18:26      10 sec. End generating 2nd order elements
+ 
+Surface elements :
+   Number of elements not evaluated     : 0  %
+   Number of excellent quality elements : 86.17  %
+   Number of good quality elements      : 5.8  %
+   Number of average quality elements   : 8.03  %
+   Number of poor quality elements      : 0  %
+   meshFaces executed
+ 
+11:18:26      10 sec. Generating 2nd order elements is running
+  Total number of nodes --> 3035
+11:18:26      10 sec. End generating 2nd order elements
+   generateSecondOrderElements executed
+   VariationParameter[ROTOR_INIT_POS] created
+VariationParameterFormula[63]
+
+   VariationParameter[REPRESENTED_POLE_NUMBER] created
+VariationParameterFormula[64]
+   VariationParameter[TEMP_MAGNET] created
+VariationParameterPilot[65]
+   VariationParameter[CTRL_ANGLE] created
+VariationParameterPilot[66]
+   VariationParameter[I_RMS] created
+VariationParameterPilot[67]
+   VariationParameter[I_PEAK] created
+VariationParameterFormula[68]
+   VariationParameter[THETA] created
+AngPos(ROTOR) : Value not available : set to not a number
+
+VariationParameterFormula[69]
+   VariationParameter[I1] created
+VariationParameterFormula[72]
+   VariationParameter[J1] created
+VariationParameterFormula[73]
+   CoilConductor[PHASE_1] modified
+   VariationParameter[I2] created
+VariationParameterFormula[74]
+   VariationParameter[J2] created
+VariationParameterFormula[75]
+   CoilConductor[PHASE_2] modified
+   VariationParameter[I3] created
+VariationParameterFormula[76]
+   VariationParameter[J3] created
+VariationParameterFormula[77]
+   CoilConductor[PHASE_3] modified
+   Material[_B_NDFEB_1320_1400] modified
+   VariationParameter[X_PHASE] created
+VariationParameterFormula[78]
+   ParameterGeom[ZIM_UL] modified
+   ParameterGeom[ZIM_UA] modified
+   ParameterGeom[ZIM_UV] modified
+   ParameterGeom[ZIM_U1] modified
+   ParameterGeom[IM_TM] modified
+   ParameterGeom[IM_WM] modified
+   ParameterGeom[IM_H] modified
+   ParameterGeom[IM_R] modified
+   ParameterGeom[ZIM_OR] modified
+   ParameterGeom[ZIM_IR] modified
+   ParameterGeom[ZIM_VE] modified
+   ParameterGeom[ZIM_X1] modified
+   ParameterGeom[ZIM_Y1] modified
+   ParameterGeom[ZIM_X2] modified
+   ParameterGeom[ZIM_Y2] modified
+   ParameterGeom[ZIM_X3] modified
+   ParameterGeom[ZIM_Y3] modified
+   ParameterGeom[ZIM_R3] modified
+   ParameterGeom[ZIM_V3] modified
+   ParameterGeom[ZIM_X4] modified
+   ParameterGeom[ZIM_Y4] modified
+   ParameterGeom[ZIM_V4] modified
+   ParameterGeom[ZIM_R4] modified
+   ParameterGeom[ZIM_WA] modified
+   ParameterGeom[ZIM_TX5] modified
+   ParameterGeom[ZIM_V5] modified
+   ParameterGeom[ZIM_R5] modified
+   ParameterGeom[ZIM_X5] modified
+   ParameterGeom[ZIM_Y5] modified
+   ParameterGeom[ZIM_V6] modified
+   ParameterGeom[ZIM_X6] modified
+   ParameterGeom[ZIM_Y6] modified
+   ParameterGeom[ZIM_X5C6] modified
+   ParameterGeom[ZIM_Y5C6] modified
+   ParameterGeom[ZIM_X7] modified
+   ParameterGeom[ZIM_Y7] modified
+   ParameterGeom[ZIM_X8] modified
+   ParameterGeom[ZIM_Y8] modified
+   ParameterGeom[ZIM_X9] modified
+   ParameterGeom[ZIM_Y9] modified
+   ParameterGeom[ZIM_X10] modified
+   ParameterGeom[ZIM_Y10] modified
+   ParameterGeom[ZIM_X11] modified
+   ParameterGeom[ZIM_Y11] modified
+   ParameterGeom[ZOS_UL] modified
+   ParameterGeom[ZOS_UA] modified
+   ParameterGeom[ZOS_UV] modified
+   ParameterGeom[ZOS_U1] modified
+   ParameterGeom[OS_HS] modified
+   ParameterGeom[OS_WS2] modified
+   ParameterGeom[OS_H1] modified
+   ParameterGeom[OS_WS1] modified
+   ParameterGeom[OS_HO] modified
+   ParameterGeom[OS_WO] modified
+   ParameterGeom[ZOS_OR] modified
+   ParameterGeom[ZOS_IR] modified
+   ParameterGeom[ZOS_VE] modified
+   ParameterGeom[ZOS_X1] modified
+   ParameterGeom[ZOS_Y1] modified
+   ParameterGeom[ZOS_X2] modified
+   ParameterGeom[ZOS_Y2] modified
+   ParameterGeom[ZOS_X3] modified
+   ParameterGeom[ZOS_Y3] modified
+   ParameterGeom[ZOS_X5] modified
+   ParameterGeom[ZOS_Y5] modified
+   ParameterGeom[ZOS_X4C5] modified
+   ParameterGeom[ZOS_Y4C5] modified
+   ParameterGeom[ZOS_V1A] modified
+   ParameterGeom[ZOS_V1B] modified
+   ParameterGeom[ZOS_V1] modified
+   ParameterGeom[ZOS_X4] modified
+   ParameterGeom[ZOS_Y4] modified
+   ParameterGeom[ZOS_X6] modified
+   ParameterGeom[ZOS_Y6] modified
+   ParameterGeom[ZOS_X7] modified
+   ParameterGeom[ZOS_Y7] modified
+   ParameterGeom[ZOS_X8] modified
+   ParameterGeom[ZOS_Y8] modified
+   ParameterGeom[ZOS_ASA] modified
+   ParameterGeom[ZOS_ASB] modified
+   ParameterGeom[ZOS_ASC] modified
+   ParameterGeom[ZOS_ASD] modified
+   ParameterGeom[ZOS_AS] modified
+   ParameterGeom[ZOS_K] modified
+   ParameterGeom[ZOS_HTC] modified
+   ParameterGeom[ZOS_WC] modified
+   ParameterGeom[ZOS_XI1] modified
+   ParameterGeom[ZOS_YI1] modified
+   ParameterGeom[ZOS_XI2] modified
+   ParameterGeom[ZOS_YI2] modified
+   ParameterGeom[ZOS_XI3] modified
+   ParameterGeom[ZOS_YI3] modified
+   ParameterGeom[ZOS_YI4] modified
+   ParameterGeom[ZS_UL] modified
+   ParameterGeom[ZS_UA] modified
+   ParameterGeom[ZS_UV] modified
+   ParameterGeom[ZS_U1] modified
+   ParameterGeom[S_D1] modified
+   ParameterGeom[S_L1] modified
+   ParameterGeom[S_D2] modified
+   ParameterGeom[S_L2] modified
+   ParameterGeom[ZS_V] modified
+   ParameterGeom[ZS_X1] modified
+   ParameterGeom[ZS_Y1] modified
+   ParameterGeom[ZS_X2] modified
+   ParameterGeom[ZS_X3] modified
+   ParameterGeom[ZS_Y3] modified
+   ParameterGeom[ZL_UL] modified
+   ParameterGeom[ZL_UA] modified
+   ParameterGeom[ZL_UV] modified
+   ParameterGeom[ZL_U1] modified
+   ParameterGeom[L_R] modified
+   ParameterGeom[ZL_V] modified
+   ParameterGeom[ZL_X0] modified
+   ParameterGeom[ZL_Y0] modified
+   ParameterGeom[ZL_X1] modified
+   ParameterGeom[ZL_Y1] modified
+   ParameterGeom[ZL_X2] modified
+   ParameterGeom[ZL_Y2] modified
+   ParameterGeom[ZL_X3] modified
+   ParameterGeom[ZL_Y3] modified
+   ParameterGeom[ZL_X4] modified
+   ParameterGeom[ZL_Y4] modified
+   ParameterGeom[ZL_X5] modified
+   ParameterGeom[ZL_Y5] modified
+   ParameterGeom[ZL_X6] modified
+   ParameterGeom[ZL_Y6] modified
+   ParameterGeom[ZAG_UL] modified
+   ParameterGeom[ZAG_UA] modified
+   ParameterGeom[ZAG_UV] modified
+   ParameterGeom[ZAG_U1] modified
+   ParameterGeom[ZAG_V] modified
+   ParameterGeom[ZAG_X0] modified
+   ParameterGeom[ZAG_Y0] modified
+   ParameterGeom[ZAG_X1] modified
+   ParameterGeom[ZAG_Y1] modified
+   ParameterGeom[ZAG_X2] modified
+   ParameterGeom[ZAG_Y2] modified
+   ParameterGeom[ZAG_X4] modified
+   ParameterGeom[ZAG_Y4] modified
+   ParameterGeom[ZAG_X3] modified
+   ParameterGeom[ZAG_Y3] modified
+   ParameterGeom[ZAG_X5] modified
+   ParameterGeom[ZAG_Y5] modified
+   ParameterGeom[ZAG_X6] modified
+   ParameterGeom[ZAG_Y6] modified
+   RegionFace[IM_YOKE] modified
+   RegionFace[IM_BRIDGE] modified
+   RegionFace[IM_POLE_SHOE] modified
+   RegionFace[IM_INTER_POLE] modified
+   RegionFace[IM_EDGE] modified
+   RegionFace[OS_YOKE] modified
+   RegionFace[OS_TOOTH] modified
+   RegionFace[OS_TOOTH_FOOT] modified
+   RegionFace[OS_INSULATING_WEDGE] modified
+   RegionFace[S_SHAFT] modified
+Loss properties suitable only for laminated region
+
+   RegionFace[AG_INNER] modified
+   RegionFace[AG_OUTER] modified
+   RegionFace[IM_MAGNET_1] modified
+   RegionFace[IM_MAGNET_2] modified
+   RegionFace[INFINITE] modified
+   Material[B_NDFEB_1320_1400] modified
+   Material[B_M400_65A] modified
+   Material[B_M330_35A] modified
+   Material[B_COPPER] modified
+   Material[B_NOMEX_130] modified
+   Material[B_EN_1_1151] modified
+
+End execution of command file 'C:/Users/Shyamanth R H/Documents/Altair/Flux2DModel.py' in batch mode ...
+Closing project
+Close of ANONYM
+... end closing project
+Maximum use of 336 MiB. in numerical memory
+For the dynamic table ID 502092
+Maximum use of 7 MiB. in character memory
+For the dynamic table ID 287641
+ 
+   NUMZM         ADRES    SUIV    PREC    CODE          LONG           UID     PROP4   ...
+ 
+       1             5       6       4   R08 5             0             0
+       2             1       5       5   C80 8             0             0
+       4     268435457       1       6   R08 5             0             0
+       5       1677722       2       2   C80 8             0             0
+       6             5       4       1   I04 2        600037             0
+Numerical memory: Total length                   = 268435456
+(8 byte words)    Present length                 =    600041
+                  Useful length                  =    600041
+                  Number of numerical arrays     =         3
+Character memory: Total length                   =   1677721
+(80 byte words)   Present length                 =         0
+                  Useful length                  =         0
+                  Number of character arrays     =         2
+Maximum number of arrays (num+char)              =    100006
+ 
+11:23:23     306 sec. FLUX2D_18.1.2 kernel finalized

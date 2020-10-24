@@ -1,0 +1,1932 @@
+# -*- coding: UTF-8 -*-
+# BEGIN_OF_ENCODED_SECTION
+
+# Archive produced by jlc.util.reflect.JythonFormatter (Sat Oct 24 11:05:08 IST 2020)
+
+import jlc
+execfile(jlc.config.JlcSystemProperties.getJlcResources('imports.py'))
+
+JLC_DATA_VERSION= JlcVersion('Motor', 'MOTOR_V2019-01-00', '', [
+   JlcVersion('Got', 'GOT_V2004-06-04', '', [], 'GOT_V2017-01-20')], 'MOTOR_V2019-01-00')
+JLC_DATA_WRITER='Shyamanth R H'
+JLC_DATA_WRITING='Sat Oct 24 11:05:08 IST 2020'
+execfile(jlc.config.JlcSystemProperties.getJlcResources('upgrades.py'))
+
+ 
+baseUnit820=BaseUnit("metre", "m", "Length", "Space")
+ 
+_IM_ID=FmParameterIo("_IM_ID", "ROTOR_INNER_DIAMETER", 0.02, baseUnit820)
+ 
+_IM_OD=FmParameterIo("_IM_OD", "ROTOR_OUTER_DIAMETER", 0.0584, baseUnit820)
+ 
+_IM_SL=FmParameterIo("_IM_SL", "ROTOR_LENGTH", 0.02, baseUnit820)
+ 
+_OS_ID=FmParameterIo("_OS_ID", "STATOR_INNER_DIAMETER", 0.06, baseUnit820)
+ 
+_OS_OD=FmParameterIo("_OS_OD", "STATOR_OUTER_DIAMETER", 0.11, baseUnit820)
+ 
+_OS_SL=FmParameterIo("_OS_SL", "STATOR_LENGTH", 0.02, baseUnit820)
+ 
+_L_EX=FmParameterIo("_L_EX", "LAMINATION_EXTENSION", 0, baseUnit820)
+ 
+XY1=FmCoordinateSystemAbsolute("XY1", "XY1", "Absolute coordinate system")
+ 
+baseUnit829=BaseUnit("radian", "rad", "Plane angle", "Space")
+ 
+_VS=FmParameterIo("_VS", "MOTOR_SLOT_ANGULAR_SHIFT", 0, baseUnit829)
+ 
+_IM_XY1_C=FmPointNonexistant("_IM_XY1_C", None, XY1, FmConstantInternal(0, baseUnit820, "Length"), FmConstantInternal(0, baseUnit820, "Length"))
+ 
+_IM_CART=FmCoordinateSystemRelativeCartesian("_IM_CART", "CART", "Inner magnet - Reference cartesian coordinate system", _IM_XY1_C, _VS)
+ 
+_IM_RT1_C=FmPointNonexistant("_IM_RT1_C", None, XY1, FmConstantInternal(0, baseUnit820, "Length"), FmConstantInternal(0, baseUnit820, "Length"))
+ 
+_IM_POLAR=FmCoordinateSystemRelativePolar("_IM_POLAR", "POLAR", "Inner magnet - Reference polar coordinate system", _IM_RT1_C, _VS)
+ 
+_OS_XY1_C=FmPointNonexistant("_OS_XY1_C", None, XY1, FmConstantInternal(0, baseUnit820, "Length"), FmConstantInternal(0, baseUnit820, "Length"))
+ 
+_OS_CART=FmCoordinateSystemRelativeCartesian("_OS_CART", "CART", "Outer slot - Reference cartesian coordinate system", _OS_XY1_C, _VS)
+ 
+_OS_RT1_C=FmPointNonexistant("_OS_RT1_C", None, XY1, FmConstantInternal(0, baseUnit820, "Length"), FmConstantInternal(0, baseUnit820, "Length"))
+ 
+_OS_POLAR=FmCoordinateSystemRelativePolar("_OS_POLAR", "POLAR", "Outer slot - Reference polar coordinate system", _OS_RT1_C, _VS)
+ 
+fmConstantInternal850=FmConstantInternal(0, baseUnit820, "Length")
+ 
+_IM_sym_cart_center=FmPointNonexistant("_IM_sym_cart_center", None, _IM_CART, fmConstantInternal850, fmConstantInternal850)
+ 
+_IM_PN=FmParameterIntegerIo("_IM_PN", "ROTOR_NO_POLES", 8)
+ 
+div851=(FmConstantInternal(3.141592653589793, baseUnit829, "Angle")/_IM_PN)
+ 
+_IM_sym_cart=FmCoordinateSystemRelativeCartesian("_IM_sym_cart", "sym_cart", "Inner magnet - Symmetric cartesian coordinate system", _IM_sym_cart_center, div851)
+ 
+fmConstantInternal856=FmConstantInternal(0, baseUnit829, "Angle")
+ 
+_IM_sym_polar_center=FmPointNonexistant("_IM_sym_polar_center", None, _IM_POLAR, fmConstantInternal850, fmConstantInternal856)
+ 
+_IM_sym_polar=FmCoordinateSystemRelativePolar("_IM_sym_polar", "sym_polar", "Inner magnet - Symmetric polar coordinate system", _IM_sym_polar_center, div851)
+ 
+_IM_ul=FmParameterIoCustomized("_IM_ul", "PART_PARAMETER_LENGTH", "ul", "ul", "ul", 0.001, baseUnit820)
+ 
+derivedUnit859=DerivedUnit("square metre", "m2", "m2", "Area", "Space")
+ 
+_IM_ua=FmParameterIoCustomized("_IM_ua", "PART_PARAMETER_AREA", "ua", "ua", "ua", 1.0E-6, derivedUnit859)
+ 
+_IM_uv=FmParameterIoCustomized("_IM_uv", "PART_PARAMETER_ANGLE", "uv", "uv", "uv", 0.017453292519943295, baseUnit829)
+ 
+baseUnit862=BaseUnit("unitless", "1", "Dimensionless quantity", "Others")
+ 
+_IM_u1=FmParameterIoCustomized("_IM_u1", "PART_PARAMETER_UNITLESS", "u1", "u1", "u1", 1, baseUnit862)
+ 
+_IM_OD_imp=FmFormulaIoCustomized("_IM_OD_imp", "PART_PARAMETER_LENGTH_OUTPUT", "OD_imp", "User Outer diameter", _IM_OD)
+ 
+_IM_KCD=FmParameterIoCustomized("_IM_KCD", "PART_PARAMETER_UNITLESS_OUTPUT", "KCD", "ratio chord/DR", "KCD", 1.2756114412169661, baseUnit862)
+ 
+baseUnit875=BaseUnit("unitless", "1", "Dimensionless quantity", "Others")
+ 
+div872=((Const(180, baseUnit875)*_IM_uv)/_IM_PN)
+ 
+sind871=Sind(div872)
+ 
+_IM_ID_imp=FmFormulaIoCustomized("_IM_ID_imp", "PART_PARAMETER_LENGTH_OUTPUT", "ID_imp", "User Inner diameter", Max([ _IM_ID, ((_IM_OD/_IM_KCD)*(_IM_KCD+(-sind871))) ]))
+ 
+_IM_Teta=FmFormulaIoCustomized("_IM_Teta", "PART_PARAMETER_ANGLE_OUTPUT", "Teta", "Part's angular pitch", div872)
+ 
+_IM_ID_k=FmParameterIoCustomized("_IM_ID_k", "PART_PARAMETER_UNITLESS_OUTPUT", "ID_k", "Ratio to define virtual inner diameter limit", "ID_k", 0.9, baseUnit862)
+ 
+name="_IM_ID_virt"
+ioName="PART_PARAMETER_LENGTH_OUTPUT"
+label="ID_virt"
+tooltip="Virtual inner diameter limit"
+expression=(_IM_OD_imp+(-(_IM_ID_k*(_IM_OD_imp+(-_IM_ID_imp)))))
+_IM_ID_virt=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+const889=Const(2, baseUnit875)
+ 
+const891=Const(4, baseUnit875)
+ 
+name="_IM_DR_virt"
+ioName="PART_PARAMETER_LENGTH_OUTPUT"
+label="DR_virt"
+tooltip="Delta R"
+expression=Min([ ((_IM_OD_imp+(-_IM_ID_virt))/const889), (_IM_OD_imp/const891) ])
+_IM_DR_virt=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+name="_IM_Teta_virt"
+ioName="PART_PARAMETER_ANGLE_OUTPUT"
+label="Teta_virt"
+tooltip="Virtual sector angle used for import"
+expression=Min([ _IM_Teta, (Acosd((_IM_ID_imp/_IM_OD_imp))/const889) ])
+_IM_Teta_virt=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+_IM_TM_k=FmParameterIoCustomized("_IM_TM_k", "PART_PARAMETER_UNITLESS_OUTPUT", "TM_k", "Magnet thickness", "TM_k", 0.24000000000000002, baseUnit862)
+ 
+_IM_TM_imp=FmFormulaIoCustomized("_IM_TM_imp", "PART_PARAMETER_LENGTH_OUTPUT", "TM_imp", "Magnet thickness", (_IM_TM_k*_IM_DR_virt))
+ 
+_IM_WM_k=FmParameterIoCustomized("_IM_WM_k", "PART_PARAMETER_UNITLESS_OUTPUT", "WM_k", "Magnet width", "WM_k", 0.47036266735549553, baseUnit862)
+ 
+_IM_WM_imp=FmFormulaIoCustomized("_IM_WM_imp", "PART_PARAMETER_LENGTH_OUTPUT", "WM_imp", "Magnet width", (_IM_WM_k*_IM_OD_imp*Sind(_IM_Teta_virt)))
+ 
+_IM_H_k=FmParameterIoCustomized("_IM_H_k", "PART_PARAMETER_UNITLESS_OUTPUT", "H_k", "Magnet edge height", "H_k", 0.3999999999999999, baseUnit862)
+ 
+_IM_H_imp=FmFormulaIoCustomized("_IM_H_imp", "PART_PARAMETER_LENGTH_OUTPUT", "H_imp", "Space between bar and outer rotor radius", (_IM_H_k*_IM_TM_imp))
+ 
+_IM_R_k=FmParameterIoCustomized("_IM_R_k", "PART_PARAMETER_UNITLESS_OUTPUT", "R_k", "Fillet radius", "R_k", 3, baseUnit862)
+ 
+name="_IM_R_imp"
+ioName="PART_PARAMETER_LENGTH_OUTPUT"
+label="R_imp"
+tooltip="Fillet radius"
+expression=Min([ (_IM_TM_imp/_IM_R_k), (_IM_TM_imp*Sind((_IM_Teta/const889))) ])
+_IM_R_imp=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+_IM_TM_func=FmFormulaIoCustomized("_IM_TM_func", "PART_PARAMETER_LENGTH_OUTPUT", "TM_func", "Magnet thickness", _IM_TM_imp)
+ 
+_IM_TM=FmParameterIoCustomizedDefaultFunction("_IM_TM", "PART_PARAMETER_LENGTH_INPUT", "TM", "Magnet thickness", "TM", 0.005, baseUnit820, _IM_TM_func)
+ 
+_IM_WM_func=FmFormulaIoCustomized("_IM_WM_func", "PART_PARAMETER_LENGTH_OUTPUT", "WM_func", "Magnet width", _IM_WM_imp)
+ 
+_IM_WM=FmParameterIoCustomizedDefaultFunction("_IM_WM", "PART_PARAMETER_LENGTH_INPUT", "WM", "Magnet width", "WM", 0.01, baseUnit820, _IM_WM_func)
+ 
+_IM_H_func=FmFormulaIoCustomized("_IM_H_func", "PART_PARAMETER_LENGTH_OUTPUT", "H_func", "Space between bar and outer rotor radius", _IM_H_imp)
+ 
+_IM_H=FmParameterIoCustomizedDefaultFunction("_IM_H", "PART_PARAMETER_LENGTH_INPUT", "H", "Space between bar and outer rotor radius", "H", 0.002312063999999999, baseUnit820, _IM_H_func)
+ 
+_IM_R_func=FmFormulaIoCustomized("_IM_R_func", "PART_PARAMETER_LENGTH_OUTPUT", "R_func", "Fillet radius", _IM_R_imp)
+ 
+_IM_R=FmParameterIoCustomizedDefaultFunction("_IM_R", "PART_PARAMETER_LENGTH_INPUT", "R", "Fillet radius", "R", 0.0011276532757047437, baseUnit820, _IM_R_func)
+ 
+const924=Const(2, baseUnit875)
+ 
+_IM_OR=FmFormulaIoCustomized("_IM_OR", "PART_PARAMETER_LENGTH_OUTPUT", "OR", "Outer radius", (_IM_OD/const924))
+ 
+_IM_IR=FmFormulaIoCustomized("_IM_IR", "PART_PARAMETER_LENGTH_OUTPUT", "IR", "Inner radius", (_IM_ID/const924))
+ 
+_IM_VE=FmFormulaIoCustomized("_IM_VE", "PART_PARAMETER_ANGLE_OUTPUT", "VE", "Half angle of sector", ((Const(180, baseUnit875)*_IM_uv)/_IM_PN))
+ 
+neg933=(-_IM_H)
+ 
+neg934=(-_IM_TM)
+ 
+_IM_X1=FmFormulaIoCustomized("_IM_X1", "PART_PARAMETER_LENGTH_OUTPUT", "X1", "x-coordinate of P1", (_IM_OR+neg933+neg934))
+ 
+_IM_Y1=FmFormulaIoCustomized("_IM_Y1", "PART_PARAMETER_LENGTH_OUTPUT", "Y1", "y-coordinate of P1", (Const(0, baseUnit875)*_IM_ul))
+ 
+_IM_X2=FmFormulaIoCustomized("_IM_X2", "PART_PARAMETER_LENGTH_OUTPUT", "X2", "x-coordinate of P2", (_IM_OR+neg933))
+ 
+_IM_Y2=FmFormulaIoCustomized("_IM_Y2", "PART_PARAMETER_LENGTH_OUTPUT", "Y2", "y-coordinate of P2", (Const(0, baseUnit875)*_IM_ul))
+ 
+_IM_X3=FmFormulaIoCustomized("_IM_X3", "PART_PARAMETER_LENGTH_OUTPUT", "X3", "x-coordinate of P3", _IM_X2)
+ 
+_IM_Y3=FmFormulaIoCustomized("_IM_Y3", "PART_PARAMETER_LENGTH_OUTPUT", "Y3", "y-coordinate of P3", (_IM_WM/const889))
+ 
+sqrt947=Sqrt(((_IM_X3**2)+(_IM_Y3**2)))
+ 
+_IM_R3=FmFormulaIoCustomized("_IM_R3", "PART_PARAMETER_LENGTH_OUTPUT", "R3", "Radius to compute P3", sqrt947)
+ 
+atan2d952=Atan2d(_IM_Y3, _IM_X3)
+ 
+_IM_V3=FmFormulaIoCustomized("_IM_V3", "PART_PARAMETER_ANGLE_OUTPUT", "V3", "Angular coordinate of P3", atan2d952)
+ 
+_IM_X4=FmFormulaIoCustomized("_IM_X4", "PART_PARAMETER_LENGTH_OUTPUT", "X4", "x-coordinate of P4", _IM_X1)
+ 
+_IM_Y4=FmFormulaIoCustomized("_IM_Y4", "PART_PARAMETER_LENGTH_OUTPUT", "Y4", "y-coordinate of P4", _IM_Y3)
+ 
+atan2d956=Atan2d(_IM_Y4, _IM_X4)
+ 
+_IM_V4=FmFormulaIoCustomized("_IM_V4", "PART_PARAMETER_ANGLE_OUTPUT", "V4", "Angular coordinate of P4", atan2d956)
+ 
+sqrt958=Sqrt(((_IM_X4**2)+(_IM_Y4**2)))
+ 
+_IM_R4=FmFormulaIoCustomized("_IM_R4", "PART_PARAMETER_LENGTH_OUTPUT", "R4", "Radius to compute P4", sqrt958)
+ 
+_IM_Wa=FmFormulaIoCustomized("_IM_Wa", "PART_PARAMETER_LENGTH_OUTPUT", "Wa", "Half tooth width", (_IM_R4*Sind((_IM_VE+(-_IM_V4)))))
+ 
+sum971=(_IM_R3+(-_IM_R))
+ 
+sum975=(_IM_Wa+_IM_R)
+ 
+_IM_TX5=FmFormulaIoCustomized("_IM_TX5", "PART_PARAMETER_LENGTH_OUTPUT", "TX5", "x-coordinate (u) of P5", Sqrt(((sum971**2)+(-(sum975**2)))))
+ 
+_IM_V5=FmFormulaIoCustomized("_IM_V5", "PART_PARAMETER_ANGLE_OUTPUT", "V5", "Angle to compute P5", (_IM_VE+(-Atan2d(_IM_Wa, _IM_TX5))))
+ 
+_IM_R5=FmFormulaIoCustomized("_IM_R5", "PART_PARAMETER_LENGTH_OUTPUT", "R5", "Radius to compute P5", Sqrt(((_IM_TX5**2)+(_IM_Wa**2))))
+ 
+_IM_X5=FmFormulaIoCustomized("_IM_X5", "PART_PARAMETER_LENGTH_OUTPUT", "X5", "x-coordinate of P5", (_IM_R5*Cosd(_IM_V5)))
+ 
+_IM_Y5=FmFormulaIoCustomized("_IM_Y5", "PART_PARAMETER_LENGTH_OUTPUT", "Y5", "y-coordinate of P5", (_IM_R5*Sind(_IM_V5)))
+ 
+_IM_V6=FmFormulaIoCustomized("_IM_V6", "PART_PARAMETER_ANGLE_OUTPUT", "V6", "Angle to compute P6", (_IM_VE+(-Asind((sum975/sum971)))))
+ 
+cosd998=Cosd(_IM_V6)
+ 
+_IM_X6=FmFormulaIoCustomized("_IM_X6", "PART_PARAMETER_LENGTH_OUTPUT", "X6", "x-coordinate of P6", (_IM_R3*cosd998))
+ 
+sind1001=Sind(_IM_V6)
+ 
+_IM_Y6=FmFormulaIoCustomized("_IM_Y6", "PART_PARAMETER_LENGTH_OUTPUT", "Y6", "y-coordinate of P6", (_IM_R3*sind1001))
+ 
+_IM_X5C6=FmFormulaIoCustomized("_IM_X5C6", "PART_PARAMETER_LENGTH_OUTPUT", "X5C6", "x-coordinate of P5C6", (sum971*cosd998))
+ 
+_IM_Y5C6=FmFormulaIoCustomized("_IM_Y5C6", "PART_PARAMETER_LENGTH_OUTPUT", "Y5C6", "y-coordinate of P5C6", (sum971*sind1001))
+ 
+cosd1008=Cosd(_IM_VE)
+ 
+_IM_X7=FmFormulaIoCustomized("_IM_X7", "PART_PARAMETER_LENGTH_OUTPUT", "X7", "x-coordinate of P7", (_IM_R4*cosd1008))
+ 
+sind1011=Sind(_IM_VE)
+ 
+_IM_Y7=FmFormulaIoCustomized("_IM_Y7", "PART_PARAMETER_LENGTH_OUTPUT", "Y7", "y-coordinate of P7", (_IM_R4*sind1011))
+ 
+_IM_X8=FmFormulaIoCustomized("_IM_X8", "PART_PARAMETER_LENGTH_OUTPUT", "X8", "x-coordinate of P8", (_IM_R5*cosd1008))
+ 
+_IM_Y8=FmFormulaIoCustomized("_IM_Y8", "PART_PARAMETER_LENGTH_OUTPUT", "Y8", "y-coordinate of P8", (_IM_R5*sind1011))
+ 
+_IM_X9=FmFormulaIoCustomized("_IM_X9", "PART_PARAMETER_LENGTH_OUTPUT", "X9", "x-coordinate of P9", (_IM_OR*Cosd(_IM_V3)))
+ 
+_IM_Y9=FmFormulaIoCustomized("_IM_Y9", "PART_PARAMETER_LENGTH_OUTPUT", "Y9", "y-coordinate of P9", (_IM_OR*Sind(_IM_V3)))
+ 
+div1024=(_IM_TM/const889)
+ 
+_IM_X10=FmFormulaIoCustomized("_IM_X10", "PART_PARAMETER_LENGTH_OUTPUT", "X10", "x-coordinate of P10", (_IM_X1+div1024))
+ 
+_IM_Y10=FmFormulaIoCustomized("_IM_Y10", "PART_PARAMETER_LENGTH_OUTPUT", "Y10", "y-coordinate of P10", (Const(0, baseUnit875)*_IM_ul))
+ 
+_IM_X11=FmFormulaIoCustomized("_IM_X11", "PART_PARAMETER_LENGTH_OUTPUT", "X11", "x-coordinate of P11", _IM_X10)
+ 
+_IM_Y11=FmFormulaIoCustomized("_IM_Y11", "PART_PARAMETER_LENGTH_OUTPUT", "Y11", "y-coordinate of P11", _IM_Y3)
+ 
+_IM_T1=FmFormulaIoCustomized("_IM_T1", "PART_PARAMETER_LENGTH_OUTPUT", "T1", "Thickness of rotor yoke under the magnet", (_IM_X1+(-_IM_IR)))
+ 
+_IM_W=FmFormulaIoCustomized("_IM_W", "PART_PARAMETER_LENGTH_OUTPUT", "W", "Q-axis width", (const889*_IM_Wa))
+ 
+_IM_R1=FmFormulaIoCustomized("_IM_R1", "PART_PARAMETER_LENGTH_OUTPUT", "R1", "Q-axis radius", _IM_R3)
+ 
+_IM_VP=FmFormulaIoCustomized("_IM_VP", "PART_PARAMETER_ANGLE_OUTPUT", "VP", "Angular pole pitch", (const924*_IM_VE))
+ 
+neg1041=(-_IM_ID)
+ 
+div1039=((_IM_OD+neg1041)/const924)
+ 
+_IM_TM_C0_F=Formula("_IM_TM_C0_F", (_IM_TM+(-div1039)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_IM_TM_C0=FmContraintInferior("_IM_TM_C0", _IM_TM, div1039, True, "TM < (OD-ID)/2", CeilingConstraint(_IM_TM_C0_F, -1.0E-12, 1, 1))
+ 
+prod1047=(const924*Sqrt((((const924*_IM_H*_IM_OD)/const924)+(-(_IM_H**2)))))
+ 
+_IM_WM_C0_F=Formula("_IM_WM_C0_F", (_IM_WM+(-prod1047)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_IM_WM_C0=FmContraintInferior("_IM_WM_C0", _IM_WM, prod1047, True, "WM < 2*Sqrt((2*H*OD)/2-H**2)", CeilingConstraint(_IM_WM_C0_F, -1.0E-12, 1, 1))
+ 
+sum1059=(div1039+neg934)
+ 
+_IM_H_C0_F=Formula("_IM_H_C0_F", (_IM_H+(-sum1059)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_IM_H_C0=FmContraintInferior("_IM_H_C0", _IM_H, sum1059, True, "H < (OD-ID)/2-TM", CeilingConstraint(_IM_H_C0_F, -1.0E-12, 1, 1))
+ 
+_IM_R_C0_F=Formula("_IM_R_C0_F", (_IM_R+(-div1024)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_IM_R_C0=FmContraintInferior("_IM_R_C0", _IM_R, div1024, True, "R < TM/2", CeilingConstraint(_IM_R_C0_F, -1.0E-12, 1, 1))
+ 
+prod1070=(_IM_TM*sind871)
+ 
+_IM_R_C1_F=Formula("_IM_R_C1_F", (_IM_R+(-prod1070)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_IM_R_C1=FmContraintInferior("_IM_R_C1", _IM_R, prod1070, True, "R < TM*Sind((180*uv)/PN)", CeilingConstraint(_IM_R_C1_F, -1.0E-12, 1, 1))
+ 
+prod1078=(Const(0, baseUnit875)*_IM_uv)
+ 
+_IM_PSC=FmPointGeometric("_IM_PSC", "PSC", _IM_sym_polar, (Const(0, baseUnit875)*_IM_ul), prod1078, False)
+ 
+_IM_PS1=FmPointGeometric("_IM_PS1", "PS1", _IM_sym_polar, _IM_IR, prod1078, False)
+ 
+_IM_PS2=FmPointGeometric("_IM_PS2", "PS2", _IM_sym_polar, _IM_OR, prod1078, True)
+ 
+_IM_PS3=FmPointGeometric("_IM_PS3", "PS3", _IM_sym_polar, _IM_OR, _IM_VE, True)
+ 
+_IM_PS4=FmPointGeometric("_IM_PS4", "PS4", _IM_sym_polar, _IM_IR, _IM_VE, False)
+ 
+_IM_P1=FmPointGeometric("_IM_P1", "P1", _IM_sym_polar, Sqrt(((_IM_X1**2)+(_IM_Y1**2))), Atan2d(_IM_Y1, _IM_X1), True)
+ 
+_IM_P2=FmPointGeometric("_IM_P2", "P2", _IM_sym_polar, Sqrt(((_IM_X2**2)+(_IM_Y2**2))), Atan2d(_IM_Y2, _IM_X2), True)
+ 
+_IM_LINE2=FmLineGeometricSegment("_IM_LINE2", "LINE2", _IM_P1, _IM_P2, False)
+ 
+_IM_P3=FmPointGeometric("_IM_P3", "P3", _IM_sym_polar, sqrt947, atan2d952, True)
+ 
+_IM_LINE10=FmLineGeometricSegment("_IM_LINE10", "LINE10", _IM_P2, _IM_P3, True)
+ 
+_IM_P4=FmPointGeometric("_IM_P4", "P4", _IM_sym_polar, sqrt958, atan2d956, True)
+ 
+_IM_LINE11=FmLineGeometricSegment("_IM_LINE11", "LINE11", _IM_P3, _IM_P4, True)
+ 
+_IM_LINE12=FmLineGeometricSegment("_IM_LINE12", "LINE12", _IM_P4, _IM_P1, True)
+ 
+_IM_LOOP3=FmLoop("_IM_LOOP3", [ _IM_LINE2, _IM_LINE10, _IM_LINE11, _IM_LINE12 ])
+ 
+sum1111=(_IM_X1+_IM_X3)
+ 
+sum1114=(_IM_Y1+_IM_Y3)
+ 
+_IM_P10=FmPointNonexistant("_IM_P10", "P10", _IM_sym_polar, Sqrt(((_IM_X10**2)+(_IM_Y10**2))), Atan2d(_IM_Y10, _IM_X10))
+ 
+_IM_P11=FmPointNonexistant("_IM_P11", "P11", _IM_sym_polar, Sqrt(((_IM_X11**2)+(_IM_Y11**2))), Atan2d(_IM_Y11, _IM_X11))
+ 
+_IM_LINEMAG=FmLineNonexistantSegment("_IM_LINEMAG", "LINEMAG", _IM_P10, _IM_P11)
+ 
+_IM_CS1_center=FmPointNonexistant("_IM_CS1_center", None, _IM_sym_polar, _IM_X10, prod1078)
+ 
+_IM_CS1=FmCoordinateSystemRelativeCartesian("_IM_CS1", "CS1", "Inner magnet - Polarization coordinate system", _IM_CS1_center, (Const(-90, baseUnit875)*_IM_uv))
+ 
+fmPolarizationDirection1116=FmPolarizationDirection(_IM_LINEMAG, _IM_CS1, _IM_CART, True, FmConstantIo("POLARIZATION_DIRECTION_ANGLE", 1.5707963267948966, baseUnit829))
+ 
+name="_IM_MagnetLoc"
+label="Magnet"
+coordinateSystem=_IM_sym_polar
+firstCoordinateFunction=Sqrt((((sum1111**2)/const891)+((sum1114**2)/const891)))
+secondCoordinateFunction=Atan2d(sum1114, sum1111)
+faceNature=14
+polarization=fmPolarizationDirection1116
+_IM_MagnetLoc=FmPointNonexistantFaceLocationMagnet(name, label, coordinateSystem, firstCoordinateFunction, secondCoordinateFunction, faceNature, polarization)
+ 
+_IM_FACE2=FmFace("_IM_FACE2", _IM_LOOP3, [  ], _IM_MagnetLoc)
+ 
+derivedUnit1138=DerivedUnit("tesla", "T", "kg/s2/A", "Magnetic flux density", "Magnetism")
+ 
+fmConstantIo1139=FmConstantIo("BEHAVIOR_MAGNET_COERCIVITY_HCJ", 1400000, DerivedUnit("ampere per metre", "A/m", "A/m", "Magnetic field", "Magnetism"))
+ 
+baseUnit1143=BaseUnit("kelvin", "K", "Temperature", "Heat")
+ 
+derivedUnit1145=DerivedUnit("per kelvin", "1/K", "1/K", "Temperature Coefficient", "Mass and energy")
+ 
+remanence=FmConstantIo("BEHAVIOR_MAGNET_REMANENT_INDUCTION", 1.32, derivedUnit1138)
+intrinsicCoercivity=fmConstantIo1139
+relativePermeability=FmConstantIo("BEHAVIOR_MAGNET_RELATIVE_PERMEABILITY", 1.1, baseUnit862)
+referenceTemperature=FmConstantIo("BEHAVIOR_MAGNET_REFERENCE_TEMPERATURE", 293.15, baseUnit1143)
+remanenceTemperatureCoefficient=FmConstantIo("BEHAVIOR_MAGNET_REMANENT_INDUCTION_TEMPERATURE_COEFFICIENT", -0.001, derivedUnit1145)
+coercivityTemperatureCoefficient=FmConstantIo("BEHAVIOR_MAGNET_COERCIVITY_TEMPERATURE_COEFFICIENT", -0.006, derivedUnit1145)
+maximumOperatingTemperature=FmConstantIo("BEHAVIOR_MAGNET_MAX_OPERATING_TEMPERATURE", 403.15, baseUnit1143)
+curieTemperature=FmConstantIo("BEHAVIOR_MAGNET_CURIE_TEMPERATURE", 603.15, baseUnit1143)
+fmBehaviorMagneticMagnetLinearHomogeneousIsotropic1136=FmBehaviorMagneticMagnetLinearHomogeneousIsotropic(remanence, intrinsicCoercivity, relativePermeability, referenceTemperature, remanenceTemperatureCoefficient, coercivityTemperatureCoefficient, maximumOperatingTemperature, curieTemperature)
+ 
+derivedUnit1152=DerivedUnit("ohm metre", "Ohm*m", "kg*m3/s3/A2", "Electrical resistivity", "Electrokinetics")
+ 
+referenceTemperature=FmConstantIo("BEHAVIOR_ELECTRIC_REFERENCE_TEMPERATURE", 293.15, baseUnit1143)
+resistivityAtReferenceTemperature=FmConstantIo("BEHAVIOR_ELECTRIC_ISOTROPIC_RESISTIVITY", 1.6E-6, derivedUnit1152)
+temperatureCoefficient=FmConstantIo("BEHAVIOR_ELECTRIC_TEMPERATURE_COEFFICIENT", 0, derivedUnit1145)
+fmBehaviorElectrokineticLinearHomogeneousIsotropic1149=FmBehaviorElectrokineticLinearHomogeneousIsotropic(referenceTemperature, resistivityAtReferenceTemperature, temperatureCoefficient)
+ 
+derivedUnit1156=DerivedUnit("kilogram per cubic metre", "kg/m3", "kg/m3", "Mass density", "Mass and energy")
+ 
+derivedUnit1159=DerivedUnit("dollar per kilogram", "USD/kg", "USD/kg", "Price", "Finance")
+ 
+name="_B_NdFeB_1320_1400"
+inMotorDir=True
+label="NdFeB_1320_1400"
+version="2019.1.0"
+marketingVersion="2019.1"
+author="FluxMotor"
+date="2017/03/21 10:07:41"
+comments=""
+manufacturer="FluxMotor"
+magneticBehavior=fmBehaviorMagneticMagnetLinearHomogeneousIsotropic1136
+electrokineticBehavior=fmBehaviorElectrokineticLinearHomogeneousIsotropic1149
+mechanicalBehavior=FmBehaviorMechanicalRigid(FmConstantIo("BEHAVIOR_MECHANICAL_MASS_DENSITY", 7500, derivedUnit1156))
+economicBehavior=FmBehaviorEconomicLinear(FmConstantIo("BEHAVIOR_ECONOMIC_PRICE", 0, derivedUnit1159))
+_B_NdFeB_1320_1400=FmMaterialMagnetBasic(name, inMotorDir, label, version, marketingVersion, author, date, comments, manufacturer, magneticBehavior, electrokineticBehavior, mechanicalBehavior, economicBehavior)
+ 
+_IM_MAGNET=FmRegionPoleMagnet("_IM_MAGNET", "Magnet", _IM_FACE2, True, fmPolarizationDirection1116, _B_NdFeB_1320_1400)
+ 
+_IM_MAGNETS=FmRegionGroupMagnet("_IM_MAGNETS", [ _IM_MAGNET ])
+ 
+_IM_P7=FmPointGeometric("_IM_P7", "P7", _IM_sym_polar, Sqrt(((_IM_X7**2)+(_IM_Y7**2))), Atan2d(_IM_Y7, _IM_X7), True)
+ 
+_IM_LINE8=FmLineGeometricSegment("_IM_LINE8", "LINE8", _IM_P7, _IM_PS4, False)
+ 
+_IM_LINE9=FmLineGeometricArc("_IM_LINE9", "LINE9", _IM_PS1, _IM_PS4, _IM_PSC, False)
+ 
+_IM_LINE1=FmLineGeometricSegment("_IM_LINE1", "LINE1", _IM_PS1, _IM_P1, False)
+ 
+_IM_LINE17=FmLineGeometricArc("_IM_LINE17", "LINE17", _IM_P4, _IM_P7, _IM_PSC, True)
+ 
+_IM_LOOP1=FmLoop("_IM_LOOP1", [ _IM_LINE8, _IM_LINE9, _IM_LINE1, _IM_LINE12, _IM_LINE17 ])
+ 
+_IM_YokeLoc=FmPointNonexistantFaceLocation("_IM_YokeLoc", "Yoke", _IM_sym_polar, ((_IM_X1+_IM_IR)/const889), (_IM_VE/const924), 0)
+ 
+_IM_FACE1=FmFace("_IM_FACE1", _IM_LOOP1, [  ], _IM_YokeLoc)
+ 
+fmConstantIo1182=FmConstantIo("BEHAVIOR_MAGNETIC_KNEE_COEFFICIENT", 1.3, baseUnit862)
+ 
+saturationInduction=FmConstantIo("BEHAVIOR_MAGNETIC_POLARIZATION_AT_SATURATION", 1.9, derivedUnit1138)
+originRelativePermeability=FmConstantIo("BEHAVIOR_MAGNETIC_RELATIVE_PERMEABILITY", 10000, baseUnit862)
+curvatureCoefficient=fmConstantIo1182
+fmBehaviorMagneticFerroNonLinearHomogeneousIsotropic1179=FmBehaviorMagneticFerroNonLinearHomogeneousIsotropic(saturationInduction, originRelativePermeability, curvatureCoefficient)
+ 
+saturationInduction=FmConstantIo("BEHAVIOR_MAGNETIC_POLARIZATION_AT_SATURATION", 1.805, derivedUnit1138)
+originRelativePermeability=FmConstantIo("BEHAVIOR_MAGNETIC_RELATIVE_PERMEABILITY", 9500.05, baseUnit862)
+curvatureCoefficient=fmConstantIo1182
+fmBehaviorMagneticFerroNonLinearHomogeneousIsotropic1183=FmBehaviorMagneticFerroNonLinearHomogeneousIsotropic(saturationInduction, originRelativePermeability, curvatureCoefficient)
+ 
+massDensity=FmConstantIo("BEHAVIOR_MECHANICAL_MASS_DENSITY", 7650, derivedUnit1156)
+stackingFactor=FmConstantIo("BEHAVIOR_MECHANICAL_STACKING_FACTOR", 0.95, baseUnit862)
+sheetThickness=FmConstantIo("BEHAVIOR_MECHANICAL_SHEET_THICKESS", 6.500000000000001E-4, baseUnit820)
+fmBehaviorMechanicalLaminationRigid1186=FmBehaviorMechanicalLaminationRigid(massDensity, stackingFactor, sheetThickness)
+ 
+mechanicalBehavior=fmBehaviorMechanicalLaminationRigid1186
+hysteresisLossCoefficient=FmConstantIo("BEHAVIOR_IRON_LOSS_HYSTERESIS_COEFFICIENT", 181, baseUnit862)
+hysteresisLossInductionExponent=FmConstantIo("BEHAVIOR_IRON_LOSS_HYSTERESIS_B_EXPONENT", 2, baseUnit862)
+hysteresisLossFrequencyExponent=FmConstantIo("BEHAVIOR_IRON_LOSS_HYSTERESIS_F_EXPONENT", 1, baseUnit862)
+classicalLossCoefficient=FmConstantIo("BEHAVIOR_IRON_LOSS_CLASSICAL_COEFFICIENT_SINEWAVE", 1.44, baseUnit862)
+classicalLossExponent=FmConstantIo("BEHAVIOR_IRON_LOSS_CLASSICAL_EXPONENT", 2, baseUnit862)
+excessLossCoefficient=FmConstantIo("BEHAVIOR_IRON_LOSS_EXCESS_COEFFICIENT_SINEWAVE", 1.05E-8, baseUnit862)
+excessLossExponent=FmConstantIo("BEHAVIOR_IRON_LOSS_EXCESS_EXPONENT", 0, baseUnit862)
+fmBehaviorIronLossBertotti1192=FmBehaviorIronLossBertotti(mechanicalBehavior, hysteresisLossCoefficient, hysteresisLossInductionExponent, hysteresisLossFrequencyExponent, classicalLossCoefficient, classicalLossExponent, excessLossCoefficient, excessLossExponent)
+ 
+name="_B_M400_65A"
+inMotorDir=True
+label="M400_65A"
+version="2019.1.0"
+marketingVersion="2019.1"
+author="FluxMotor"
+date="2017/03/21 10:07:41"
+comments=""
+manufacturer="FluxMotor"
+solidMagneticBehavior=fmBehaviorMagneticFerroNonLinearHomogeneousIsotropic1179
+magneticBehavior=fmBehaviorMagneticFerroNonLinearHomogeneousIsotropic1183
+mechanicalBehavior=fmBehaviorMechanicalLaminationRigid1186
+economicBehavior=FmBehaviorEconomicLinear(FmConstantIo("BEHAVIOR_ECONOMIC_PRICE", 0, derivedUnit1159))
+ironLossBehavior=fmBehaviorIronLossBertotti1192
+_B_M400_65A=FmMaterialPackLaminationBasic(name, inMotorDir, label, version, marketingVersion, author, date, comments, manufacturer, solidMagneticBehavior, magneticBehavior, mechanicalBehavior, economicBehavior, ironLossBehavior)
+ 
+_IM_YOKE=FmRegionPoleYoke("_IM_YOKE", [ _IM_FACE1 ], _B_M400_65A)
+ 
+_IM_P9=FmPointGeometric("_IM_P9", "P9", _IM_sym_polar, Sqrt(((_IM_X9**2)+(_IM_Y9**2))), Atan2d(_IM_Y9, _IM_X9), True)
+ 
+_IM_LINE5=FmLineGeometricArc("_IM_LINE5", "LINE5", _IM_P9, _IM_PS3, _IM_PSC, True)
+ 
+_IM_P8=FmPointGeometric("_IM_P8", "P8", _IM_sym_polar, Sqrt(((_IM_X8**2)+(_IM_Y8**2))), Atan2d(_IM_Y8, _IM_X8), True)
+ 
+_IM_LINE6=FmLineGeometricSegment("_IM_LINE6", "LINE6", _IM_PS3, _IM_P8, False)
+ 
+_IM_P5=FmPointGeometric("_IM_P5", "P5", _IM_sym_polar, Sqrt(((_IM_X5**2)+(_IM_Y5**2))), Atan2d(_IM_Y5, _IM_X5), True)
+ 
+_IM_LINE16=FmLineGeometricArc("_IM_LINE16", "LINE16", _IM_P5, _IM_P8, _IM_PSC, True)
+ 
+_IM_P6=FmPointGeometric("_IM_P6", "P6", _IM_sym_polar, Sqrt(((_IM_X6**2)+(_IM_Y6**2))), Atan2d(_IM_Y6, _IM_X6), True)
+ 
+_IM_P5C6=FmPointNonexistant("_IM_P5C6", "P5C6", _IM_sym_polar, Sqrt(((_IM_X5C6**2)+(_IM_Y5C6**2))), Atan2d(_IM_Y5C6, _IM_X5C6))
+ 
+_IM_LINE15=FmLineGeometricArc("_IM_LINE15", "LINE15", _IM_P6, _IM_P5, _IM_P5C6, True)
+ 
+_IM_LINE14=FmLineGeometricArc("_IM_LINE14", "LINE14", _IM_P3, _IM_P6, _IM_PSC, True)
+ 
+_IM_LINE18=FmLineGeometricSegment("_IM_LINE18", "LINE18", _IM_P3, _IM_P9, True)
+ 
+_IM_LOOP5=FmLoop("_IM_LOOP5", [ _IM_LINE5, _IM_LINE6, _IM_LINE16, _IM_LINE15, _IM_LINE14, _IM_LINE18 ])
+ 
+div1240=((_IM_OR+_IM_R3)/const889)
+ 
+_IM_BridgeLoc=FmPointNonexistantFaceLocation("_IM_BridgeLoc", "Bridge", _IM_sym_polar, div1240, ((_IM_V3+_IM_VE)/const889), 16)
+ 
+_IM_FACE3=FmFace("_IM_FACE3", _IM_LOOP5, [  ], _IM_BridgeLoc)
+ 
+_IM_BRIDGE=FmRegionPoleBridge("_IM_BRIDGE", [ _IM_FACE3 ], _B_M400_65A)
+ 
+_IM_LINE3=FmLineGeometricSegment("_IM_LINE3", "LINE3", _IM_P2, _IM_PS2, False)
+ 
+_IM_LINE4=FmLineGeometricArc("_IM_LINE4", "LINE4", _IM_PS2, _IM_P9, _IM_PSC, True)
+ 
+_IM_LOOP4=FmLoop("_IM_LOOP4", [ _IM_LINE3, _IM_LINE4, _IM_LINE18, _IM_LINE10 ])
+ 
+_IM_PoleShoeLoc=FmPointNonexistantFaceLocation("_IM_PoleShoeLoc", "PoleShoe", _IM_sym_polar, div1240, (_IM_V3/const889), 18)
+ 
+_IM_FACE6=FmFace("_IM_FACE6", _IM_LOOP4, [  ], _IM_PoleShoeLoc)
+ 
+_IM_POLE_SHOE=FmRegionPoleShoe("_IM_POLE_SHOE", [ _IM_FACE6 ], _B_M400_65A)
+ 
+_IM_LINE7=FmLineGeometricSegment("_IM_LINE7", "LINE7", _IM_P8, _IM_P7, False)
+ 
+_IM_LINE13=FmLineGeometricSegment("_IM_LINE13", "LINE13", _IM_P4, _IM_P5, True)
+ 
+_IM_LOOP6=FmLoop("_IM_LOOP6", [ _IM_LINE7, _IM_LINE17, _IM_LINE13, _IM_LINE16 ])
+ 
+_IM_InterpoleLoc=FmPointNonexistantFaceLocation("_IM_InterpoleLoc", "Interpole", _IM_sym_polar, ((_IM_R5+_IM_R4)/const889), ((_IM_VE+_IM_V5)/const889), 19)
+ 
+_IM_FACE5=FmFace("_IM_FACE5", _IM_LOOP6, [  ], _IM_InterpoleLoc)
+ 
+_IM_INTER_POLE=FmRegionPoleInter("_IM_INTER_POLE", [ _IM_FACE5 ], _B_M400_65A)
+ 
+_IM_MAGNETIC_CIRCUIT=FmRegionGroupMagnetMagneticCircuit("_IM_MAGNETIC_CIRCUIT", _IM_YOKE, _IM_BRIDGE, None, _IM_POLE_SHOE, None, _IM_INTER_POLE)
+ 
+_IM_LOOP7=FmLoop("_IM_LOOP7", [ _IM_LINE11, _IM_LINE13, _IM_LINE15, _IM_LINE14 ])
+ 
+sum1269=(_IM_X5+_IM_X6)
+ 
+sum1272=(_IM_Y5+_IM_Y6)
+ 
+_IM_EdgeLoc=FmPointNonexistantFaceLocation("_IM_EdgeLoc", "Edge", _IM_sym_polar, Sqrt((((sum1269**2)/const891)+((sum1272**2)/const891))), Atan2d(sum1272, sum1269), 21)
+ 
+_IM_FACE4=FmFace("_IM_FACE4", _IM_LOOP7, [  ], _IM_EdgeLoc)
+ 
+name="_B_Air"
+inMotorDir=True
+label="Air"
+version="2019.1.0"
+marketingVersion="2019.1"
+author="FluxMotor"
+date="2017/03/21 10:07:41"
+comments=""
+manufacturer="FluxMotor"
+magneticBehavior=FmBehaviorMagneticNon()
+mechanicalBehavior=FmBehaviorMechanicalRigid(FmConstantIo("BEHAVIOR_MECHANICAL_MASS_DENSITY", 1.293, derivedUnit1156))
+economicBehavior=FmBehaviorEconomicLinear(FmConstantIo("BEHAVIOR_ECONOMIC_PRICE", 0, derivedUnit1159))
+_B_Air=FmMaterialFluidBasic(name, inMotorDir, label, version, marketingVersion, author, date, comments, manufacturer, magneticBehavior, mechanicalBehavior, economicBehavior)
+ 
+_IM_EDGE=FmRegionPoleEdge("_IM_EDGE", [ _IM_FACE4 ], _B_Air)
+ 
+fmEndArrowSymmetricPoint1281=FmEndArrowSymmetricPoint(_IM_P4)
+ 
+fmEndArrowPoint1287=FmEndArrowPoint(_IM_P4)
+ 
+fmEndArrowPoint1297=FmEndArrowPoint(_IM_PSC)
+ 
+type2=0
+namedFunction=_IM_VP
+parameterLabel="VP"
+firstEnd=FmEndArrowSymmetricPoint(_IM_PS4)
+secondEnd=FmEndArrowPoint(_IM_PS4)
+pointCenter=fmEndArrowPoint1297
+expression=(_IM_IR*Const(0.9, baseUnit875))
+anchorPoint=None
+input2=False
+fmArrowArc1294=FmArrowArc(type2, namedFunction, parameterLabel, firstEnd, secondEnd, pointCenter, expression, anchorPoint, input2)
+ 
+_IM_FPN1=FmPointNonexistant("_IM_FPN1", "partRotPiv", _IM_POLAR, fmConstantInternal850, fmConstantInternal856)
+ 
+_IM_NF6=FmFormulaInternal("_IM_NF6", (FmConstantInternal(6.283185307179586, baseUnit829, "Angle")/_IM_PN), "Angle")
+ 
+_IM_magnetRot=FmTransformationRotation("_IM_magnetRot", "Inner magnet - Propagation", _IM_FPN1, _IM_NF6)
+ 
+_IM_FPN2=FmPointNonexistant("_IM_FPN2", "magnetSymP1", _IM_sym_polar, fmConstantInternal850, fmConstantInternal856)
+ 
+_IM_FPN3=FmPointNonexistant("_IM_FPN3", "magnetSymP2", _IM_sym_polar, FmConstantInternal(0.1, baseUnit820, "Length"), fmConstantInternal856)
+ 
+_IM_magnetSym=FmTransformationSymmetry("_IM_magnetSym", "Inner magnet - Symetry", _IM_FPN2, _IM_FPN3)
+ 
+name="_IM_partInnerMagnet"
+inMotorDir=True
+version="2019.1.0"
+marketingVersion="2019.1"
+label="imi_Block_02B"
+librairy="imi_Block"
+absoluteCoordinateSystem=XY1
+cartesianCoordinateSystem=_IM_CART
+polarCoordinateSystem=_IM_POLAR
+symmetricCartesianCoordinateSystem=_IM_sym_cart
+symmetricPolarCoordinateSystem=_IM_sym_polar
+innerDiameter=_IM_ID
+outerDiameter=_IM_OD
+entityNumber=_IM_PN
+unitParameters=[ _IM_ul, _IM_ua, _IM_uv, _IM_u1 ]
+virtualSectorFormulas=[ _IM_OD_imp, _IM_ID_imp, _IM_Teta, _IM_ID_virt, _IM_DR_virt, _IM_Teta_virt, _IM_TM_imp, _IM_WM_imp, _IM_H_imp, _IM_R_imp ]
+userParameters=[ _IM_TM, _IM_WM, _IM_H, _IM_R ]
+innerFormulas=[ _IM_OR, _IM_IR, _IM_VE, _IM_X1, _IM_Y1, _IM_X2, _IM_Y2, _IM_X3, _IM_Y3, _IM_R3, _IM_V3, _IM_X4, _IM_Y4, _IM_V4, _IM_R4, _IM_Wa, _IM_TX5, _IM_V5, _IM_R5, _IM_X5, _IM_Y5, _IM_V6, _IM_X6, _IM_Y6, _IM_X5C6, _IM_Y5C6, _IM_X7, _IM_Y7, _IM_X8, _IM_Y8, _IM_X9, _IM_Y9, _IM_X10, _IM_Y10, _IM_X11, _IM_Y11 ]
+outputFormulas=[ _IM_T1, _IM_W, _IM_R1, _IM_VP ]
+constraints=[ _IM_TM_C0, _IM_WM_C0, _IM_H_C0, _IM_R_C0, _IM_R_C1 ]
+sectorPoints=[ _IM_PSC, _IM_PS1, _IM_PS2, _IM_PS3, _IM_PS4 ]
+magnetRegionGroup=_IM_MAGNETS
+magneticCircuit=_IM_MAGNETIC_CIRCUIT
+hubRegion=None
+edgeRegion=_IM_EDGE
+holeRegion=None
+slitRegion=None
+ferroWedgeRegion=None
+coolingHoleRegionGroup=None
+mechanicalDeviceRegionGroup=None
+parasiticGapRegionGroup=None
+length=_IM_SL
+dimensionArrows=[ FmArrowSegment(0, _IM_TM, "TM", fmEndArrowSymmetricPoint1281, FmEndArrowSymmetricPoint(_IM_P3), None, True), FmArrowSegment(1, _IM_H, "H", FmEndArrowPoint(_IM_P2), FmEndArrowPoint(_IM_PS2), None, True), FmArrowSegment(0, _IM_WM, "WM", fmEndArrowSymmetricPoint1281, fmEndArrowPoint1287, None, True), FmArrowSegment(2, _IM_R, "R", FmEndArrowPoint(_IM_P5C6), FmEndArrowPoint(_IM_P6), None, True), FmArrowSegment(0, _IM_T1, "T1", FmEndArrowPoint(_IM_PS1), FmEndArrowPoint(_IM_P1), None, False), fmArrowArc1294, FmArrowSegment(0, _IM_W, "W", FmEndArrowSymmetricRotatedPoint(_IM_P4), fmEndArrowPoint1287, None, False), FmArrowSegment(2, _IM_R1, "R1", fmEndArrowPoint1297, FmEndArrowSymmetricPoint(_IM_P6), None, False) ]
+rotation=_IM_magnetRot
+symmetry=_IM_magnetSym
+_IM_partInnerMagnet=FmPartMagnetInnerClassicalHalf(name, inMotorDir, version, marketingVersion, label, librairy, absoluteCoordinateSystem, cartesianCoordinateSystem, polarCoordinateSystem, symmetricCartesianCoordinateSystem, symmetricPolarCoordinateSystem, innerDiameter, outerDiameter, entityNumber, unitParameters, virtualSectorFormulas, userParameters, innerFormulas, outputFormulas, constraints, sectorPoints, magnetRegionGroup, magneticCircuit, hubRegion, edgeRegion, holeRegion, slitRegion, ferroWedgeRegion, coolingHoleRegionGroup, mechanicalDeviceRegionGroup, parasiticGapRegionGroup, length, dimensionArrows, rotation, symmetry)
+ 
+_magnetSkew=FmSkewMagnetInnerNone("_magnetSkew")
+ 
+_magnetDataManager=FmDataManagerMagnet("_magnetDataManager", _IM_partInnerMagnet, _magnetSkew)
+ 
+_magnetManager=FmManagerMagnetInner("_magnetManager", _IM_partInnerMagnet, _magnetSkew, _magnetDataManager)
+ 
+fmConstantInternal1319=FmConstantInternal(0, baseUnit820, "Length")
+ 
+_OS_sym_cart_center=FmPointNonexistant("_OS_sym_cart_center", None, _OS_CART, fmConstantInternal1319, fmConstantInternal1319)
+ 
+_OS_SN=FmParameterIntegerIo("_OS_SN", "STATOR_NO_SLOTS", 24)
+ 
+div1320=(FmConstantInternal(3.141592653589793, baseUnit829, "Angle")/_OS_SN)
+ 
+_OS_sym_cart=FmCoordinateSystemRelativeCartesian("_OS_sym_cart", "cart", "Outer slot - Symmetric cartesian coordinate system", _OS_sym_cart_center, div1320)
+ 
+fmConstantInternal1325=FmConstantInternal(0, baseUnit829, "Angle")
+ 
+_OS_sym_polar_center=FmPointNonexistant("_OS_sym_polar_center", None, _OS_POLAR, fmConstantInternal1319, fmConstantInternal1325)
+ 
+_OS_sym_polar=FmCoordinateSystemRelativePolar("_OS_sym_polar", "polar", "Outer slot - Symmetric polar coordinate system", _OS_sym_polar_center, div1320)
+ 
+_OS_ul=FmParameterIoCustomized("_OS_ul", "PART_PARAMETER_LENGTH", "ul", "ul", "ul", 0.001, baseUnit820)
+ 
+_OS_ua=FmParameterIoCustomized("_OS_ua", "PART_PARAMETER_AREA", "ua", "ua", "ua", 1.0E-6, derivedUnit859)
+ 
+_OS_uv=FmParameterIoCustomized("_OS_uv", "PART_PARAMETER_ANGLE", "uv", "uv", "uv", 0.017453292519943295, baseUnit829)
+ 
+_OS_u1=FmParameterIoCustomized("_OS_u1", "PART_PARAMETER_UNITLESS", "u1", "u1", "u1", 1, baseUnit862)
+ 
+_OS_KDR=FmParameterIoCustomized("_OS_KDR", "PART_PARAMETER_UNITLESS_OUTPUT", "KDR", "Ratio DR/ID", "KDR", 1, baseUnit862)
+ 
+name="_OS_OD_imp"
+ioName="PART_PARAMETER_LENGTH_OUTPUT"
+label="OD_imp"
+tooltip="User Outer diameter - Import process in Motor factory"
+expression=(_OS_ID+Min([ (_OS_KDR*_OS_ID), (_OS_OD+(-_OS_ID)) ]))
+_OS_OD_imp=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+_OS_ID_imp=FmFormulaIoCustomized("_OS_ID_imp", "PART_PARAMETER_LENGTH_OUTPUT", "ID_imp", "User Inner diameter - Import process in Motor factory", _OS_ID)
+ 
+baseUnit1342=BaseUnit("unitless", "1", "Dimensionless quantity", "Others")
+ 
+const1341=Const(180, baseUnit1342)
+ 
+_OS_Teta=FmFormulaIoCustomized("_OS_Teta", "PART_PARAMETER_ANGLE_OUTPUT", "Teta", "Part's angular pitch", ((const1341*_OS_uv)/_OS_SN))
+ 
+_OS_OD_k=FmParameterIoCustomized("_OS_OD_k", "PART_PARAMETER_UNITLESS_OUTPUT", "OD_k", "Ratio to define virtual outer diameter limit", "OD_k", 0.9, baseUnit862)
+ 
+neg1348=(-_OS_ID_imp)
+ 
+_OS_OD_virt=FmFormulaIoCustomized("_OS_OD_virt", "PART_PARAMETER_LENGTH_OUTPUT", "OD_virt", "Virtual outer diameter limit", ((_OS_OD_k*(_OS_OD_imp+neg1348))+_OS_ID_imp))
+ 
+_OS_HS_k=FmParameterIoCustomized("_OS_HS_k", "PART_PARAMETER_UNITLESS_OUTPUT", "HS_k", "Slot height  - For formula adjustment", "HS_k", 0.66, baseUnit862)
+ 
+const1354=Const(2, baseUnit1342)
+ 
+name="_OS_HS_imp"
+ioName="PART_PARAMETER_LENGTH_OUTPUT"
+label="HS_imp"
+tooltip="Slot height - Import process in Motor factory"
+expression=((_OS_HS_k*(_OS_OD_virt+neg1348))/const1354)
+_OS_HS_imp=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+_OS_WS2_k=FmParameterIoCustomized("_OS_WS2_k", "PART_PARAMETER_UNITLESS_OUTPUT", "WS2_k", "Slot width - For formula adjustment", "WS2_k", 0.47619047619047616, baseUnit862)
+ 
+div1360=(_OS_ID_imp/const1354)
+ 
+sind1361=Sind(_OS_Teta)
+ 
+name="_OS_WS2_imp"
+ioName="PART_PARAMETER_LENGTH_OUTPUT"
+label="WS2_imp"
+tooltip="Slot width (bottom part of slot) - Import process in Motor factory"
+expression=Min([ (_OS_WS2_k*_OS_HS_imp), (div1360*sind1361*Const(1.5, baseUnit1342)) ])
+_OS_WS2_imp=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+name="_OS_HO_k"
+ioName="PART_PARAMETER_UNITLESS_OUTPUT"
+label="HO_k"
+tooltip="Height of slot opening - For formula adjustment"
+scriptLabel="HO_k"
+value=0.09523809523809523
+measureUnit=baseUnit862
+_OS_HO_k=FmParameterIoCustomized(name, ioName, label, tooltip, scriptLabel, value, measureUnit)
+ 
+name="_OS_HO_imp"
+ioName="PART_PARAMETER_LENGTH_OUTPUT"
+label="HO_imp"
+tooltip="Height of slot opening - Import process in Motor factory"
+expression=(_OS_HO_k*_OS_HS_imp)
+_OS_HO_imp=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+name="_OS_H1_k"
+ioName="PART_PARAMETER_UNITLESS_OUTPUT"
+label="H1_k"
+tooltip="Intermediary height of the slot - For formula adjustment"
+scriptLabel="H1_k"
+value=0.09523809523809523
+measureUnit=baseUnit862
+_OS_H1_k=FmParameterIoCustomized(name, ioName, label, tooltip, scriptLabel, value, measureUnit)
+ 
+const1371=Const(4, baseUnit1342)
+ 
+name="_OS_H1_imp"
+ioName="PART_PARAMETER_LENGTH_OUTPUT"
+label="H1_imp"
+tooltip="Intermediary height of the slot (upper part) - Import process in Motor factory"
+expression=Min([ (_OS_H1_k*_OS_HS_imp), (_OS_WS2_imp/const1371) ])
+_OS_H1_imp=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+_OS_WO_k=FmParameterIoCustomized("_OS_WO_k", "PART_PARAMETER_UNITLESS_OUTPUT", "WO_k", "Width of slot opening - For formula adjustment", "WO_k", 0.2, baseUnit862)
+ 
+name="_OS_WO_imp"
+ioName="PART_PARAMETER_LENGTH_OUTPUT"
+label="WO_imp"
+tooltip="Width of slot opening - Import process in Motor factory"
+expression=Min([ (_OS_WO_k*_OS_WS2_imp), ((div1360*sind1361)/const1371) ])
+_OS_WO_imp=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+name="_OS_WS1_k"
+ioName="PART_PARAMETER_UNITLESS_OUTPUT"
+label="WS1_k"
+tooltip="Intermediary width of the slot - For formula adjustment"
+scriptLabel="WS1_k"
+value=0.6
+measureUnit=baseUnit862
+_OS_WS1_k=FmParameterIoCustomized(name, ioName, label, tooltip, scriptLabel, value, measureUnit)
+ 
+name="_OS_WS1_imp"
+ioName="PART_PARAMETER_LENGTH_OUTPUT"
+label="WS1_imp"
+tooltip="Slot width (upper part of slot) - Import process in Motor factory"
+expression=(_OS_WS1_k*_OS_WS2_imp)
+_OS_WS1_imp=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+_OS_HS_func=FmFormulaIoCustomized("_OS_HS_func", "PART_PARAMETER_LENGTH_OUTPUT", "HS_func", "Slot height", _OS_HS_imp)
+ 
+_OS_HS=FmParameterIoCustomizedDefaultFunction("_OS_HS", "PART_PARAMETER_LENGTH_INPUT", "HS", "Slot height", "HS", 0.014850000000000006, baseUnit820, _OS_HS_func)
+ 
+_OS_WS2_func=FmFormulaIoCustomized("_OS_WS2_func", "PART_PARAMETER_LENGTH_OUTPUT", "WS2_func", "Slot width", _OS_WS2_imp)
+ 
+_OS_WS2=FmParameterIoCustomizedDefaultFunction("_OS_WS2", "PART_PARAMETER_LENGTH_INPUT", "WS2", "Slot width", "WS2", 0.00587367864990232, baseUnit820, _OS_WS2_func)
+ 
+_OS_H1_func=FmFormulaIoCustomized("_OS_H1_func", "PART_PARAMETER_LENGTH_OUTPUT", "H1_func", "Intermediary height of the slot", _OS_H1_imp)
+ 
+_OS_H1=FmParameterIoCustomizedDefaultFunction("_OS_H1", "PART_PARAMETER_LENGTH_INPUT", "H1", "Intermediary height of the slot", "H1", 0.0014142857142857147, baseUnit820, _OS_H1_func)
+ 
+_OS_WS1_func=FmFormulaIoCustomized("_OS_WS1_func", "PART_PARAMETER_LENGTH_OUTPUT", "WS1_func", "Intermediary width of the slot", _OS_WS1_imp)
+ 
+_OS_WS1=FmParameterIoCustomizedDefaultFunction("_OS_WS1", "PART_PARAMETER_LENGTH_INPUT", "WS1", "Intermediary width of the slot", "WS1", 0.0035242071899413917, baseUnit820, _OS_WS1_func)
+ 
+_OS_HO_func=FmFormulaIoCustomized("_OS_HO_func", "PART_PARAMETER_LENGTH_OUTPUT", "HO_func", "Height of slot opening", _OS_HO_imp)
+ 
+_OS_HO=FmParameterIoCustomizedDefaultFunction("_OS_HO", "PART_PARAMETER_LENGTH_INPUT", "HO", "Height of slot opening", "HO", 0.0014142857142857147, baseUnit820, _OS_HO_func)
+ 
+_OS_WO_func=FmFormulaIoCustomized("_OS_WO_func", "PART_PARAMETER_LENGTH_OUTPUT", "WO_func", "Width of slot opening", _OS_WO_imp)
+ 
+_OS_WO=FmParameterIoCustomizedDefaultFunction("_OS_WO", "PART_PARAMETER_LENGTH_INPUT", "WO", "Width of slot opening", "WO", 8.390969499860457E-4, baseUnit820, _OS_WO_func)
+ 
+const1395=Const(2, baseUnit1342)
+ 
+_OS_OR=FmFormulaIoCustomized("_OS_OR", "PART_PARAMETER_LENGTH_OUTPUT", "OR", "Outer radius", (_OS_OD/const1395))
+ 
+div1397=(_OS_ID/const1395)
+ 
+_OS_IR=FmFormulaIoCustomized("_OS_IR", "PART_PARAMETER_LENGTH_OUTPUT", "IR", "Inner radius", div1397)
+ 
+div1399=((Const(180, baseUnit1342)*_OS_uv)/_OS_SN)
+ 
+_OS_VE=FmFormulaIoCustomized("_OS_VE", "PART_PARAMETER_ANGLE_OUTPUT", "VE", "Half angle of sector", div1399)
+ 
+div1407=(_OS_WO/const1354)
+ 
+_OS_X1=FmFormulaIoCustomized("_OS_X1", "PART_PARAMETER_LENGTH_OUTPUT", "X1", "x-coordinate of P1", (_OS_IR*Cosd(Asind((div1407/_OS_IR)))))
+ 
+_OS_Y1=FmFormulaIoCustomized("_OS_Y1", "PART_PARAMETER_LENGTH_OUTPUT", "Y1", "y-coordinate of P1", div1407)
+ 
+_OS_X2=FmFormulaIoCustomized("_OS_X2", "PART_PARAMETER_LENGTH_OUTPUT", "X2", "x-coordinate of P2", (_OS_X1+_OS_HO))
+ 
+_OS_Y2=FmFormulaIoCustomized("_OS_Y2", "PART_PARAMETER_LENGTH_OUTPUT", "Y2", "y-coordinate of P2", div1407)
+ 
+_OS_X3=FmFormulaIoCustomized("_OS_X3", "PART_PARAMETER_LENGTH_OUTPUT", "X3", "x-coordinate of P3", (_OS_X2+_OS_H1))
+ 
+_OS_Y3=FmFormulaIoCustomized("_OS_Y3", "PART_PARAMETER_LENGTH_OUTPUT", "Y3", "y-coordinate of P3", (_OS_WS1/const1395))
+ 
+_OS_X5=FmFormulaIoCustomized("_OS_X5", "PART_PARAMETER_LENGTH_OUTPUT", "X5", "x-coordinate of P5", (_OS_X1+_OS_HS))
+ 
+_OS_Y5=FmFormulaIoCustomized("_OS_Y5", "PART_PARAMETER_LENGTH_OUTPUT", "Y5", "y-coordinate of P5", (Const(0, baseUnit1342)*_OS_ul))
+ 
+div1424=(_OS_WS2/const1395)
+ 
+neg1423=(-div1424)
+ 
+_OS_X4C5=FmFormulaIoCustomized("_OS_X4C5", "PART_PARAMETER_LENGTH_OUTPUT", "X4C5", "x-coordinate of PT4C5", (_OS_X5+neg1423))
+ 
+_OS_Y4C5=FmFormulaIoCustomized("_OS_Y4C5", "PART_PARAMETER_LENGTH_OUTPUT", "Y4C5", "y-coordinate of PT4C5", (Const(0, baseUnit1342)*_OS_ul))
+ 
+neg1430=(-_OS_X3)
+ 
+_OS_V1a=FmFormulaIoCustomized("_OS_V1a", "PART_PARAMETER_LENGTH_OUTPUT", "V1a", "Angle V1 (intermediary parameter a)", (_OS_X5+neg1423+neg1430))
+ 
+pow1437=(div1424**2)
+ 
+pow1439=(_OS_Y3**2)
+ 
+_OS_V1b=FmFormulaIoCustomized("_OS_V1b", "PART_PARAMETER_LENGTH_OUTPUT", "V1b", "Angle V1 (intermediary parameter b)", Sqrt(((_OS_V1a**2)+(-(pow1437+(-pow1439))))))
+ 
+name="_OS_V1"
+ioName="PART_PARAMETER_ANGLE_OUTPUT"
+label="V1"
+tooltip="Angle between PT4-PT3 versus x axis"
+expression=(const1354*Atan2d((_OS_V1a+(-_OS_V1b)), (div1424+_OS_Y3)))
+_OS_V1=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+_OS_X4=FmFormulaIoCustomized("_OS_X4", "PART_PARAMETER_LENGTH_OUTPUT", "X4", "x-coordinate of PT4", (_OS_X4C5+(-(div1424*Sind(_OS_V1)))))
+ 
+_OS_Y4=FmFormulaIoCustomized("_OS_Y4", "PART_PARAMETER_LENGTH_OUTPUT", "Y4", "y-coordinate of PT4", (div1424*Cosd(_OS_V1)))
+ 
+sqrt1456=Sqrt(((_OS_X4**2)+(_OS_Y4**2)))
+ 
+cosd1460=Cosd(_OS_VE)
+ 
+_OS_X6=FmFormulaIoCustomized("_OS_X6", "PART_PARAMETER_LENGTH_OUTPUT", "X6", "x-coordinate of P6", (sqrt1456*cosd1460))
+ 
+sind1463=Sind(_OS_VE)
+ 
+_OS_Y6=FmFormulaIoCustomized("_OS_Y6", "PART_PARAMETER_LENGTH_OUTPUT", "Y6", "y-coordinate of P6", (sqrt1456*sind1463))
+ 
+sqrt1466=Sqrt(((_OS_X3**2)+pow1439))
+ 
+_OS_X7=FmFormulaIoCustomized("_OS_X7", "PART_PARAMETER_LENGTH_OUTPUT", "X7", "x-coordinate of P7", (sqrt1466*cosd1460))
+ 
+_OS_Y7=FmFormulaIoCustomized("_OS_Y7", "PART_PARAMETER_LENGTH_OUTPUT", "Y7", "y-coordinate of P7", (sqrt1466*sind1463))
+ 
+_OS_X8=FmFormulaIoCustomized("_OS_X8", "PART_PARAMETER_LENGTH_OUTPUT", "X8", "x-coordinate of P8", _OS_X3)
+ 
+_OS_Y8=FmFormulaIoCustomized("_OS_Y8", "PART_PARAMETER_LENGTH_OUTPUT", "Y8", "y-coordinate of P8", (Const(0, baseUnit1342)*_OS_ul))
+ 
+neg1479=(-_OS_X2)
+ 
+sum1478=(_OS_X3+neg1479)
+ 
+_OS_ASa=FmFormulaIoCustomized("_OS_ASa", "PART_PARAMETER_AREA_OUTPUT", "ASa", "Slot area (trapezoidal upper)", ((_OS_Y2+_OS_Y3)*sum1478))
+ 
+_OS_ASb=FmFormulaIoCustomized("_OS_ASb", "PART_PARAMETER_AREA_OUTPUT", "ASb", "Slot area (trapezoidal middle)", ((_OS_Y4+_OS_Y3)*(_OS_X4+neg1430)))
+ 
+_OS_ASc=FmFormulaIoCustomized("_OS_ASc", "PART_PARAMETER_AREA_OUTPUT", "ASc", "Slot area (triangular under bottom)", (_OS_Y4*(_OS_X4C5+(-_OS_X4))))
+ 
+name="_OS_ASd"
+ioName="PART_PARAMETER_AREA_OUTPUT"
+label="ASd"
+tooltip="Slot area (round bottom)"
+expression=((pow1437*(Const(90, baseUnit1342)+(_OS_V1/_OS_uv))*Pi([  ]))/const1341)
+_OS_ASd=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+_OS_AS=FmFormulaIoCustomized("_OS_AS", "PART_PARAMETER_AREA_OUTPUT", "AS", "Slot area", (_OS_ASb+_OS_ASc+_OS_ASd))
+ 
+tand1501=Tand(_OS_V1)
+ 
+_OS_K=FmFormulaIoCustomized("_OS_K", "PART_PARAMETER_AREA_OUTPUT", "K", "Coefficient for computing WC & HTC", (pow1439+((tand1501*_OS_AS)/const1354)))
+ 
+neg1505=(-_OS_Y3)
+ 
+_OS_HTC=FmFormulaIoCustomized("_OS_HTC", "PART_PARAMETER_LENGTH_OUTPUT", "HTC", "Height of the upper layer", ((neg1505+Sqrt(_OS_K))/tand1501))
+ 
+_OS_WC=FmFormulaIoCustomized("_OS_WC", "PART_PARAMETER_LENGTH_OUTPUT", "WC", "Width of one layer (Mean value)", (const1354*(_OS_Y3+(_OS_HTC*tand1501))))
+ 
+_OS_XI1=FmFormulaIoCustomized("_OS_XI1", "PART_PARAMETER_LENGTH_OUTPUT", "XI1", "x-coordinate of Pi1", _OS_X2)
+ 
+_OS_YI1=FmFormulaIoCustomized("_OS_YI1", "PART_PARAMETER_LENGTH_OUTPUT", "YI1", "y-coordinate of Pi1", (Const(0, baseUnit1342)*_OS_ul))
+ 
+_OS_XI2=FmFormulaIoCustomized("_OS_XI2", "PART_PARAMETER_LENGTH_OUTPUT", "XI2", "x-coordinate of Pi2", (_OS_X3+_OS_HTC))
+ 
+_OS_YI2=FmFormulaIoCustomized("_OS_YI2", "PART_PARAMETER_LENGTH_OUTPUT", "YI2", "y-coordinate of Pi2", (_OS_WC/const1354))
+ 
+_OS_XI3=FmFormulaIoCustomized("_OS_XI3", "PART_PARAMETER_LENGTH_OUTPUT", "XI3", "x-coordinate of Pi3", _OS_XI2)
+ 
+prod1521=(Const(0, baseUnit1342)*_OS_ul)
+ 
+_OS_YI3=FmFormulaIoCustomized("_OS_YI3", "PART_PARAMETER_LENGTH_OUTPUT", "YI3", "y-coordinate of Pi3", prod1521)
+ 
+_OS_YI4=FmFormulaIoCustomized("_OS_YI4", "PART_PARAMETER_LENGTH_OUTPUT", "YI4", "y-coordinate of Pi4", div1424)
+ 
+tand1528=Tand(_OS_VE)
+ 
+_OS_WT1=FmFormulaIoCustomized("_OS_WT1", "PART_PARAMETER_LENGTH_OUTPUT", "WT1", "Tooth width (upper part of slot)", (const1354*((_OS_X3*tand1528)+neg1505)*cosd1460))
+ 
+name="_OS_WT2"
+ioName="PART_PARAMETER_LENGTH_OUTPUT"
+label="WT2"
+tooltip="Tooth width (bottom part of slot)"
+expression=(const1354*((_OS_X4*tand1528)+(-_OS_Y4))*cosd1460)
+_OS_WT2=FmFormulaIoCustomized(name, ioName, label, tooltip, expression)
+ 
+_OS_WT=FmFormulaIoCustomized("_OS_WT", "PART_PARAMETER_LENGTH_OUTPUT", "WT", "Tooth width (mean value)", ((_OS_WT1+_OS_WT2)/const1354))
+ 
+_OS_WS=FmFormulaIoCustomized("_OS_WS", "PART_PARAMETER_LENGTH_OUTPUT", "WS", "Slot width (mean value)", ((_OS_WS1+_OS_WS2)/const1395))
+ 
+_OS_R=FmFormulaIoCustomized("_OS_R", "PART_PARAMETER_LENGTH_OUTPUT", "R", "Slot bottom radius", div1424)
+ 
+_OS_V=FmFormulaIoCustomized("_OS_V", "PART_PARAMETER_ANGLE_OUTPUT", "V", "Undercut angle of stator tooth tip", Atan2d(_OS_H1, ((_OS_WS1+(-_OS_WO))/const1354)))
+ 
+_OS_D=FmFormulaIoCustomized("_OS_D", "PART_PARAMETER_LENGTH_OUTPUT", "D", "Position of the center (slot bottom radius).", (_OS_X4C5+neg1479))
+ 
+_OS_HS_1550=FmParameterIoCustomizedDefaultFunction("_OS_HS", "PART_PARAMETER_LENGTH_INPUT", "HS", "Slot height", "HS", 0.014850000000000006, baseUnit820, _OS_HS_func)
+ 
+div1550=((_OS_OD+(-_OS_ID))/const1395)
+ 
+_OS_HS_C0_F=Formula("_OS_HS_C0_F", (_OS_HS_1550+(-div1550)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_OS_HS_C0=FmContraintInferior("_OS_HS_C0", _OS_HS_1550, div1550, True, "HS < (OD-ID)/2", CeilingConstraint(_OS_HS_C0_F, -1.0E-12, 1, 1))
+ 
+prod1558=(_OS_WS2*const1395)
+ 
+_OS_HS_C1_F=Formula("_OS_HS_C1_F", (_OS_HS_1550+(-prod1558)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_OS_HS_C1=FmContraintSuperior("_OS_HS_C1", _OS_HS_1550, prod1558, False, "HS >= WS2*2", FloorConstraint(_OS_HS_C1_F, 0, 1, 1))
+ 
+tand1566=Tand(div1399)
+ 
+prod1564=((div1397+_OS_HS_1550)*tand1566*const1395)
+ 
+_OS_WS2_C0_F=Formula("_OS_WS2_C0_F", (_OS_WS2+(-prod1564)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_OS_WS2_C0=FmContraintInferior("_OS_WS2_C0", _OS_WS2, prod1564, True, "WS2 < (ID/2+HS)*Tand((180*uv)/SN)*2", CeilingConstraint(_OS_WS2_C0_F, -1.0E-12, 1, 1))
+ 
+_OS_H1_C0_F=Formula("_OS_H1_C0_F", (_OS_H1+(-_OS_HS_1550)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_OS_H1_C0=FmContraintInferior("_OS_H1_C0", _OS_H1, _OS_HS_1550, True, "H1 < HS", CeilingConstraint(_OS_H1_C0_F, -1.0E-12, 1, 1))
+ 
+_OS_WS1_C0_F=Formula("_OS_WS1_C0_F", (_OS_WS1+(-_OS_WS2)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_OS_WS1_C0=FmContraintInferior("_OS_WS1_C0", _OS_WS1, _OS_WS2, True, "WS1 < WS2", CeilingConstraint(_OS_WS1_C0_F, -1.0E-12, 1, 1))
+ 
+prod1582=(const1354*((div1397*Cosd(Asind((_OS_WO/_OS_ID))))+_OS_HO+_OS_H1)*tand1566)
+ 
+_OS_WS1_C1_F=Formula("_OS_WS1_C1_F", (_OS_WS1+(-prod1582)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+name="_OS_WS1_C1"
+function=_OS_WS1
+constrainingFunction=prod1582
+strictly=True
+statement="WS1 < 2*(ID/2*Cosd(Asind(WO/ID))+HO+H1)*Tand((180*uv)/SN)"
+constraint=CeilingConstraint(_OS_WS1_C1_F, -1.0E-12, 1, 1)
+_OS_WS1_C1=FmContraintInferior(name, function, constrainingFunction, strictly, statement, constraint)
+ 
+_OS_HO_1594=FmParameterIoCustomizedDefaultFunction("_OS_HO", "PART_PARAMETER_LENGTH_INPUT", "HO", "Height of slot opening", "HO", 0.0014142857142857147, baseUnit820, _OS_HO_func)
+ 
+sum1594=(_OS_HS_1550+(-_OS_H1))
+ 
+_OS_HO_C0_F=Formula("_OS_HO_C0_F", (_OS_HO_1594+(-sum1594)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_OS_HO_C0=FmContraintInferior("_OS_HO_C0", _OS_HO_1594, sum1594, True, "HO < HS-H1", CeilingConstraint(_OS_HO_C0_F, -1.0E-12, 1, 1))
+ 
+min1601=Min([ _OS_WS1, (_OS_ID*Sind(div1399)) ])
+ 
+_OS_WO_C0_F=Formula("_OS_WO_C0_F", (_OS_WO+(-min1601)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_OS_WO_C0=FmContraintInferior("_OS_WO_C0", _OS_WO, min1601, True, "WO < Min([WS1,ID*Sind((180*uv)/SN)])", CeilingConstraint(_OS_WO_C0_F, -1.0E-12, 1, 1))
+ 
+prod1609=(_OS_ID*Sind(Acosd((Const(1, baseUnit1342)+(-((const1395*_OS_HO_1594)/_OS_ID))))))
+ 
+_OS_WO_C1_F=Formula("_OS_WO_C1_F", (_OS_WO+(-prod1609)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_OS_WO_C1=FmContraintInferior("_OS_WO_C1", _OS_WO, prod1609, True, "WO < ID*Sind(Acosd(1-(2*HO)/ID))", CeilingConstraint(_OS_WO_C1_F, -1.0E-12, 1, 1))
+ 
+prod1622=(Const(0, baseUnit1342)*_OS_uv)
+ 
+_OS_PSC=FmPointGeometric("_OS_PSC", "PSC", _OS_sym_polar, prod1521, prod1622, False)
+ 
+_OS_PS1=FmPointGeometric("_OS_PS1", "PS1", _OS_sym_polar, _OS_IR, _OS_VE, True)
+ 
+_OS_PS2=FmPointGeometric("_OS_PS2", "PS2", _OS_sym_polar, _OS_OR, _OS_VE, False)
+ 
+_OS_PS3=FmPointGeometric("_OS_PS3", "PS3", _OS_sym_polar, _OS_OR, prod1622, False)
+ 
+_OS_PS4=FmPointGeometric("_OS_PS4", "PS4", _OS_sym_polar, _OS_IR, prod1622, False)
+ 
+_OS_P3=FmPointGeometric("_OS_P3", "P3", _OS_sym_cart, _OS_X3, _OS_Y3, True)
+ 
+_OS_PI2=FmPointGeometric("_OS_PI2", "PI2", _OS_sym_cart, _OS_XI2, _OS_YI2, True)
+ 
+_OS_LINE9=FmLineGeometricSegment("_OS_LINE9", "LINE9", _OS_P3, _OS_PI2, True)
+ 
+_OS_PI3=FmPointGeometric("_OS_PI3", "PI3", _OS_sym_cart, _OS_XI3, _OS_YI3, True)
+ 
+_OS_LINE17=FmLineGeometricSegment("_OS_LINE17", "LINE17", _OS_PI2, _OS_PI3, True)
+ 
+_OS_P8=FmPointGeometric("_OS_P8", "P8", _OS_sym_cart, _OS_X8, _OS_Y8, True)
+ 
+_OS_LINE13=FmLineGeometricSegment("_OS_LINE13", "LINE13", _OS_PI3, _OS_P8, True)
+ 
+_OS_LINE15=FmLineGeometricSegment("_OS_LINE15", "LINE15", _OS_P8, _OS_P3, True)
+ 
+_OS_LOOP6=FmLoop("_OS_LOOP6", [ _OS_LINE9, _OS_LINE17, _OS_LINE13, _OS_LINE15 ])
+ 
+name="_OS_CoilConductor1Loc"
+label="CoilConductor1"
+coordinateSystem=_OS_sym_polar
+firstCoordinateFunction=Sqrt(((((_OS_XI3+_OS_X3)/const1354)**2)+((((_OS_YI3+_OS_Y3)/const1395)/const1395)**2)))
+secondCoordinateFunction=(Atan2d(_OS_Y3, _OS_X3)/const1354)
+faceNature=6
+_OS_CoilConductor1Loc=FmPointNonexistantFaceLocation(name, label, coordinateSystem, firstCoordinateFunction, secondCoordinateFunction, faceNature)
+ 
+_OS_FACE4=FmFace("_OS_FACE4", _OS_LOOP6, [  ], _OS_CoilConductor1Loc)
+ 
+_OS_P4=FmPointGeometric("_OS_P4", "P4", _OS_sym_cart, _OS_X4, _OS_Y4, True)
+ 
+_OS_LINE10=FmLineGeometricSegment("_OS_LINE10", "LINE10", _OS_PI2, _OS_P4, True)
+ 
+_OS_P5=FmPointGeometric("_OS_P5", "P5", _OS_sym_cart, _OS_X5, _OS_Y5, True)
+ 
+_OS_P4C5=FmPointNonexistant("_OS_P4C5", "P4C5", _OS_sym_cart, _OS_X4C5, _OS_Y4C5)
+ 
+_OS_LINE11=FmLineGeometricArc("_OS_LINE11", "LINE11", _OS_P5, _OS_P4, _OS_P4C5, True)
+ 
+_OS_LINE12=FmLineGeometricSegment("_OS_LINE12", "LINE12", _OS_P5, _OS_PI3, True)
+ 
+_OS_LOOP7=FmLoop("_OS_LOOP7", [ _OS_LINE10, _OS_LINE11, _OS_LINE12, _OS_LINE17 ])
+ 
+div1663=((_OS_X4+_OS_X5)/const1354)
+ 
+div1666=((_OS_Y4+_OS_Y5)/const1354)
+ 
+_OS_CoilConductor2Loc=FmPointNonexistantFaceLocation("_OS_CoilConductor2Loc", "CoilConductor2", _OS_sym_polar, Sqrt(((div1663**2)+(div1666**2))), Atan2d(div1666, div1663), 6)
+ 
+_OS_FACE6=FmFace("_OS_FACE6", _OS_LOOP7, [  ], _OS_CoilConductor2Loc)
+ 
+referenceTemperature=FmConstantIo("BEHAVIOR_ELECTRIC_REFERENCE_TEMPERATURE", 293.15, baseUnit1143)
+resistivityAtReferenceTemperature=FmConstantIo("BEHAVIOR_ELECTRIC_ISOTROPIC_RESISTIVITY", 1.724E-8, derivedUnit1152)
+temperatureCoefficient=FmConstantIo("BEHAVIOR_ELECTRIC_TEMPERATURE_COEFFICIENT", 0.00393, derivedUnit1145)
+fmBehaviorElectrokineticLinearHomogeneousIsotropic1671=FmBehaviorElectrokineticLinearHomogeneousIsotropic(referenceTemperature, resistivityAtReferenceTemperature, temperatureCoefficient)
+ 
+name="_B_Copper"
+inMotorDir=True
+label="Copper"
+version="2019.1.0"
+marketingVersion="2019.1"
+author="FluxMotor"
+date="2017/03/21 10:07:41"
+comments=""
+manufacturer="FluxMotor"
+magneticBehavior=FmBehaviorMagneticNon()
+electrokineticBehavior=fmBehaviorElectrokineticLinearHomogeneousIsotropic1671
+mechanicalBehavior=FmBehaviorMechanicalRigid(FmConstantIo("BEHAVIOR_MECHANICAL_MASS_DENSITY", 8890, derivedUnit1156))
+economicBehavior=FmBehaviorEconomicLinear(FmConstantIo("BEHAVIOR_ECONOMIC_PRICE", 0, derivedUnit1159))
+_B_Copper=FmMaterialConductorBasic(name, inMotorDir, label, version, marketingVersion, author, date, comments, manufacturer, magneticBehavior, electrokineticBehavior, mechanicalBehavior, economicBehavior)
+ 
+_OS_CONDUCTOR=FmRegionSlotConductorTwoFace("_OS_CONDUCTOR", _OS_FACE4, _OS_FACE6, _B_Copper)
+ 
+_OS_LINE6=FmLineGeometricSegment("_OS_LINE6", "LINE6", _OS_PS3, _OS_P5, False)
+ 
+_OS_LINE5=FmLineGeometricArc("_OS_LINE5", "LINE5", _OS_PS3, _OS_PS2, _OS_PSC, False)
+ 
+_OS_P6=FmPointGeometric("_OS_P6", "P6", _OS_sym_cart, _OS_X6, _OS_Y6, True)
+ 
+_OS_LINE2=FmLineGeometricSegment("_OS_LINE2", "LINE2", _OS_PS2, _OS_P6, False)
+ 
+_OS_LINE18=FmLineGeometricArc("_OS_LINE18", "LINE18", _OS_P4, _OS_P6, _OS_PSC, True)
+ 
+_OS_LOOP3=FmLoop("_OS_LOOP3", [ _OS_LINE6, _OS_LINE5, _OS_LINE2, _OS_LINE18, _OS_LINE11 ])
+ 
+_OS_YokeLoc=FmPointNonexistantFaceLocation("_OS_YokeLoc", "Yoke", _OS_sym_polar, ((_OS_X5+_OS_OR)/const1354), (_OS_VE/const1395), 0)
+ 
+_OS_FACE2=FmFace("_OS_FACE2", _OS_LOOP3, [  ], _OS_YokeLoc)
+ 
+fmConstantIo1696=FmConstantIo("BEHAVIOR_MAGNETIC_KNEE_COEFFICIENT", 1.4, baseUnit862)
+ 
+saturationInduction=FmConstantIo("BEHAVIOR_MAGNETIC_POLARIZATION_AT_SATURATION", 1.85, derivedUnit1138)
+originRelativePermeability=FmConstantIo("BEHAVIOR_MAGNETIC_RELATIVE_PERMEABILITY", 10000, baseUnit862)
+curvatureCoefficient=fmConstantIo1696
+fmBehaviorMagneticFerroNonLinearHomogeneousIsotropic1693=FmBehaviorMagneticFerroNonLinearHomogeneousIsotropic(saturationInduction, originRelativePermeability, curvatureCoefficient)
+ 
+saturationInduction=FmConstantIo("BEHAVIOR_MAGNETIC_POLARIZATION_AT_SATURATION", 1.7575, derivedUnit1138)
+originRelativePermeability=FmConstantIo("BEHAVIOR_MAGNETIC_RELATIVE_PERMEABILITY", 9500.05, baseUnit862)
+curvatureCoefficient=fmConstantIo1696
+fmBehaviorMagneticFerroNonLinearHomogeneousIsotropic1697=FmBehaviorMagneticFerroNonLinearHomogeneousIsotropic(saturationInduction, originRelativePermeability, curvatureCoefficient)
+ 
+massDensity=FmConstantIo("BEHAVIOR_MECHANICAL_MASS_DENSITY", 7650, derivedUnit1156)
+stackingFactor=FmConstantIo("BEHAVIOR_MECHANICAL_STACKING_FACTOR", 0.95, baseUnit862)
+sheetThickness=FmConstantIo("BEHAVIOR_MECHANICAL_SHEET_THICKESS", 3.5E-4, baseUnit820)
+fmBehaviorMechanicalLaminationRigid1700=FmBehaviorMechanicalLaminationRigid(massDensity, stackingFactor, sheetThickness)
+ 
+mechanicalBehavior=fmBehaviorMechanicalLaminationRigid1700
+hysteresisLossCoefficient=FmConstantIo("BEHAVIOR_IRON_LOSS_HYSTERESIS_COEFFICIENT", 179, baseUnit862)
+hysteresisLossInductionExponent=FmConstantIo("BEHAVIOR_IRON_LOSS_HYSTERESIS_B_EXPONENT", 1.6, baseUnit862)
+hysteresisLossFrequencyExponent=FmConstantIo("BEHAVIOR_IRON_LOSS_HYSTERESIS_F_EXPONENT", 1, baseUnit862)
+classicalLossCoefficient=FmConstantIo("BEHAVIOR_IRON_LOSS_CLASSICAL_COEFFICIENT_SINEWAVE", 0.5495, baseUnit862)
+classicalLossExponent=FmConstantIo("BEHAVIOR_IRON_LOSS_CLASSICAL_EXPONENT", 2, baseUnit862)
+excessLossCoefficient=FmConstantIo("BEHAVIOR_IRON_LOSS_EXCESS_COEFFICIENT_SINEWAVE", 1.0E-8, baseUnit862)
+excessLossExponent=FmConstantIo("BEHAVIOR_IRON_LOSS_EXCESS_EXPONENT", 0, baseUnit862)
+fmBehaviorIronLossBertotti1706=FmBehaviorIronLossBertotti(mechanicalBehavior, hysteresisLossCoefficient, hysteresisLossInductionExponent, hysteresisLossFrequencyExponent, classicalLossCoefficient, classicalLossExponent, excessLossCoefficient, excessLossExponent)
+ 
+name="_B_M330_35A"
+inMotorDir=True
+label="M330_35A"
+version="2019.1.0"
+marketingVersion="2019.1"
+author="FluxMotor"
+date="2017/03/21 10:07:41"
+comments=""
+manufacturer="FluxMotor"
+solidMagneticBehavior=fmBehaviorMagneticFerroNonLinearHomogeneousIsotropic1693
+magneticBehavior=fmBehaviorMagneticFerroNonLinearHomogeneousIsotropic1697
+mechanicalBehavior=fmBehaviorMechanicalLaminationRigid1700
+economicBehavior=FmBehaviorEconomicLinear(FmConstantIo("BEHAVIOR_ECONOMIC_PRICE", 0, derivedUnit1159))
+ironLossBehavior=fmBehaviorIronLossBertotti1706
+_B_M330_35A=FmMaterialPackLaminationBasic(name, inMotorDir, label, version, marketingVersion, author, date, comments, manufacturer, solidMagneticBehavior, magneticBehavior, mechanicalBehavior, economicBehavior, ironLossBehavior)
+ 
+_OS_YOKE=FmRegionSlotYoke("_OS_YOKE", [ _OS_FACE2 ], _B_M330_35A)
+ 
+_OS_P7=FmPointGeometric("_OS_P7", "P7", _OS_sym_cart, _OS_X7, _OS_Y7, True)
+ 
+_OS_LINE4=FmLineGeometricSegment("_OS_LINE4", "LINE4", _OS_P6, _OS_P7, False)
+ 
+_OS_LINE19=FmLineGeometricArc("_OS_LINE19", "LINE19", _OS_P3, _OS_P7, _OS_PSC, True)
+ 
+_OS_LOOP4=FmLoop("_OS_LOOP4", [ _OS_LINE4, _OS_LINE19, _OS_LINE9, _OS_LINE10, _OS_LINE18 ])
+ 
+name="_OS_ToothLoc"
+label="Tooth"
+coordinateSystem=_OS_sym_polar
+firstCoordinateFunction=((sqrt1456+Sqrt(((_OS_X7**2)+(_OS_Y7**2))))/const1354)
+secondCoordinateFunction=Atan2d((_OS_Y7+_OS_Y4), (_OS_X7+_OS_X4))
+faceNature=7
+_OS_ToothLoc=FmPointNonexistantFaceLocation(name, label, coordinateSystem, firstCoordinateFunction, secondCoordinateFunction, faceNature)
+ 
+_OS_FACE3=FmFace("_OS_FACE3", _OS_LOOP4, [  ], _OS_ToothLoc)
+ 
+_OS_TOOTH=FmRegionSlotTooth("_OS_TOOTH", [ _OS_FACE3 ], _B_M330_35A)
+ 
+_OS_P1=FmPointGeometric("_OS_P1", "P1", _OS_sym_cart, _OS_X1, _OS_Y1, True)
+ 
+_OS_P2=FmPointGeometric("_OS_P2", "P2", _OS_sym_cart, _OS_X2, _OS_Y2, True)
+ 
+_OS_LINE7=FmLineGeometricSegment("_OS_LINE7", "LINE7", _OS_P1, _OS_P2, True)
+ 
+_OS_LINE1=FmLineGeometricArc("_OS_LINE1", "LINE1", _OS_P1, _OS_PS1, _OS_PSC, True)
+ 
+_OS_LINE3=FmLineGeometricSegment("_OS_LINE3", "LINE3", _OS_P7, _OS_PS1, False)
+ 
+_OS_LINE8=FmLineGeometricSegment("_OS_LINE8", "LINE8", _OS_P2, _OS_P3, True)
+ 
+_OS_LOOP2=FmLoop("_OS_LOOP2", [ _OS_LINE7, _OS_LINE1, _OS_LINE3, _OS_LINE19, _OS_LINE8 ])
+ 
+name="_OS_ToothFootLoc"
+label="ToothFoot"
+coordinateSystem=_OS_sym_polar
+firstCoordinateFunction=Sqrt(((((_OS_X1+_OS_X3)/const1354)**2)+(((_OS_Y1+_OS_Y3)/const1354)**2)))
+secondCoordinateFunction=Atan2d((_OS_Y7+_OS_Y3), (_OS_X7+_OS_X3))
+faceNature=8
+_OS_ToothFootLoc=FmPointNonexistantFaceLocation(name, label, coordinateSystem, firstCoordinateFunction, secondCoordinateFunction, faceNature)
+ 
+_OS_FACE1=FmFace("_OS_FACE1", _OS_LOOP2, [  ], _OS_ToothFootLoc)
+ 
+_OS_TOOTH_FOOT=FmRegionSlotToothFoot("_OS_TOOTH_FOOT", [ _OS_FACE1 ], _B_M330_35A)
+ 
+_OS_MAGNETIC_CIRCUIT=FmRegionGroupSlotMagneticCircuit("_OS_MAGNETIC_CIRCUIT", _OS_YOKE, _OS_TOOTH, _OS_TOOTH_FOOT)
+ 
+_OS_PI1=FmPointGeometric("_OS_PI1", "PI1", _OS_sym_cart, _OS_XI1, _OS_YI1, True)
+ 
+_OS_LINE14=FmLineGeometricSegment("_OS_LINE14", "LINE14", _OS_P8, _OS_PI1, False)
+ 
+_OS_LINE16=FmLineGeometricSegment("_OS_LINE16", "LINE16", _OS_PI1, _OS_P2, True)
+ 
+_OS_LOOP5=FmLoop("_OS_LOOP5", [ _OS_LINE8, _OS_LINE15, _OS_LINE14, _OS_LINE16 ])
+ 
+name="_OS_WedgeLoc"
+label="Wedge"
+coordinateSystem=_OS_sym_polar
+firstCoordinateFunction=Sqrt(((((_OS_X2+_OS_X8)/const1354)**2)+(((_OS_Y2+_OS_Y8)/const1354)**2)))
+secondCoordinateFunction=Atan2d(_OS_Y2, _OS_X3)
+faceNature=9
+_OS_WedgeLoc=FmPointNonexistantFaceLocation(name, label, coordinateSystem, firstCoordinateFunction, secondCoordinateFunction, faceNature)
+ 
+_OS_FACE5=FmFace("_OS_FACE5", _OS_LOOP5, [  ], _OS_WedgeLoc)
+ 
+name="_B_Nomex_130"
+inMotorDir=True
+label="Nomex_130"
+version="2019.1.0"
+marketingVersion="2019.1"
+author="FluxMotor"
+date="2017/03/21 10:07:41"
+comments="Nominal thickness 0.13 mm"
+manufacturer="FluxMotor"
+magneticBehavior=FmBehaviorMagneticNon()
+mechanicalBehavior=FmBehaviorMechanicalRigid(FmConstantIo("BEHAVIOR_MECHANICAL_MASS_DENSITY", 870, derivedUnit1156))
+economicBehavior=FmBehaviorEconomicLinear(FmConstantIo("BEHAVIOR_ECONOMIC_PRICE", 0, derivedUnit1159))
+_B_Nomex_130=FmMaterialInsulatorBasic(name, inMotorDir, label, version, marketingVersion, author, date, comments, manufacturer, magneticBehavior, mechanicalBehavior, economicBehavior)
+ 
+_OS_INSULATING_WEDGE=FmRegionSlotInsulatingWedge("_OS_INSULATING_WEDGE", [ _OS_FACE5 ], _B_Nomex_130)
+ 
+fmEndArrowSymmetricPoint1774=FmEndArrowSymmetricPoint(_OS_P1)
+ 
+_OS_P9=FmPointNonexistant("_OS_P9", "P9", _OS_sym_cart, _OS_X5, _OS_Y2)
+ 
+_OS_PI4=FmPointNonexistant("_OS_PI4", "PI4", _OS_sym_cart, _OS_X4C5, _OS_YI4)
+ 
+_OS_P10=FmPointNonexistant("_OS_P10", "P10", _OS_sym_cart, _OS_X2, _OS_Y3)
+ 
+fmEndArrowPoint1784=FmEndArrowPoint(_OS_P3)
+ 
+fmEndArrowSymmetricPoint1786=FmEndArrowSymmetricPoint(_OS_P3)
+ 
+fmEndArrowPoint1788=FmEndArrowPoint(_OS_P1)
+ 
+fmEndArrowPoint1795=FmEndArrowPoint(_OS_P4)
+ 
+type2=0
+namedFunction=_OS_V
+parameterLabel="V"
+firstEnd=FmEndArrowSymmetricPoint(_OS_P10)
+secondEnd=fmEndArrowSymmetricPoint1786
+pointCenter=FmEndArrowSymmetricPoint(_OS_P2)
+expression=(Sqrt(((sum1478**2)+((_OS_Y3+(-_OS_Y2))**2)))*Const(0.8, baseUnit1342))
+anchorPoint=None
+input2=False
+fmArrowArc1796=FmArrowArc(type2, namedFunction, parameterLabel, firstEnd, secondEnd, pointCenter, expression, anchorPoint, input2)
+ 
+fmEndArrowPoint1808=FmEndArrowPoint(_OS_P4C5)
+ 
+_OS_FPN1=FmPointNonexistant("_OS_FPN1", "partRotPiv", _OS_POLAR, fmConstantInternal1319, fmConstantInternal1325)
+ 
+_OS_NF6=FmFormulaInternal("_OS_NF6", (FmConstantInternal(6.283185307179586, baseUnit829, "Angle")/_OS_SN), "Angle")
+ 
+_OS_slotRot=FmTransformationRotation("_OS_slotRot", "Outer slot - Propagation", _OS_FPN1, _OS_NF6)
+ 
+_OS_FPN2=FmPointNonexistant("_OS_FPN2", "slotSymP1", _OS_sym_polar, fmConstantInternal1319, fmConstantInternal1325)
+ 
+_OS_FPN3=FmPointNonexistant("_OS_FPN3", "slotSymP2", _OS_sym_polar, FmConstantInternal(0.1, baseUnit820, "Length"), fmConstantInternal1325)
+ 
+_OS_Slot_sym=FmTransformationSymmetry("_OS_Slot_sym", "Outer slot - Symmetry", _OS_FPN2, _OS_FPN3)
+ 
+name="_OS_partOuterSlot"
+inMotorDir=True
+version="2019.1.0"
+marketingVersion="2019.1"
+label="os_Free_03C"
+librairy="os_Free"
+absoluteCoordinateSystem=XY1
+cartesianCoordinateSystem=_OS_CART
+polarCoordinateSystem=_OS_POLAR
+symmetricCartesianCoordinateSystem=_OS_sym_cart
+symmetricPolarCoordinateSystem=_OS_sym_polar
+innerDiameter=_OS_ID
+outerDiameter=_OS_OD
+entityNumber=_OS_SN
+unitParameters=[ _OS_ul, _OS_ua, _OS_uv, _OS_u1 ]
+virtualSectorFormulas=[ _OS_OD_imp, _OS_ID_imp, _OS_Teta, _OS_OD_virt, _OS_HS_imp, _OS_WS2_imp, _OS_HO_imp, _OS_H1_imp, _OS_WO_imp, _OS_WS1_imp ]
+userParameters=[ _OS_HS, _OS_WS2, _OS_H1, _OS_WS1, _OS_HO, _OS_WO ]
+innerFormulas=[ _OS_OR, _OS_IR, _OS_VE, _OS_X1, _OS_Y1, _OS_X2, _OS_Y2, _OS_X3, _OS_Y3, _OS_X5, _OS_Y5, _OS_X4C5, _OS_Y4C5, _OS_V1a, _OS_V1b, _OS_V1, _OS_X4, _OS_Y4, _OS_X6, _OS_Y6, _OS_X7, _OS_Y7, _OS_X8, _OS_Y8, _OS_ASa, _OS_ASb, _OS_ASc, _OS_ASd, _OS_AS, _OS_K, _OS_HTC, _OS_WC, _OS_XI1, _OS_YI1, _OS_XI2, _OS_YI2, _OS_XI3, _OS_YI3, _OS_YI4 ]
+outputFormulas=[ _OS_WT1, _OS_WT2, _OS_WT, _OS_WS, _OS_R, _OS_V, _OS_D ]
+constraints=[ _OS_HS_C0, _OS_HS_C1, _OS_WS2_C0, _OS_H1_C0, _OS_WS1_C0, _OS_WS1_C1, _OS_HO_C0, _OS_WO_C0, _OS_WO_C1 ]
+sectorPoints=[ _OS_PSC, _OS_PS1, _OS_PS2, _OS_PS3, _OS_PS4 ]
+conductorRegion=_OS_CONDUCTOR
+magnetCircuit=_OS_MAGNETIC_CIRCUIT
+fluidAreaRegion=None
+insulatorWedgeRegion=_OS_INSULATING_WEDGE
+holeRegion=None
+slitRegion=None
+ferroWedgeRegion=None
+coolingHoleRegionGroup=None
+mechanicalDeviceRegionGroup=None
+parasiticGapRegionGroup=None
+length=_OS_SL
+dimensionArrows=[ FmArrowSegment(0, _OS_HS, "HS", fmEndArrowSymmetricPoint1774, FmEndArrowSymmetricPoint(_OS_P9), None, True), FmArrowSegment(0, _OS_WS2, "WS2", FmEndArrowPoint(_OS_PI4), FmEndArrowSymmetricPoint(_OS_PI4), None, True), FmArrowSegment(1, _OS_H1, "H1", FmEndArrowPoint(_OS_P10), fmEndArrowPoint1784, None, True), FmArrowSegment(0, _OS_WS1, "WS1", fmEndArrowPoint1784, fmEndArrowSymmetricPoint1786, None, True), FmArrowSegment(1, _OS_HO, "HO", fmEndArrowPoint1788, FmEndArrowPoint(_OS_P2), None, True), FmArrowSegment(1, _OS_WO, "WO", fmEndArrowSymmetricPoint1774, fmEndArrowPoint1788, None, True), FmArrowSegment(0, _OS_WT1, "WT1", FmEndArrowSymmetricRotatedPoint(_OS_P3), fmEndArrowPoint1784, None, False), FmArrowSegment(0, _OS_WT2, "WT2", FmEndArrowSymmetricRotatedPoint(_OS_P4), fmEndArrowPoint1795, None, False), fmArrowArc1796, FmArrowSegment(2, _OS_R, "R", fmEndArrowPoint1808, fmEndArrowPoint1795, None, False), FmArrowSegment(0, _OS_D, "D", FmEndArrowPoint(_OS_PI1), fmEndArrowPoint1808, None, False) ]
+rotation=_OS_slotRot
+symmetry=_OS_Slot_sym
+_OS_partOuterSlot=FmPartSlotOuterClassicalHalf(name, inMotorDir, version, marketingVersion, label, librairy, absoluteCoordinateSystem, cartesianCoordinateSystem, polarCoordinateSystem, symmetricCartesianCoordinateSystem, symmetricPolarCoordinateSystem, innerDiameter, outerDiameter, entityNumber, unitParameters, virtualSectorFormulas, userParameters, innerFormulas, outputFormulas, constraints, sectorPoints, conductorRegion, magnetCircuit, fluidAreaRegion, insulatorWedgeRegion, holeRegion, slitRegion, ferroWedgeRegion, coolingHoleRegionGroup, mechanicalDeviceRegionGroup, parasiticGapRegionGroup, length, dimensionArrows, rotation, symmetry)
+ 
+_slotSkew=FmSkewSlotOuterNone("_slotSkew")
+ 
+_slotDataManager=FmDataManagerSlot("_slotDataManager", _OS_partOuterSlot, _slotSkew)
+ 
+_slotManager=FmManagerSlotOuter("_slotManager", _OS_partOuterSlot, _slotSkew, _slotDataManager)
+ 
+_S_ul=FmParameterIoCustomized("_S_ul", "PART_PARAMETER_LENGTH", "ul", "ul", "ul", 0.001, baseUnit820)
+ 
+_S_ua=FmParameterIoCustomized("_S_ua", "PART_PARAMETER_AREA", "ua", "ua", "ua", 1.0E-6, derivedUnit859)
+ 
+_S_uv=FmParameterIoCustomized("_S_uv", "PART_PARAMETER_ANGLE", "uv", "uv", "uv", 0.017453292519943295, baseUnit829)
+ 
+_S_u1=FmParameterIoCustomized("_S_u1", "PART_PARAMETER_UNITLESS", "u1", "u1", "u1", 1, baseUnit862)
+ 
+div1829=(_IM_ID/3)
+ 
+_S_D1=FmParameterIoCustomizedDefaultFunction("_S_D1", "SHAFT_CS_DIAMETER", "C.S. diameter", "Connection Side end-shaft diameter D1", "D1", 0.012, baseUnit820, div1829)
+ 
+max1832=Max([ (_IM_ID*0.75), FmConstantInternal(0.01, baseUnit820, "Length") ])
+ 
+_S_L1=FmParameterIoCustomizedDefaultFunction("_S_L1", "SHAFT_CS_EXTENSION", "C.S. extension", "Connection Side end-shaft extension L1", "L1", 0.025, baseUnit820, max1832)
+ 
+_S_D2=FmParameterIoCustomizedDefaultFunction("_S_D2", "SHAFT_OCS_DIAMETER", "O.C.S. diameter", "Opposite Connection Side end-shaft diameter D2", "D2", 0.012, baseUnit820, div1829)
+ 
+_S_L2=FmParameterIoCustomizedDefaultFunction("_S_L2", "SHAFT_OCS_EXTENSION", "O.C.S. extension", "Opposite Connection Side end-shaft extension L2", "L2", 0.025, baseUnit820, max1832)
+ 
+_S_V=FmFormulaIoCustomized("_S_V", "PART_PARAMETER_ANGLE", "V", "V", ((_S_uv*360)/_IM_PN))
+ 
+zero1843=Zero(baseUnit820)
+ 
+_S_X1=FmFormulaIoCustomized("_S_X1", "PART_PARAMETER_LENGTH", "X1", "X1", zero1843)
+ 
+_S_Y1=FmFormulaIoCustomized("_S_Y1", "PART_PARAMETER_LENGTH", "Y1", "Y1", zero1843)
+ 
+_S_X2=FmFormulaIoCustomized("_S_X2", "PART_PARAMETER_LENGTH", "X2", "X2", (_IM_ID/2))
+ 
+_S_X3=FmFormulaIoCustomized("_S_X3", "PART_PARAMETER_LENGTH", "X3", "X3", (_S_X2*Cosd(_S_V)))
+ 
+_S_Y3=FmFormulaIoCustomized("_S_Y3", "PART_PARAMETER_LENGTH", "Y3", "Y3", (_S_X2*Sind(_S_V)))
+ 
+_S_D1_C1_F=Formula("_S_D1_C1_F", (_S_D1+neg1041), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_S_D1_C1=FmContraintInferior("_S_D1_C1", _S_D1, _IM_ID, False, "D1 <= OD", CeilingConstraint(_S_D1_C1_F, 0, 1, 1))
+ 
+_S_D2_C2_F=Formula("_S_D2_C2_F", (_S_D2+neg1041), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_S_D2_C2=FmContraintInferior("_S_D2_C2", _S_D2, _IM_ID, False, "D2 <= OD", CeilingConstraint(_S_D2_C2_F, 0, 1, 1))
+ 
+_S_PSC=FmPointGeometric("_S_PSC", None, _IM_CART, _S_X1, _S_Y1, True)
+ 
+_S_PS1=FmPointGeometric("_S_PS1", None, _IM_CART, _S_X2, _S_Y1, True)
+ 
+_S_PS2=FmPointGeometric("_S_PS2", None, _IM_CART, _S_X3, _S_Y3, True)
+ 
+_S_LINE1=FmLineGeometricSegment("_S_LINE1", None, _S_PSC, _S_PS1, False)
+ 
+_S_LINE2=FmLineGeometricArc("_S_LINE2", None, _S_PS1, _S_PS2, _S_PSC, True)
+ 
+_S_LINE3=FmLineGeometricSegment("_S_LINE3", None, _S_PS2, _S_PSC, False)
+ 
+_S_LOOP1=FmLoop("_S_LOOP1", [ _S_LINE1, _S_LINE2, _S_LINE3 ])
+ 
+div1873=(_S_X2/2)
+ 
+div1876=(_S_V/2)
+ 
+_S_sectionLoc=FmPointNonexistantFaceLocation("_S_sectionLoc", "PL1", _IM_CART, (div1873*Cosd(div1876)), (div1873*Sind(div1876)), 22)
+ 
+_S_FACE1=FmFace("_S_FACE1", _S_LOOP1, [  ], _S_sectionLoc)
+ 
+saturationInduction=FmConstantIo("BEHAVIOR_MAGNETIC_POLARIZATION_AT_SATURATION", 1.98, derivedUnit1138)
+originRelativePermeability=FmConstantIo("BEHAVIOR_MAGNETIC_RELATIVE_PERMEABILITY", 1800, baseUnit862)
+curvatureCoefficient=FmConstantIo("BEHAVIOR_MAGNETIC_KNEE_COEFFICIENT", 0.71, baseUnit862)
+fmBehaviorMagneticFerroNonLinearHomogeneousIsotropic1881=FmBehaviorMagneticFerroNonLinearHomogeneousIsotropic(saturationInduction, originRelativePermeability, curvatureCoefficient)
+ 
+referenceTemperature=FmConstantIo("BEHAVIOR_ELECTRIC_REFERENCE_TEMPERATURE", 293.15, baseUnit1143)
+resistivityAtReferenceTemperature=FmConstantIo("BEHAVIOR_ELECTRIC_ISOTROPIC_RESISTIVITY", 1.68E-7, derivedUnit1152)
+temperatureCoefficient=FmConstantIo("BEHAVIOR_ELECTRIC_TEMPERATURE_COEFFICIENT", 0.0038, derivedUnit1145)
+fmBehaviorElectrokineticLinearHomogeneousIsotropic1885=FmBehaviorElectrokineticLinearHomogeneousIsotropic(referenceTemperature, resistivityAtReferenceTemperature, temperatureCoefficient)
+ 
+fmConstantIo1891=FmConstantIo("BEHAVIOR_MECHANICAL_YOUNG_MODULUS", 186000000000, DerivedUnit("pascal", "Pa", "kg/m/s2", "Pressure density", "Mechanics"))
+ 
+massDensity=FmConstantIo("BEHAVIOR_MECHANICAL_MASS_DENSITY", 7870, derivedUnit1156)
+youngModulus=fmConstantIo1891
+poissonRatio=FmConstantIo("BEHAVIOR_MECHANICAL_POISSON_RATIO", 0.29, baseUnit862)
+fmBehaviorMechanicalLinearHomogeneousIsotropic1889=FmBehaviorMechanicalLinearHomogeneousIsotropic(massDensity, youngModulus, poissonRatio)
+ 
+mechanicalBehavior=fmBehaviorMechanicalLinearHomogeneousIsotropic1889
+hysteresisLossCoefficient=FmConstantIo("BEHAVIOR_IRON_LOSS_HYSTERESIS_COEFFICIENT", 0, baseUnit862)
+hysteresisLossInductionExponent=FmConstantIo("BEHAVIOR_IRON_LOSS_HYSTERESIS_B_EXPONENT", 0, baseUnit862)
+hysteresisLossFrequencyExponent=FmConstantIo("BEHAVIOR_IRON_LOSS_HYSTERESIS_F_EXPONENT", 0, baseUnit862)
+classicalLossCoefficient=FmConstantIo("BEHAVIOR_IRON_LOSS_CLASSICAL_COEFFICIENT_SINEWAVE", 0, baseUnit862)
+classicalLossExponent=FmConstantIo("BEHAVIOR_IRON_LOSS_CLASSICAL_EXPONENT", 0, baseUnit862)
+excessLossCoefficient=FmConstantIo("BEHAVIOR_IRON_LOSS_EXCESS_COEFFICIENT_SINEWAVE", 0, baseUnit862)
+excessLossExponent=FmConstantIo("BEHAVIOR_IRON_LOSS_EXCESS_EXPONENT", 0, baseUnit862)
+fmBehaviorIronLossBertotti1896=FmBehaviorIronLossBertotti(mechanicalBehavior, hysteresisLossCoefficient, hysteresisLossInductionExponent, hysteresisLossFrequencyExponent, classicalLossCoefficient, classicalLossExponent, excessLossCoefficient, excessLossExponent)
+ 
+name="_B_EN_1_1151"
+inMotorDir=True
+label="EN_1_1151"
+version="2019.1.0"
+marketingVersion="2019.1"
+author="FluxMotor"
+date="2017/03/21 10:07:41"
+comments="Low carbon steel /nAISI 1020/nAFNOR XC18"
+manufacturer="FluxMotor"
+magneticBehavior=fmBehaviorMagneticFerroNonLinearHomogeneousIsotropic1881
+electrokineticBehavior=fmBehaviorElectrokineticLinearHomogeneousIsotropic1885
+mechanicalBehavior=fmBehaviorMechanicalLinearHomogeneousIsotropic1889
+economicBehavior=FmBehaviorEconomicLinear(FmConstantIo("BEHAVIOR_ECONOMIC_PRICE", 0, derivedUnit1159))
+ironLossBehavior=fmBehaviorIronLossBertotti1896
+_B_EN_1_1151=FmMaterialPackSolidBasic(name, inMotorDir, label, version, marketingVersion, author, date, comments, manufacturer, magneticBehavior, electrokineticBehavior, mechanicalBehavior, economicBehavior, ironLossBehavior)
+ 
+_S_Shaft=FmRegionShaftSection("_S_Shaft", _S_FACE1, _B_EN_1_1151)
+ 
+_S_FPN1=FmPointNonexistant("_S_FPN1", "partRotPiv", _IM_POLAR, FmConstantInternal(0, baseUnit820, "Length"), FmConstantInternal(0, baseUnit829, "Angle"))
+ 
+_S_NF=FmFormulaInternal("_S_NF", (FmConstantInternal(6.283185307179586, baseUnit829, "Angle")/_IM_PN), "Angle")
+ 
+_S_shaftRot=FmTransformationRotation("_S_shaftRot", "Shaft - Propagation", _S_FPN1, _S_NF)
+ 
+name="_S_partShaft"
+version="2019.1.0"
+marketingVersion="2019.1"
+absoluteCoordinateSystem=XY1
+cartesianCoordinateSystem=_IM_CART
+polarCoordinateSystem=_IM_POLAR
+outerDiameter=_IM_ID
+entityNumber=_IM_PN
+unitParameters=[ _S_ul, _S_ua, _S_uv, _S_u1 ]
+userParameters=[ _S_D1, _S_L1, _S_D2, _S_L2 ]
+innerFormulas=[ _S_V, _S_X1, _S_Y1, _S_X2, _S_X3, _S_Y3 ]
+outputFormulas=[  ]
+constraints=[ _S_D1_C1, _S_D2_C2 ]
+sectorPoints=[ _S_PSC, _S_PS1, _S_PS2 ]
+shaftRegion=_S_Shaft
+length=_IM_SL
+rotation=_S_shaftRot
+_S_partShaft=FmPartShaftSolid(name, version, marketingVersion, absoluteCoordinateSystem, cartesianCoordinateSystem, polarCoordinateSystem, outerDiameter, entityNumber, unitParameters, userParameters, innerFormulas, outputFormulas, constraints, sectorPoints, shaftRegion, length, rotation)
+ 
+_shaftDataManager=FmDataManagerShaft("_shaftDataManager", _S_partShaft)
+ 
+_shaftManager=FmManagerShaft("_shaftManager", _S_partShaft, _shaftDataManager)
+ 
+_L_EN=FmParameterIntegerIoCustomized("_L_EN", "PART_PARAMETER_UNITLESS_INPUT", "No. repetitions", "No. repetitions", "EN", 4)
+ 
+_L_ul=FmParameterIoCustomized("_L_ul", "PART_PARAMETER_LENGTH", "ul", "ul", "ul", 0.001, baseUnit820)
+ 
+_L_ua=FmParameterIoCustomized("_L_ua", "PART_PARAMETER_AREA", "ua", "ua", "ua", 1.0E-6, derivedUnit859)
+ 
+_L_uv=FmParameterIoCustomized("_L_uv", "PART_PARAMETER_ANGLE", "uv", "uv", "uv", 0.017453292519943295, baseUnit829)
+ 
+_L_u1=FmParameterIoCustomized("_L_u1", "PART_PARAMETER_UNITLESS", "u1", "u1", "u1", 1, baseUnit862)
+ 
+_L_R=FmParameterIoCustomizedDefaultFunction("_L_R", "LAMINATION_FILLET_RADIUS", "Fillet radius", "Lamination fillet radius", "R", 0.01, baseUnit820, ((_OS_OD+_L_EX)*0.2))
+ 
+_L_V=FmFormulaIoCustomized("_L_V", "PART_PARAMETER_ANGLE", "V", "V", ((_L_uv*360)/_L_EN))
+ 
+_L_X0=FmFormulaIoCustomized("_L_X0", "PART_PARAMETER_LENGTH", "X0", "X0", zero1843)
+ 
+_L_Y0=FmFormulaIoCustomized("_L_Y0", "PART_PARAMETER_LENGTH", "Y0", "Y0", zero1843)
+ 
+tand1931=Tand(_VS)
+ 
+div1933=(_OS_OD/2)
+ 
+sum1932=(div1933+_L_EX)
+ 
+_L_X1=FmFormulaIoCustomized("_L_X1", "PART_PARAMETER_LENGTH", "X1", "X1", (tand1931*sum1932*(-1)))
+ 
+_L_Y1=FmFormulaIoCustomized("_L_Y1", "PART_PARAMETER_LENGTH", "Y1", "Y1", sum1932)
+ 
+sum1938=(div1933+_L_EX+(-_L_R))
+ 
+_L_X2=FmFormulaIoCustomized("_L_X2", "PART_PARAMETER_LENGTH", "X2", "X2", sum1938)
+ 
+_L_Y2=FmFormulaIoCustomized("_L_Y2", "PART_PARAMETER_LENGTH", "Y2", "Y2", sum1932)
+ 
+_L_X3=FmFormulaIoCustomized("_L_X3", "PART_PARAMETER_LENGTH", "X3", "X3", sum1932)
+ 
+_L_Y3=FmFormulaIoCustomized("_L_Y3", "PART_PARAMETER_LENGTH", "Y3", "Y3", sum1938)
+ 
+_L_X4=FmFormulaIoCustomized("_L_X4", "PART_PARAMETER_LENGTH", "X4", "X4", sum1932)
+ 
+_L_Y4=FmFormulaIoCustomized("_L_Y4", "PART_PARAMETER_LENGTH", "Y4", "Y4", (tand1931*sum1932))
+ 
+prod1947=(Cosd(_VS)*div1933)
+ 
+_L_X5=FmFormulaIoCustomized("_L_X5", "PART_PARAMETER_LENGTH", "X5", "X5", prod1947)
+ 
+sind1951=Sind(_VS)
+ 
+_L_Y5=FmFormulaIoCustomized("_L_Y5", "PART_PARAMETER_LENGTH", "Y5", "Y5", (sind1951*div1933))
+ 
+_L_X6=FmFormulaIoCustomized("_L_X6", "PART_PARAMETER_LENGTH", "X6", "X6", (sind1951*div1933*(-1)))
+ 
+_L_Y6=FmFormulaIoCustomized("_L_Y6", "PART_PARAMETER_LENGTH", "Y6", "Y6", prod1947)
+ 
+_L_R_C1_F=Formula("_L_R_C1_F", (_L_R+(-sum1932)), baseUnit820, None, [  ], False, None, False, 0)
+ 
+_L_R_C1=FmContraintInferiorCustomized("_L_R_C1", _L_R, sum1932, True, "The Fillet radius length is too long", CeilingConstraint(_L_R_C1_F, -1.0E-12, 1, 1))
+ 
+atand1962=Atand((One(baseUnit862)+(-(_L_R/sum1932))))
+ 
+_L_VS_C1_F=Formula("_L_VS_C1_F", (_VS+(-atand1962)), baseUnit829, None, [  ], False, None, False, 0)
+ 
+name="_L_VS_C1"
+function=_VS
+constrainingFunction=atand1962
+strictly=True
+statement="The Fillet radius and the Angular shift are uncompatible with the lamination shape"
+constraint=CeilingConstraint(_L_VS_C1_F, -1.0E-12, 1, 1)
+_L_VS_C1=FmContraintInferiorCustomized(name, function, constrainingFunction, strictly, statement, constraint)
+ 
+_L_PC=FmPointGeometric("_L_PC", None, XY1, _L_X0, _L_Y0, False)
+ 
+_L_P1=FmPointGeometric("_L_P1", None, XY1, _L_X1, _L_Y1, True)
+ 
+_L_P2=FmPointGeometric("_L_P2", None, XY1, _L_X2, _L_Y2, True)
+ 
+_L_P3=FmPointGeometric("_L_P3", None, XY1, _L_X3, _L_Y3, True)
+ 
+_L_P4=FmPointGeometric("_L_P4", None, XY1, _L_X4, _L_Y4, True)
+ 
+_L_P5=FmPointGeometric("_L_P5", None, XY1, _L_X5, _L_Y5, False)
+ 
+_L_P6=FmPointGeometric("_L_P6", None, XY1, _L_X6, _L_Y6, False)
+ 
+_L_P2C3=FmPointGeometric("_L_P2C3", None, XY1, _L_X2, _L_Y3, False)
+ 
+_L_LINE1=FmLineGeometricSegment("_L_LINE1", None, _L_P1, _L_P2, True)
+ 
+_L_LINE2=FmLineGeometricArc("_L_LINE2", None, _L_P3, _L_P2, _L_P2C3, True)
+ 
+_L_LINE3=FmLineGeometricSegment("_L_LINE3", None, _L_P3, _L_P4, True)
+ 
+_L_LINE4=FmLineGeometricSegment("_L_LINE4", None, _L_P4, _L_P5, False)
+ 
+_L_LINE5=FmLineGeometricArc("_L_LINE5", None, _L_P5, _L_P6, _L_PC, False)
+ 
+_L_LINE6=FmLineGeometricSegment("_L_LINE6", None, _L_P6, _L_P1, False)
+ 
+_L_LOOP1=FmLoop("_L_LOOP1", [ _L_LINE1, _L_LINE2, _L_LINE3, _L_LINE4, _L_LINE5, _L_LINE6 ])
+ 
+_L_yokeLoc=FmPointNonexistantFaceLocation("_L_yokeLoc", "PL1", XY1, ((((_L_X2+_L_X3)/2)+(_L_X5*Cosd((_L_V/2))))/2), ((((_L_Y2+_L_Y3)/2)+(_L_X5*Sind((_L_V/2))))/2), 26)
+ 
+_L_FACE1=FmFace("_L_FACE1", _L_LOOP1, [  ], _L_yokeLoc)
+ 
+_L_LaminationRegion=FmRegionLaminationYoke("_L_LaminationRegion", _L_FACE1, _B_M330_35A)
+ 
+_L_arrowPoint1=FmPointNonexistant("_L_arrowPoint1", None, XY1, _L_X0, div1933)
+ 
+_L_arrowPoint2=FmPointNonexistant("_L_arrowPoint2", None, XY1, _L_X0, sum1932)
+ 
+_L_arrowPoint3=FmPointNonexistant("_L_arrowPoint3", None, XY1, _L_X2, _L_Y3)
+ 
+_L_arrowPoint4=FmPointNonexistant("_L_arrowPoint4", None, XY1, _L_X3, _L_Y3)
+ 
+_L_FPN1=FmPointNonexistant("_L_FPN1", "partRotPiv", _OS_POLAR, FmConstantInternal(0, baseUnit820, "Length"), FmConstantInternal(0, baseUnit829, "Angle"))
+ 
+_L_NF=FmFormulaInternal("_L_NF", (FmConstantInternal(6.283185307179586, baseUnit829, "Angle")/_L_EN), "Angle")
+ 
+_L_laminationRot=FmTransformationRotation("_L_laminationRot", "Lamination - Propagation", _L_FPN1, _L_NF)
+ 
+name="_L_partLamination"
+version="2019.1.0"
+marketingVersion="2019.1"
+absoluteCoordinateSystem=XY1
+cartesianCoordinateSystem=_OS_CART
+polarCoordinateSystem=_OS_POLAR
+innerDiameter=_OS_OD
+thickness=_L_EX
+entityNumber=_L_EN
+angularShift=_VS
+unitParameters=[ _L_ul, _L_ua, _L_uv, _L_u1 ]
+userParameters=[ _L_R ]
+innerFormulas=[ _L_V, _L_X0, _L_Y0, _L_X1, _L_Y1, _L_X2, _L_Y2, _L_X3, _L_Y3, _L_X4, _L_Y4, _L_X5, _L_Y5, _L_X6, _L_Y6 ]
+outputFormulas=[  ]
+constraints=[ _L_R_C1, _L_VS_C1 ]
+sectorPoints=[ _L_PC, _L_P1, _L_P2, _L_P3, _L_P4, _L_P5, _L_P6, _L_P2C3 ]
+laminationRegion=_L_LaminationRegion
+length=_OS_SL
+dimensionArrows=[ FmArrowSegment(1, _L_EX, "Extension", FmEndArrowPoint(_L_arrowPoint1), FmEndArrowPoint(_L_arrowPoint2), None, True), FmArrowSegment(0, _L_R, "Fillet radius", FmEndArrowPoint(_L_arrowPoint3), FmEndArrowPoint(_L_arrowPoint4), None, True) ]
+rotation=_L_laminationRot
+_L_partLamination=FmPartLaminationRectangularRounded(name, version, marketingVersion, absoluteCoordinateSystem, cartesianCoordinateSystem, polarCoordinateSystem, innerDiameter, thickness, entityNumber, angularShift, unitParameters, userParameters, innerFormulas, outputFormulas, constraints, sectorPoints, laminationRegion, length, dimensionArrows, rotation)
+ 
+_laminationDataManager=FmDataManagerLamination("_laminationDataManager", _L_partLamination)
+ 
+_laminationManager=FmManagerLamination("_laminationManager", _L_partLamination, _laminationDataManager)
+ 
+_L_EN_2030=FmParameterIntegerIoCustomized("_L_EN", "PART_PARAMETER_UNITLESS_INPUT", "No. repetitions", "No. repetitions", "EN", 4)
+ 
+_H_ul=FmParameterIoCustomized("_H_ul", "PART_PARAMETER_LENGTH", "ul", "ul", "ul", 0.001, baseUnit820)
+ 
+_H_ua=FmParameterIoCustomized("_H_ua", "PART_PARAMETER_AREA", "ua", "ua", "ua", 1.0E-6, derivedUnit859)
+ 
+_H_uv=FmParameterIoCustomized("_H_uv", "PART_PARAMETER_ANGLE", "uv", "uv", "uv", 0.017453292519943295, baseUnit829)
+ 
+_H_u1=FmParameterIoCustomized("_H_u1", "PART_PARAMETER_UNITLESS", "u1", "u1", "u1", 1, baseUnit862)
+ 
+_H_FPN1=FmPointNonexistant("_H_FPN1", "partRotPiv", _OS_POLAR, FmConstantInternal(0, baseUnit820, "Length"), FmConstantInternal(0, baseUnit829, "Angle"))
+ 
+_H_NF=FmFormulaInternal("_H_NF", (FmConstantInternal(6.283185307179586, baseUnit829, "Angle")/_L_EN_2030), "Angle")
+ 
+_H_housingRot=FmTransformationRotation("_H_housingRot", "Housing - Propagation", _H_FPN1, _H_NF)
+ 
+name="_H_partShaft"
+version="2019.1.0"
+marketingVersion="2019.1"
+absoluteCoordinateSystem=XY1
+cartesianCoordinateSystem=_OS_CART
+polarCoordinateSystem=_OS_POLAR
+laminationInnerDiameter=_OS_OD
+laminationThickness=_L_EX
+entityNumber=_L_EN_2030
+unitParameters=[ _H_ul, _H_ua, _H_uv, _H_u1 ]
+userParameters=[  ]
+innerFormulas=[  ]
+outputFormulas=[  ]
+constraints=[  ]
+sectorPoints=[  ]
+length=_OS_SL
+dimensionArrows=None
+rotation=_H_housingRot
+_H_partShaft=FmPartHousingNone(name, version, marketingVersion, absoluteCoordinateSystem, cartesianCoordinateSystem, polarCoordinateSystem, laminationInnerDiameter, laminationThickness, entityNumber, unitParameters, userParameters, innerFormulas, outputFormulas, constraints, sectorPoints, length, dimensionArrows, rotation)
+ 
+_housingDataManager=FmDataManagerHousing("_housingDataManager", _H_partShaft)
+ 
+_housingManager=FmManagerHousing("_housingManager", _H_partShaft, _housingDataManager)
+ 
+_AG_ul=FmParameterIoCustomized("_AG_ul", "PART_PARAMETER_LENGTH", "ul", "ul", "ul", 0.001, baseUnit820)
+ 
+_AG_ua=FmParameterIoCustomized("_AG_ua", "PART_PARAMETER_AREA", "ua", "ua", "ua", 1.0E-6, derivedUnit859)
+ 
+_AG_uv=FmParameterIoCustomized("_AG_uv", "PART_PARAMETER_ANGLE", "uv", "uv", "uv", 0.017453292519943295, baseUnit829)
+ 
+_AG_u1=FmParameterIoCustomized("_AG_u1", "PART_PARAMETER_UNITLESS", "u1", "u1", "u1", 1, baseUnit862)
+ 
+_AG_V=FmFormulaIoCustomized("_AG_V", "PART_PARAMETER_ANGLE", "V", "V", ((_AG_uv*360)/_IM_PN))
+ 
+zero2053=Zero(baseUnit820)
+ 
+_AG_X0=FmFormulaIoCustomized("_AG_X0", "PART_PARAMETER_LENGTH", "X0", "X0", zero2053)
+ 
+_AG_Y0=FmFormulaIoCustomized("_AG_Y0", "PART_PARAMETER_LENGTH", "Y0", "Y0", zero2053)
+ 
+div2056=(_IM_OD/2)
+ 
+_AG_X1=FmFormulaIoCustomized("_AG_X1", "PART_PARAMETER_LENGTH", "X1", "X1", div2056)
+ 
+_AG_Y1=FmFormulaIoCustomized("_AG_Y1", "PART_PARAMETER_LENGTH", "Y1", "Y1", zero2053)
+ 
+cosd2061=Cosd(_AG_V)
+ 
+_AG_X2=FmFormulaIoCustomized("_AG_X2", "PART_PARAMETER_LENGTH", "X2", "X2", (div2056*cosd2061))
+ 
+sind2064=Sind(_AG_V)
+ 
+_AG_Y2=FmFormulaIoCustomized("_AG_Y2", "PART_PARAMETER_LENGTH", "Y2", "Y2", (div2056*sind2064))
+ 
+div2067=(_OS_ID/2)
+ 
+_AG_X4=FmFormulaIoCustomized("_AG_X4", "PART_PARAMETER_LENGTH", "X4", "X4", (div2067*cosd2061))
+ 
+_AG_Y4=FmFormulaIoCustomized("_AG_Y4", "PART_PARAMETER_LENGTH", "Y4", "Y4", (div2067*sind2064))
+ 
+_AG_X3=FmFormulaIoCustomized("_AG_X3", "PART_PARAMETER_LENGTH", "X3", "X3", div2067)
+ 
+_AG_Y3=FmFormulaIoCustomized("_AG_Y3", "PART_PARAMETER_LENGTH", "Y3", "Y3", zero2053)
+ 
+div2074=((_IM_OD+_OS_ID)/4)
+ 
+_AG_X5=FmFormulaIoCustomized("_AG_X5", "PART_PARAMETER_LENGTH", "X5", "X5", div2074)
+ 
+_AG_Y5=FmFormulaIoCustomized("_AG_Y5", "PART_PARAMETER_LENGTH", "Y5", "Y5", zero2053)
+ 
+_AG_X6=FmFormulaIoCustomized("_AG_X6", "PART_PARAMETER_LENGTH", "X6", "X6", (div2074*cosd2061))
+ 
+_AG_Y6=FmFormulaIoCustomized("_AG_Y6", "PART_PARAMETER_LENGTH", "Y6", "Y6", (div2074*sind2064))
+ 
+sum2084=(_OS_ID+(-_IM_OD))
+ 
+_AG_Length=FmFormulaIoCustomized("_AG_Length", "PART_PARAMETER_LENGTH", "Length", "Length", (sum2084/2))
+ 
+_AG_OD_C1_F=Formula("_AG_OD_C1_F", sum2084, baseUnit820, None, [  ], False, None, False, 0)
+ 
+_AG_OD_C1=FmContraintSuperior("_AG_OD_C1", _OS_ID, _IM_OD, False, "OD >= ID", FloorConstraint(_AG_OD_C1_F, 0, 1, 1))
+ 
+_AG_P1C2=FmPointGeometric("_AG_P1C2", None, _OS_CART, _AG_X0, _AG_Y0, False)
+ 
+_AG_P1=FmPointGeometric("_AG_P1", None, _OS_CART, _AG_X1, _AG_Y1, True)
+ 
+_AG_P2=FmPointGeometric("_AG_P2", None, _OS_CART, _AG_X2, _AG_Y2, True)
+ 
+_AG_P3=FmPointGeometric("_AG_P3", None, _OS_CART, _AG_X4, _AG_Y4, True)
+ 
+_AG_P4=FmPointGeometric("_AG_P4", None, _OS_CART, _AG_X3, _AG_Y3, True)
+ 
+_AG_P5=FmPointGeometric("_AG_P5", None, _OS_CART, _AG_X5, _AG_Y5, True)
+ 
+_AG_P6=FmPointGeometric("_AG_P6", None, _OS_CART, _AG_X6, _AG_Y6, True)
+ 
+_AG_LINE1=FmLineGeometricArc("_AG_LINE1", None, _AG_P5, _AG_P6, _AG_P1C2, True)
+ 
+div2102=(((_IM_OD*3)+_OS_ID)/8)
+ 
+div2108=(_AG_V/2)
+ 
+cosd2107=Cosd(div2108)
+ 
+sind2111=Sind(div2108)
+ 
+_AG_innerAirgapLoc=FmPointNonexistantFaceLocation("_AG_innerAirgapLoc", "PF1", _OS_CART, (div2102*cosd2107), (div2102*sind2111), 24)
+ 
+_AG_INNER=FmRegionAirgapInner("_AG_INNER", _AG_LINE1, _B_Air, _AG_innerAirgapLoc)
+ 
+div2115=((_IM_OD+(_OS_ID*3))/8)
+ 
+_AG_outerAirgapLoc=FmPointNonexistantFaceLocation("_AG_outerAirgapLoc", "PF2", _OS_CART, (div2115*cosd2107), (div2115*sind2111), 24)
+ 
+_AG_OUTER=FmRegionAirgapOuter("_AG_OUTER", _B_Air, _AG_outerAirgapLoc)
+ 
+_AG_AIRGAP=FmRegionGroupAirgap("_AG_AIRGAP", _AG_INNER, _AG_OUTER)
+ 
+_AG_FPN4=FmPointNonexistant("_AG_FPN4", "partRotPiv", _OS_POLAR, FmConstantInternal(0, baseUnit820, "Length"), FmConstantInternal(0, baseUnit829, "Angle"))
+ 
+_AG_NF9=FmFormulaInternal("_AG_NF9", (FmConstantInternal(6.283185307179586, baseUnit829, "Angle")/_IM_PN), "Angle")
+ 
+_AG_airgapRot=FmTransformationRotation("_AG_airgapRot", "Airgap - Propagation", _AG_FPN4, _AG_NF9)
+ 
+name="_AG_partAirgap"
+version="2019.1.0"
+marketingVersion="2019.1"
+absoluteCoordinateSystem=XY1
+cartesianCoordinateSystem=_OS_CART
+polarCoordinateSystem=_OS_POLAR
+innerDiameter=_IM_OD
+outerDiameter=_OS_ID
+entityNumber=_IM_PN
+unitParameters=[ _AG_ul, _AG_ua, _AG_uv, _AG_u1 ]
+userParameters=[  ]
+innerFormulas=[ _AG_V, _AG_X0, _AG_Y0, _AG_X1, _AG_Y1, _AG_X2, _AG_Y2, _AG_X4, _AG_Y4, _AG_X3, _AG_Y3, _AG_X5, _AG_Y5, _AG_X6, _AG_Y6 ]
+outputFormulas=[ _AG_Length ]
+constraints=[ _AG_OD_C1 ]
+sectorPoints=[ _AG_P1C2, _AG_P1, _AG_P2, _AG_P3, _AG_P4, _AG_P5, _AG_P6 ]
+airgapRegionGroup=_AG_AIRGAP
+rotation=_AG_airgapRot
+_AG_partAirgap=FmPartAirgap(name, version, marketingVersion, absoluteCoordinateSystem, cartesianCoordinateSystem, polarCoordinateSystem, innerDiameter, outerDiameter, entityNumber, unitParameters, userParameters, innerFormulas, outputFormulas, constraints, sectorPoints, airgapRegionGroup, rotation)
+ 
+_airgapDataManager=FmDataManagerAirgap("_airgapDataManager", _AG_partAirgap)
+ 
+_airgapManager=FmManagerAirgap("_airgapManager", _AG_partAirgap, _airgapDataManager)
+ 
+name="_Motor"
+irid=_IM_ID
+irod=_IM_OD
+irsl=_IM_SL
+orid=_OS_ID
+orod=_OS_OD
+orsl=_OS_SL
+lt=_L_EX
+absoluteCoordinateSystem=XY1
+angularShift=_VS
+rotorCartesianCoordinateSystem=_IM_CART
+rotorPolarCoordinateSystem=_IM_POLAR
+statorCartesianCoordinateSystem=_OS_CART
+statorPolarCoordinateSystem=_OS_POLAR
+rotorManager=_magnetManager
+statorManager=_slotManager
+shaftManager=_shaftManager
+laminationManager=_laminationManager
+housingManager=_housingManager
+airgapManager=_airgapManager
+poleNumber=_IM_PN
+slotNumber=_OS_SN
+_Motor=FmMotorSynchronousBpmInnerRotor(name, irid, irod, irsl, orid, orod, orsl, lt, absoluteCoordinateSystem, angularShift, rotorCartesianCoordinateSystem, rotorPolarCoordinateSystem, statorCartesianCoordinateSystem, statorPolarCoordinateSystem, rotorManager, statorManager, shaftManager, laminationManager, housingManager, airgapManager, poleNumber, slotNumber)
+ 
+fmDataMotorSkewSheet2130=FmDataMotorSkewSheet(_Motor)
+ 
+_motorDataManager=FmDataManagerMotor("_motorDataManager", _Motor, fmDataMotorSkewSheet2130, FmDataMotorView(_Motor, fmDataMotorSkewSheet2130))
+ 
+_motorManager=FmManagerMotorSmPmIr("_motorManager", _Motor, _motorDataManager)
+ 
+_M=FmParameterIntegerIo("_M", "WINDING_NO_PHASES", 3)
+ 
+sectors=[ FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(1, 0, 4, 0, True) ]) ]) ]), FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(7, 0, 10, 0, True) ]) ]) ]), FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(13, 0, 16, 0, True) ]) ]) ]), FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(19, 0, 22, 0, True) ]) ]) ]) ]
+fmWindingPhase2140=FmWindingPhase(sectors)
+ 
+sectors=[ FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(3, 0, 6, 0, True) ]) ]) ]), FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(9, 0, 12, 0, True) ]) ]) ]), FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(15, 0, 18, 0, True) ]) ]) ]), FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(21, 0, 24, 0, True) ]) ]) ]) ]
+fmWindingPhase2157=FmWindingPhase(sectors)
+ 
+sectors=[ FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(5, 0, 8, 0, True) ]) ]) ]), FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(11, 0, 14, 0, True) ]) ]) ]), FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(17, 0, 20, 0, True) ]) ]) ]), FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(23, 0, 2, 0, True) ]) ]) ]) ]
+fmWindingPhase2174=FmWindingPhase(sectors)
+ 
+name="_Winding"
+slotNumber=24
+poleNumber=8
+phaseNumber=3
+coilPerRepresentedPole=1
+coiltPich=3
+oneLayer=True
+consequentPole=True
+windingType=0
+clockwise=True
+parallelCircuitNumber=4
+elementarySector=FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(1, 0, 4, 0, True) ]) ]) ])
+sectorNumber=4
+phaseOffset=2
+connectionTable=FmWindingConnectionTable([ fmWindingPhase2140, fmWindingPhase2157, fmWindingPhase2174 ])
+_Winding=FmWindingIntegerAutomatic(name, slotNumber, poleNumber, phaseNumber, coilPerRepresentedPole, coiltPich, oneLayer, consequentPole, windingType, clockwise, parallelCircuitNumber, elementarySector, sectorNumber, phaseOffset, connectionTable)
+ 
+fmWindingInputTabular2194=FmWindingInputTabular(24, 8, 3, FmWindingSector([ FmWindingCircuit([ FmWindingCoilGroup([ FmWindingCoil(1, 0, 4, 0, True) ]) ]) ]), 4, 2, True, 1)
+ 
+name="_bundleSetting"
+turnPerCoil=FmConstantIntegerIo("WINDING_NO_TURNS_PER_COIL", 200)
+strandInHand=FmConstantIntegerIo("WINDING_NO_WIRES_IN_HAND", 1)
+wire=FmWireCircular(FmConstantIo("WINDING_WIRE_DIAMETER", 3.894032861766231E-4, baseUnit820))
+_bundleSetting=FmSettingWindingBundle(name, turnPerCoil, strandInHand, wire)
+ 
+name="_InsulationSetting"
+strandInsulationThickness=FmConstantIo("WINDING_INSULATION_THICKNESS_WIRE", 3.064219740543473E-5, baseUnit820)
+conductorInsulationThickness=FmConstantIo("WINDING_INSULATION_THICKNESS_CONDUCTOR", 0, baseUnit820)
+bundleInsulationThickness=FmConstantIo("WINDING_INSULATION_THICKNESS_COIL", 0, baseUnit820)
+linerInsulationThickness=FmConstantIo("WINDING_INSULATION_THICKNESS_LINER", 0, baseUnit820)
+phaseSeparatorInsulationThickness=FmConstantIo("WINDING_INSULATION_THICKNESS_PHASE_SEPARATOR", 0, baseUnit820)
+_InsulationSetting=FmSettingWindingInsulation(name, strandInsulationThickness, conductorInsulationThickness, bundleInsulationThickness, linerInsulationThickness, phaseSeparatorInsulationThickness)
+ 
+connectionStraightPartLength=FmConstantIo("WINDING_END_CS_STRAIGHT_EXTENSION", 0.014971, baseUnit820)
+oppositeConnectionStraightPartLength=FmConstantIo("WINDING_END_OCS_STRAIGHT_EXTENSION", 0.014971, baseUnit820)
+connectionTotalExtensionLength=FmConstantIo("WINDING_END_CS_TOTAL_EXTENSION", 0.026416, baseUnit820)
+oppositeConnectionTotalExtensionLength=FmConstantIo("WINDING_END_OCS_TOTAL_EXTENSION", 0.026416, baseUnit820)
+fmEndWindingExtensionUshape2211=FmEndWindingExtensionUshape(connectionStraightPartLength, oppositeConnectionStraightPartLength, connectionTotalExtensionLength, oppositeConnectionTotalExtensionLength)
+ 
+_EndWindingSetting=FmSettingWindingEnd("_EndWindingSetting", fmEndWindingExtensionUshape2211)
+ 
+name="_XFactorSetting"
+referenceTemperature=FmConstantIo("WINDING_REFERENCE_TEMPERATURE", 293.15, baseUnit1143)
+resistanceFactor=FmConstantIo("WINDING_FACTOR_RESISTANCE", 1, baseUnit862)
+inductanceFactor=FmConstantIo("WINDING_FACTOR_INDUCTANCE", 1, baseUnit862)
+_XFactorSetting=FmSettingWindingXfactor(name, referenceTemperature, resistanceFactor, inductanceFactor)
+ 
+_ConnectionSetting=FmSettingWindingConnection("_ConnectionSetting", True)
+ 
+_bundleInsulator=FmRegionWindingBundleInsulator("_bundleInsulator", _B_Nomex_130)
+ 
+_turnInsulator=FmRegionWindingTurnInsulator("_turnInsulator", _B_Nomex_130)
+ 
+_wireInsulator=FmRegionWindingWireInsulator("_wireInsulator", _B_Nomex_130)
+ 
+_linerInsulator=FmRegionWindingLinerInsulator("_linerInsulator", _B_Nomex_130)
+ 
+_phaseSeparatorInsulator=FmRegionWindingPhaseSeparatorInsulator("_phaseSeparatorInsulator", _B_Nomex_130)
+ 
+_insulators=FmRegionGroupInsulator("_insulators", _bundleInsulator, _turnInsulator, _wireInsulator, _linerInsulator, _phaseSeparatorInsulator)
+ 
+fmDataWindingIoBundle2229=FmDataWindingIoBundle(_Winding, _InsulationSetting, _bundleSetting)
+ 
+fmDataWindingIoSlotFilling2231=FmDataWindingIoSlotFilling(_OS_partOuterSlot, _slotSkew, _Winding, _InsulationSetting, fmDataWindingIoBundle2229)
+ 
+fmDataWindingIoEndWinding2233=FmDataWindingIoEndWinding(_OS_partOuterSlot, _slotSkew, _Winding, _bundleSetting, _EndWindingSetting)
+ 
+fmDataWindingIoMass2235=FmDataWindingIoMass(_OS_partOuterSlot, _insulators, fmDataWindingIoSlotFilling2231, fmDataWindingIoEndWinding2233)
+ 
+fmDataWindingIoResistanceReference2239=FmDataWindingIoResistanceReference(_Winding, _OS_partOuterSlot, _XFactorSetting, _ConnectionSetting, fmDataWindingIoSlotFilling2231, fmDataWindingIoEndWinding2233)
+ 
+fmDataWindingIoResistance202240=FmDataWindingIoResistance20(_Winding, _OS_partOuterSlot, _XFactorSetting, _ConnectionSetting, fmDataWindingIoSlotFilling2231, fmDataWindingIoEndWinding2233)
+ 
+stator=_OS_partOuterSlot
+slotSkew=_slotSkew
+insulatorRegionGroup=_insulators
+winding=_Winding
+bundleSetting=_bundleSetting
+insulationSetting=_InsulationSetting
+endWindingSetting=_EndWindingSetting
+xfactorSetting=_XFactorSetting
+connectionSetting=_ConnectionSetting
+dataBundle=fmDataWindingIoBundle2229
+dataInsulation=FmDataWindingIoInsulation(_InsulationSetting)
+dataSlotFilling=fmDataWindingIoSlotFilling2231
+dataWindingFactor=FmDataWindingIoWindingFactor(_Winding, _slotSkew)
+dataEndWinding=fmDataWindingIoEndWinding2233
+dataMaterial=FmDataWindingIoMaterial(_OS_partOuterSlot, _insulators)
+dataMass=fmDataWindingIoMass2235
+dataCost=FmDataWindingIoCost(_OS_partOuterSlot, _insulators, fmDataWindingIoMass2235)
+dataXfactor=FmDataWindingIoXfactor(_XFactorSetting)
+dataWinding=FmDataWindingIoStructural(_Winding, _ConnectionSetting, fmDataWindingIoBundle2229)
+referenceResistanceData=fmDataWindingIoResistanceReference2239
+resistanceData=fmDataWindingIoResistance202240
+inductanceData=FmDataWindingIoInductance(_Winding, _bundleSetting, _XFactorSetting, fmDataWindingIoEndWinding2233)
+fmWindingDataIo2228=FmWindingDataIo(stator, slotSkew, insulatorRegionGroup, winding, bundleSetting, insulationSetting, endWindingSetting, xfactorSetting, connectionSetting, dataBundle, dataInsulation, dataSlotFilling, dataWindingFactor, dataEndWinding, dataMaterial, dataMass, dataCost, dataXfactor, dataWinding, referenceResistanceData, resistanceData, inductanceData)
+ 
+name="_WindingDataManager"
+stator=_OS_partOuterSlot
+slotSkew=_slotSkew
+insulatorRegionGroup=_insulators
+winding=_Winding
+bundleSetting=_bundleSetting
+insulationSetting=_InsulationSetting
+endWindingSetting=_EndWindingSetting
+xfactorSetting=_XFactorSetting
+connectionSetting=_ConnectionSetting
+ioData=fmWindingDataIo2228
+schemeData=FmWindingDataScheme(_Winding)
+longitudinalViewData=FmWindingDataLongitudinal(_OS_partOuterSlot, fmDataWindingIoEndWinding2233)
+transversalViewData=FmWindingDataTransversal(_OS_partOuterSlot, _Winding)
+mmfDataf=FmWindingDataMmf(_Winding, 200)
+windingFactorData=FmWindingDataFactor(_Winding, _slotSkew, 50)
+slotStarData=FmWindingDataSlotStar(_Winding)
+_WindingDataManager=FmWindingDataManager(name, stator, slotSkew, insulatorRegionGroup, winding, bundleSetting, insulationSetting, endWindingSetting, xfactorSetting, connectionSetting, ioData, schemeData, longitudinalViewData, transversalViewData, mmfDataf, windingFactorData, slotStarData)
+ 
+name="_WindingManager"
+slotPart=_OS_partOuterSlot
+slotSkew=_slotSkew
+poleNumber=_IM_PN
+phaseNumber=_M
+winding=_Winding
+automaticWindingInput=FmWindingInputAutomaticInteger(24, 8, 3, True, 4)
+guidedWindingInput=FmWindingInputGuidedInteger(24, 8, 3, 3, True, 0, True, 1)
+userWindingInput=FmWindingInputUserInteger(24, 8, 3, 1, 3, True, 0, True, 1)
+tabularWindingInput=fmWindingInputTabular2194
+bundleSetting=_bundleSetting
+insulationSetting=_InsulationSetting
+endWindingSetting=_EndWindingSetting
+xfactorSetting=_XFactorSetting
+connectionSetting=_ConnectionSetting
+insulatorRegionGroup=_insulators
+dataManager=_WindingDataManager
+_WindingManager=FmWindingManagerThreePase(name, slotPart, slotSkew, poleNumber, phaseNumber, winding, automaticWindingInput, guidedWindingInput, userWindingInput, tabularWindingInput, bundleSetting, insulationSetting, endWindingSetting, xfactorSetting, connectionSetting, insulatorRegionGroup, dataManager)
+ 
+FDA1=FmDesignSynchronousBPMInnerRotorThreePhase("FDA1", "2019.1.0", "2019.1", _motorManager, 1, _WindingManager)
+ 
+id2248=PropertiesMap("JLC_PROJECT_PROPERTIES", [ "WritingTime" ], [ "1603469275535" ])
+ 
+version=FmMotorVersion("Motor", "MOTOR_V2019-01-00", "", [ GotVersion("Got", "GOT_V2004-06-04", "", [  ]) ])
+namedObjects=[ FDA1, id2248, XY1, _AG_AIRGAP, _AG_FPN4, _AG_INNER, _AG_LINE1, _AG_Length, _AG_NF9, _AG_OD_C1, _AG_OD_C1_F, _AG_OUTER, _AG_P1, _AG_P1C2, _AG_P2, _AG_P3, _AG_P4, _AG_P5, _AG_P6, _AG_V, _AG_X0, _AG_X1, _AG_X2, _AG_X3, _AG_X4, _AG_X5, _AG_X6, _AG_Y0, _AG_Y1, _AG_Y2, _AG_Y3, _AG_Y4, _AG_Y5, _AG_Y6, _AG_airgapRot, _AG_innerAirgapLoc, _AG_outerAirgapLoc, _AG_partAirgap, _AG_u1, _AG_ua, _AG_ul, _AG_uv, _B_Air, _B_Copper, _B_EN_1_1151, _B_M330_35A, _B_M400_65A, _B_NdFeB_1320_1400, _B_Nomex_130, _ConnectionSetting, _EndWindingSetting, _H_FPN1, _H_NF, _H_housingRot, _H_partShaft, _H_u1, _H_ua, _H_ul, _H_uv, _IM_BRIDGE, _IM_BridgeLoc, _IM_CART, _IM_CS1, _IM_CS1_center, _IM_DR_virt, _IM_EDGE, _IM_EdgeLoc, _IM_FACE1, _IM_FACE2, _IM_FACE3, _IM_FACE4, _IM_FACE5, _IM_FACE6, _IM_FPN1, _IM_FPN2, _IM_FPN3, _IM_H, _IM_H_C0, _IM_H_C0_F, _IM_H_func, _IM_H_imp, _IM_H_k, _IM_ID, _IM_ID_imp, _IM_ID_k, _IM_ID_virt, _IM_INTER_POLE, _IM_IR, _IM_InterpoleLoc, _IM_KCD, _IM_LINE1, _IM_LINE10, _IM_LINE11, _IM_LINE12, _IM_LINE13, _IM_LINE14, _IM_LINE15, _IM_LINE16, _IM_LINE17, _IM_LINE18, _IM_LINE2, _IM_LINE3, _IM_LINE4, _IM_LINE5, _IM_LINE6, _IM_LINE7, _IM_LINE8, _IM_LINE9, _IM_LINEMAG, _IM_LOOP1, _IM_LOOP3, _IM_LOOP4, _IM_LOOP5, _IM_LOOP6, _IM_LOOP7, _IM_MAGNET, _IM_MAGNETIC_CIRCUIT, _IM_MAGNETS, _IM_MagnetLoc, _IM_NF6, _IM_OD, _IM_OD_imp, _IM_OR, _IM_P1, _IM_P10, _IM_P11, _IM_P2, _IM_P3, _IM_P4, _IM_P5, _IM_P5C6, _IM_P6, _IM_P7, _IM_P8, _IM_P9, _IM_PN, _IM_POLAR, _IM_POLE_SHOE, _IM_PS1, _IM_PS2, _IM_PS3, _IM_PS4, _IM_PSC, _IM_PoleShoeLoc, _IM_R, _IM_R1, _IM_R3, _IM_R4, _IM_R5, _IM_RT1_C, _IM_R_C0, _IM_R_C0_F, _IM_R_C1, _IM_R_C1_F, _IM_R_func, _IM_R_imp, _IM_R_k, _IM_SL, _IM_T1, _IM_TM, _IM_TM_C0, _IM_TM_C0_F, _IM_TM_func, _IM_TM_imp, _IM_TM_k, _IM_TX5, _IM_Teta, _IM_Teta_virt, _IM_V3, _IM_V4, _IM_V5, _IM_V6, _IM_VE, _IM_VP, _IM_W, _IM_WM, _IM_WM_C0, _IM_WM_C0_F, _IM_WM_func, _IM_WM_imp, _IM_WM_k, _IM_Wa, _IM_X1, _IM_X10, _IM_X11, _IM_X2, _IM_X3, _IM_X4, _IM_X5, _IM_X5C6, _IM_X6, _IM_X7, _IM_X8, _IM_X9, _IM_XY1_C, _IM_Y1, _IM_Y10, _IM_Y11, _IM_Y2, _IM_Y3, _IM_Y4, _IM_Y5, _IM_Y5C6, _IM_Y6, _IM_Y7, _IM_Y8, _IM_Y9, _IM_YOKE, _IM_YokeLoc, _IM_magnetRot, _IM_magnetSym, _IM_partInnerMagnet, _IM_sym_cart, _IM_sym_cart_center, _IM_sym_polar, _IM_sym_polar_center, _IM_u1, _IM_ua, _IM_ul, _IM_uv, _InsulationSetting, _L_EN_2030, _L_EX, _L_FACE1, _L_FPN1, _L_LINE1, _L_LINE2, _L_LINE3, _L_LINE4, _L_LINE5, _L_LINE6, _L_LOOP1, _L_LaminationRegion, _L_NF, _L_P1, _L_P2, _L_P2C3, _L_P3, _L_P4, _L_P5, _L_P6, _L_PC, _L_R, _L_R_C1, _L_R_C1_F, _L_V, _L_VS_C1, _L_VS_C1_F, _L_X0, _L_X1, _L_X2, _L_X3, _L_X4, _L_X5, _L_X6, _L_Y0, _L_Y1, _L_Y2, _L_Y3, _L_Y4, _L_Y5, _L_Y6, _L_arrowPoint1, _L_arrowPoint2, _L_arrowPoint3, _L_arrowPoint4, _L_laminationRot, _L_partLamination, _L_u1, _L_ua, _L_ul, _L_uv, _L_yokeLoc, _M, _Motor, _OS_AS, _OS_ASa, _OS_ASb, _OS_ASc, _OS_ASd, _OS_CART, _OS_CONDUCTOR, _OS_CoilConductor1Loc, _OS_CoilConductor2Loc, _OS_D, _OS_FACE1, _OS_FACE2, _OS_FACE3, _OS_FACE4, _OS_FACE5, _OS_FACE6, _OS_FPN1, _OS_FPN2, _OS_FPN3, _OS_H1, _OS_H1_C0, _OS_H1_C0_F, _OS_H1_func, _OS_H1_imp, _OS_H1_k, _OS_HO, _OS_HO_C0, _OS_HO_C0_F, _OS_HO_func, _OS_HO_imp, _OS_HO_k, _OS_HS, _OS_HS_C0, _OS_HS_C0_F, _OS_HS_C1, _OS_HS_C1_F, _OS_HS_func, _OS_HS_imp, _OS_HS_k, _OS_HTC, _OS_ID, _OS_ID_imp, _OS_INSULATING_WEDGE, _OS_IR, _OS_K, _OS_KDR, _OS_LINE1, _OS_LINE10, _OS_LINE11, _OS_LINE12, _OS_LINE13, _OS_LINE14, _OS_LINE15, _OS_LINE16, _OS_LINE17, _OS_LINE18, _OS_LINE19, _OS_LINE2, _OS_LINE3, _OS_LINE4, _OS_LINE5, _OS_LINE6, _OS_LINE7, _OS_LINE8, _OS_LINE9, _OS_LOOP2, _OS_LOOP3, _OS_LOOP4, _OS_LOOP5, _OS_LOOP6, _OS_LOOP7, _OS_MAGNETIC_CIRCUIT, _OS_NF6, _OS_OD, _OS_OD_imp, _OS_OD_k, _OS_OD_virt, _OS_OR, _OS_P1, _OS_P10, _OS_P2, _OS_P3, _OS_P4, _OS_P4C5, _OS_P5, _OS_P6, _OS_P7, _OS_P8, _OS_P9, _OS_PI1, _OS_PI2, _OS_PI3, _OS_PI4, _OS_POLAR, _OS_PS1, _OS_PS2, _OS_PS3, _OS_PS4, _OS_PSC, _OS_R, _OS_RT1_C, _OS_SL, _OS_SN, _OS_Slot_sym, _OS_TOOTH, _OS_TOOTH_FOOT, _OS_Teta, _OS_ToothFootLoc, _OS_ToothLoc, _OS_V, _OS_V1, _OS_V1a, _OS_V1b, _OS_VE, _OS_WC, _OS_WO, _OS_WO_C0, _OS_WO_C0_F, _OS_WO_C1, _OS_WO_C1_F, _OS_WO_func, _OS_WO_imp, _OS_WO_k, _OS_WS, _OS_WS1, _OS_WS1_C0, _OS_WS1_C0_F, _OS_WS1_C1, _OS_WS1_C1_F, _OS_WS1_func, _OS_WS1_imp, _OS_WS1_k, _OS_WS2, _OS_WS2_C0, _OS_WS2_C0_F, _OS_WS2_func, _OS_WS2_imp, _OS_WS2_k, _OS_WT, _OS_WT1, _OS_WT2, _OS_WedgeLoc, _OS_X1, _OS_X2, _OS_X3, _OS_X4, _OS_X4C5, _OS_X5, _OS_X6, _OS_X7, _OS_X8, _OS_XI1, _OS_XI2, _OS_XI3, _OS_XY1_C, _OS_Y1, _OS_Y2, _OS_Y3, _OS_Y4, _OS_Y4C5, _OS_Y5, _OS_Y6, _OS_Y7, _OS_Y8, _OS_YI1, _OS_YI2, _OS_YI3, _OS_YI4, _OS_YOKE, _OS_YokeLoc, _OS_partOuterSlot, _OS_slotRot, _OS_sym_cart, _OS_sym_cart_center, _OS_sym_polar, _OS_sym_polar_center, _OS_u1, _OS_ua, _OS_ul, _OS_uv, _S_D1, _S_D1_C1, _S_D1_C1_F, _S_D2, _S_D2_C2, _S_D2_C2_F, _S_FACE1, _S_FPN1, _S_L1, _S_L2, _S_LINE1, _S_LINE2, _S_LINE3, _S_LOOP1, _S_NF, _S_PS1, _S_PS2, _S_PSC, _S_Shaft, _S_V, _S_X1, _S_X2, _S_X3, _S_Y1, _S_Y3, _S_partShaft, _S_sectionLoc, _S_shaftRot, _S_u1, _S_ua, _S_ul, _S_uv, _VS, _Winding, _WindingDataManager, _WindingManager, _XFactorSetting, _airgapDataManager, _airgapManager, _bundleInsulator, _bundleSetting, _housingDataManager, _housingManager, _insulators, _laminationDataManager, _laminationManager, _linerInsulator, _magnetDataManager, _magnetManager, _magnetSkew, _motorDataManager, _motorManager, _phaseSeparatorInsulator, _shaftDataManager, _shaftManager, _slotDataManager, _slotManager, _slotSkew, _turnInsulator, _wireInsulator ]
+updatingTimes=[ 1603459012230L, 1603469497624L, 1577359285667L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469272034L, 1603469275535L, 1603469272034L, 1603469272034L, 1603469272034L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469272034L, 1603469272034L, 1603469275535L, 1603469275535L, 1603469272034L, 1603469272034L, 1603469272034L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469272034L, 1603469272034L, 1603469275535L, 1603469272034L, 1603469272034L, 1603469275535L, 1603469275535L, 1603469272034L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469272034L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469272034L, 1603469272034L, 1603469275535L, 1603469272034L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469272034L, 1603469275535L, 1603463618609L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603463618609L, 1603463618609L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603463618609L, 1603463618609L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L ]
+notificationTimes=[ 1603469275535L, 1603469497624L, 1577359285667L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L, 1603469275535L ]
+creationTime=1577359282609L
+modificationTime=1603469497624L
+namedObjectBase813=NamedObjectBase(version, namedObjects, updatingTimes, notificationTimes, creationTime, modificationTime)
+ 
+JLC_LOAD0=namedObjectBase813
+ 
+
+# END_OF_ENCODED_SECTION
+
+ 

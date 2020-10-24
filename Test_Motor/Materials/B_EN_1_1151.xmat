@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<B_EN_1_1151>
+  <Type>SOLID</Type>
+  <BaseType>BASIC</BaseType>
+  <Version>1.0.0</Version>
+  <Name>EN_1_1151</Name>
+  <Author>FluxMotor</Author>
+  <Date>2017/03/21 10:07:41</Date>
+  <Comments>Low carbon steel 
+AISI 1020
+AFNOR XC18</Comments>
+  <Manufacturer>FluxMotor</Manufacturer>
+  <magneticBehavior>
+    <magneticCurvatureCoefficient>0.71</magneticCurvatureCoefficient>
+    <magneticSaturationInduction>1.98</magneticSaturationInduction>
+    <magneticOriginRelativePermeability>1800.0</magneticOriginRelativePermeability>
+    <magneticLinearBehavior>false</magneticLinearBehavior>
+  </magneticBehavior>
+  <electrokineticBehavior>
+    <electrokineticReferenceTemperature>293.15</electrokineticReferenceTemperature>
+    <electrokineticResistivityAtReferenceTemperature>1.68E-7</electrokineticResistivityAtReferenceTemperature>
+    <electrokineticResistivityCoefficient>0.0038</electrokineticResistivityCoefficient>
+  </electrokineticBehavior>
+  <mechanicalBehavior>
+    <mechanicalMassDensity>7870.0</mechanicalMassDensity>
+    <mechanicalYoungModulus>1.86E11</mechanicalYoungModulus>
+    <mechanicalPoissonRatio>0.29</mechanicalPoissonRatio>
+  </mechanicalBehavior>
+  <economicBehavior>
+    <economicPrice>0.0</economicPrice>
+  </economicBehavior>
+</B_EN_1_1151>

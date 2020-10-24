@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<B_Nomex_130>
+  <Type>INSULATOR</Type>
+  <BaseType>BASIC</BaseType>
+  <Version>1.0.0</Version>
+  <Name>Nomex_130</Name>
+  <Author>FluxMotor</Author>
+  <Date>2017/03/21 10:07:41</Date>
+  <Comments>Nominal thickness 0.13 mm</Comments>
+  <Manufacturer>FluxMotor</Manufacturer>
+  <magneticBehavior />
+  <electrokineticBehavior />
+  <mechanicalBehavior>
+    <mechanicalMassDensity>870.0</mechanicalMassDensity>
+  </mechanicalBehavior>
+  <economicBehavior>
+    <economicPrice>0.0</economicPrice>
+  </economicBehavior>
+</B_Nomex_130>

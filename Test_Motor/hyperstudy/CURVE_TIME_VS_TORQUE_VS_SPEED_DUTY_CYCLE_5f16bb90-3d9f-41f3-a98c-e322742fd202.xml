@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curve>
+  <Version>2019.1.0</Version>
+  <uuid>6131cea3-f4d8-4ec5-a9c9-31e3d63ad135</uuid>
+  <date />
+  <axes>
+    <axis>
+      <ioName>AXIS_TIME</ioName>
+      <values />
+    </axis>
+  </axes>
+  <curveElements>
+    <curveElement>
+      <ioName>ELEMENT_SPEED</ioName>
+      <type>CurveElement</type>
+      <values />
+    </curveElement>
+    <curveElement>
+      <ioName>ELEMENT_TORQUE_USEFUL_DUTYCYCLE</ioName>
+      <type>CurveElement</type>
+      <values />
+    </curveElement>
+  </curveElements>
+</curve>
